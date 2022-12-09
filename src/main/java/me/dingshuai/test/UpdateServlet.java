@@ -25,6 +25,10 @@ public class UpdateServlet extends HttpServlet {
 		String location = request.getParameter("location");
 		String phoneNumber = request.getParameter("phoneNumber");
 
+		System.out.println(userid + " " + username + " " + password + " " + location + " " + phoneNumber);
+
+		Tusers user1 = (Tusers) request.getSession().getAttribute("user");
+
 		// 创建 Tusers 对象
 		Tusers user = new Tusers();
 		user.setUserId(Integer.parseInt(userid));
@@ -40,9 +44,11 @@ public class UpdateServlet extends HttpServlet {
 		dao.update(user);
 
 		// 刷新session
-		request.getSession().setAttribute("user", user);
-
-		// 重定向到 userinfo.jsp 页面
-		response.sendRedirect("index.jsp");
+//		request.getSession().setAttribute("user", user);
+		if (user1.getUsername().equals("admin")) {
+			response.sendRedirect("manage/user.jsp");
+		} else {
+			response.sendRedirect("index.jsp");
+		}
 	}
 }
