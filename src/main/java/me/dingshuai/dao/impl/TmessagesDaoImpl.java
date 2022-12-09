@@ -28,8 +28,9 @@ public class TmessagesDaoImpl implements TmessagesDao {
 				Tmessages Tmessages = new Tmessages();
 				Tmessages.setMsgId(rs.getInt("msgId"));
 				Tmessages.setMsgSender(rs.getString("msgSender"));
+				Tmessages.setMsgTitle(rs.getString("msgTitle"));
 				Tmessages.setMsgContent(rs.getString("msgContent"));
-				Tmessages.setMsgContent(rs.getString("msgStatus"));
+				Tmessages.setMsgStatus(rs.getString("msgStatus"));
 				list.add(Tmessages);
 			}
 		} catch (Exception e) {
