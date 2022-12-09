@@ -9,7 +9,61 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c979057-edd9-4904-8b74-81638d2d1c44" name="变更" comment="" />
+    <list default="true" id="5c979057-edd9-4904-8b74-81638d2d1c44" name="变更" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed7096e8-a47a-432b-99c8-2313330dbdfb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ed7096e8-a47a-432b-99c8-2313330dbdfb.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/dao/TusersDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/dao/TusersDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/dao/impl/TusersDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/dao/impl/TusersDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/RegisterServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/RegisterServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/UpdateServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/UpdateServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/guestbook-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/guestbook-modify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/guestbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/guestbook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/manage-result.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/manage-result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/news-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/news-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/news-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/news-modify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/order-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/order-modify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/product-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/product-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/product-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/product-modify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/productClass-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/productClass-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/productClass-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/productClass-modify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/productClass.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/productClass.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/user-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/user-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/user-modify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/scripts/function-manage.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/scripts/function-manage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/TusersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/TusersDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/TusersDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/TusersDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/RegisterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/UpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/UpdateServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/dao/TusersDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/dingshuai/dao/TusersDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/dao/impl/TusersDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/dingshuai/dao/impl/TusersDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/test/RegisterServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/dingshuai/test/RegisterServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/guestbook-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/guestbook-modify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/guestbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/guestbook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/manage-result.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/manage-result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/news-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/news-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/news-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/news-modify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/order-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/order-modify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/product-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/product-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/product-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/product-modify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/productClass-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/productClass-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/productClass-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/productClass-modify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/productClass.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/productClass.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/user-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/user-add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/user-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/user-modify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/scripts/function-manage.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/scripts/function-manage.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +77,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -42,6 +99,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2Iexzpn158CZ0Lf0wmOKuiM7RBb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -53,7 +113,8 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/dingshuai/Dev/Code/Java/shopping/web&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;工件&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.web.browsers&quot;
@@ -88,6 +149,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 10.1.2" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.2" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -194,12 +256,24 @@
       <workItem from="1670564007237" duration="4663000" />
       <workItem from="1670569409432" duration="3743000" />
       <workItem from="1670573858798" duration="16040000" />
-      <workItem from="1670594413957" duration="3245000" />
+      <workItem from="1670594413957" duration="8179000" />
+      <workItem from="1670602906154" duration="4801000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

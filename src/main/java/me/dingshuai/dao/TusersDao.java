@@ -11,7 +11,9 @@ public interface TusersDao {
 	Tusers findByUsernameAndPassword(String username, String password);
 
 	// 根据 id 查询 Tusers 数据
-	Tusers findByUsername(String username);
+	Tusers checkIfExists(String username);
+
+	Tusers findById(String userId);
 
 	// 添加 Tusers 数据
 	int addUser(Tusers tuser);

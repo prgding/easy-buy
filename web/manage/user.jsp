@@ -1,8 +1,7 @@
-<%@ page import="me.dingshuai.util.DButil" %>
-<%@ page import="java.sql.SQLException" %>
-<%@ page import="java.sql.Connection" %>
-<%@ page import="java.sql.PreparedStatement" %>
-<%@ page import="java.sql.ResultSet" %>
+<%@ page import="me.dingshuai.dao.TusersDao" %>
+<%@ page import="me.dingshuai.dao.impl.TusersDaoImpl" %>
+<%@ page import="me.dingshuai.pojo.Tusers" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -29,7 +28,7 @@
 </div>
 <div id="childNav">
     <div class="welcome wrap">
-        管理员admin您好，今天是2012-12-21，欢迎回到管理后台。
+        管理员admin您好，今天是2022-12-09，欢迎回到管理后台。
     </div>
 </div>
 <div id="position" class="wrap">
@@ -40,7 +39,7 @@
         <div class="box">
             <dl>
                 <dt>用户管理</dt>
-                <dd><em><a href="user-add.html">新增</a></em><a href="user.jsp">用户管理</a></dd>
+                <dd><em><a href="user-add.jsp">新增</a></em><a href="user.jsp">用户管理</a></dd>
                 <dt>商品信息</dt>
                 <dd><em><a href="productClass-add.html">新增</a></em><a href="productClass.html">分类管理</a></dd>
                 <dd><em><a href="product-add.html">新增</a></em><a href="product.html">商品管理</a></dd>
@@ -58,51 +57,27 @@
         <div class="manage">
             <table class="list">
                 <tr>
-                    <th>userId</th>
+                    <th>userId(主键自增)</th>
                     <th>用户名</th>
                     <th>密码</th>
-                    <th>收货地址</th>
-                    <th>手机</th>
+                    <th>送货地址</th>
+                    <th>手机号</th>
                     <th>操作</th>
                 </tr>
                 <%
-                    Connection conn = null;
-                    PreparedStatement ps = null;
-                    ResultSet rs = null;
-                    try {
-                        //get connection
-                        conn = DButil.getConnection();
-
-                        //get operation object
-                        String sql = "select * from tusers";
-                        ps = conn.prepareStatement(sql);
-
-                        //exec sql
-                        rs = ps.executeQuery();
-                        int i = 0;
-                        //show result
-                        while (rs.next()) {
-                            String userid = rs.getString("userid");
-                            String username = rs.getString("username");
-                            String password = rs.getString("password");
-                            String location = rs.getString("location");
-                            String phoneNumber = rs.getString("phoneNumber");
-
-                            out.print("<tr>");
-                            out.print("	<td class='first w4 c'>"+userid+"</td>");
-                            out.print("	<td class='w1 c'>" + username + "</td>");
-                            out.print("	<td class='w2 c'>"+password+"</td>");
-                            out.print("	<td class='w3 c'>"+location+"</td>");
-                            out.print("	<td class='w4 c'>"+phoneNumber+"</td>");
-                            out.print("	<td class='w1 c'><a href='user-modify.html'>修改</a> <a href='javascript:Delete(1);'>删除</a></td>");
-                            out.print("</tr>");
-
-                        }
-                    } catch (SQLException e) {
-                        throw new RuntimeException(e);
-                    } finally {
-                        //close
-                        DButil.close(conn, ps, rs);
+                    TusersDao td = new TusersDaoImpl();
+                    List<Tusers> tusers = td.findAll();
+                    for (Tusers tuser : tusers) {
+                        out.println("<tr>");
+                        out.println("	<td class='first w4 c'>" + tuser.getUserId() + "</td>");
+                        out.println("	<td class='w1 c'>" + tuser.getUsername() + "</td>");
+                        out.println("	<td class='w2 c'>" + tuser.getPassword() + "</td>");
+                        out.println("	<td class='w3 c'>" + tuser.getLocation() + "</td>");
+                        out.println("	<td class='w4 c'>" + tuser.getPhoneNumber() + "</td>");
+                        out.println("	<td class='w1 c'><a href='/shopping/detail?userid=" + tuser.getUserId() +
+                                "'>修改</a> <a href='javascript:Delete(" + tuser.getUserId() + ");" +
+                                "'>删除</a></td>");
+                        out.println("</tr>");
                     }
                 %>
             </table>

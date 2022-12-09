@@ -21,7 +21,7 @@
 			out.println("<a href='userinfo.jsp'>修改个人信息</a>");
 			out.print("<a href='logout.jsp'>注销</a>");
 			if (user.getUsername().equals("admin")){
-				out.print("<a href='manage/index.jsp'>进入管理后台</a>");
+				out.print("<a href='manage/index.html'>进入管理后台</a>");
 			}
 		}
 		 else {

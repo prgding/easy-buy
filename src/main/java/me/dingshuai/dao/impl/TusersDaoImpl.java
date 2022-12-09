@@ -14,6 +14,50 @@ import java.util.List;
 public class TusersDaoImpl implements TusersDao {
 
 	@Override
+	public Tusers findById(String userId) {
+		Tusers user = null;
+
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+
+		try {
+			// 使用 DButil 类的 getConnection 方法获取数据库连接
+			conn = DButil.getConnection();
+
+			// 创建 SQL 查询语句
+			String sql = "SELECT * FROM tusers WHERE userid = ? ";
+
+			// 创建 PreparedStatement 对象
+			stmt = conn.prepareStatement(sql);
+
+			// 为 PreparedStatement 对象的参数赋值
+			stmt.setInt(1, Integer.parseInt(userId));
+
+			// 使用 PreparedStatement 对象的 executeQuery 方法执行查询
+			rs = stmt.executeQuery();
+
+			// 如果查询结果不为空，则创建 Tusers 对象
+			if (rs.next()) {
+				user = new Tusers();
+				user.setUserId(rs.getInt("userid"));
+				user.setUsername(rs.getString("username"));
+				user.setPassword(rs.getString("password"));
+				user.setLocation(rs.getString("location"));
+				user.setPhoneNumber(rs.getString("phoneNumber"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			// 使用 DButil 类的 close 方法关闭连接
+			DButil.close(conn, stmt, rs);
+		}
+
+		// 返回 Tusers 对象
+		return user;
+	}
+
+	@Override
 	public List<Tusers> findAll() {
 		List<Tusers> list = new ArrayList<>();
 		String sql = "select * from tusers";
@@ -87,7 +131,7 @@ public class TusersDaoImpl implements TusersDao {
 	}
 
 	@Override
-	public Tusers findByUsername(String username) {
+	public Tusers checkIfExists(String username) {
 		Tusers user = null;
 
 		Connection conn = null;

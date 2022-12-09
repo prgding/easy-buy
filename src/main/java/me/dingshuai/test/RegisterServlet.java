@@ -26,7 +26,7 @@ public class RegisterServlet extends HttpServlet {
 
 		// 创建 TusersDao 对象
 		TusersDao dao = new TusersDaoImpl();
-		Tusers alreadyHave = dao.findByUsername(username);
+		Tusers alreadyHave = dao.checkIfExists(username);
 		if (alreadyHave != null) {
 			// 用户名已存在
 			request.setAttribute("RegisterMsg", "用户名已存在");
