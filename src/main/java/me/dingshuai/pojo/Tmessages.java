@@ -3,6 +3,10 @@ package me.dingshuai.pojo;
 public class Tmessages {
 	private int msgId;
 	private String msgSender;
+
+	private String msgTitle;
+
+
 	private String msgContent;
 	private String msgStatus;
 
@@ -23,6 +27,14 @@ public class Tmessages {
 
 	public String getMsgStatus() {
 		return msgStatus;
+	}
+
+	public String getMsgTitle() {
+		return msgTitle;
+	}
+
+	public void setMsgTitle(String msgTitle) {
+		this.msgTitle = msgTitle;
 	}
 
 	public void setMsgId(int msgId) {

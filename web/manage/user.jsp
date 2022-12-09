@@ -21,7 +21,7 @@
             <li class="current"><a href="user.jsp">用户</a></li>
             <li><a href="product.html">商品</a></li>
             <li><a href="order.html">订单</a></li>
-            <li><a href="guestbook.html">留言</a></li>
+            <li><a href="guestbook.jsp">留言</a></li>
             <li><a href="news.html">新闻</a></li>
         </ul>
     </div>
@@ -46,7 +46,7 @@
                 <dt>订单管理</dt>
                 <dd><a href="order.html">订单管理</a></dd>
                 <dt>留言管理</dt>
-                <dd><a href="guestbook.html">留言管理</a></dd>
+                <dd><a href="guestbook.jsp">留言管理</a></dd>
                 <dt>新闻管理</dt>
                 <dd><em><a href="news-add.html">新增</a></em><a href="news.html">新闻管理</a></dd>
             </dl>
@@ -75,7 +75,7 @@
                         out.println("	<td class='w3 c'>" + tuser.getLocation() + "</td>");
                         out.println("	<td class='w4 c'>" + tuser.getPhoneNumber() + "</td>");
                         out.println("	<td class='w1 c'><a href='/shopping/detail?userid=" + tuser.getUserId() +
-                                "'>修改</a> <a href='javascript:Delete(" + tuser.getUserId() + ");" +
+                                "'>修改</a> <a href='javascript:DeleteUser(" + tuser.getUserId() + ");" +
                                 "'>删除</a></td>");
                         out.println("</tr>");
                     }
