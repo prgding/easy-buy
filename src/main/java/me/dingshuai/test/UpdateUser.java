@@ -1,5 +1,7 @@
 package me.dingshuai.test;
 
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -11,8 +13,8 @@ import me.dingshuai.pojo.Tusers;
 import java.io.IOException;
 import java.io.Serial;
 
-@WebServlet(name = "UpdateServlet", urlPatterns = "/update")
-public class UpdateServlet extends HttpServlet {
+@WebServlet(name = "UpdateUser", urlPatterns = "/updateUser")
+public class UpdateUser extends HttpServlet {
 	@Serial
 	private static final long serialVersionUID = 1L;
 
@@ -44,11 +46,22 @@ public class UpdateServlet extends HttpServlet {
 		dao.update(user);
 
 		// 刷新session
-//		request.getSession().setAttribute("user", user);
-		if (user1.getUsername().equals("admin")) {
-			response.sendRedirect("manage/user.jsp");
-		} else {
-			response.sendRedirect("index.jsp");
+		try {
+			if (user1.getUsername().equals("admin")) {
+				response.sendRedirect("manage/user.jsp");
+			} else {
+				request.getSession().setAttribute("user", user);
+				response.sendRedirect("index.jsp");
+			}
+		}catch (Exception e) {
+			request.setAttribute("sessionMsg", "Session失效，请重新登陆");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
+			try {
+				dispatcher.forward(request, response);
+			} catch (ServletException ex) {
+				throw new RuntimeException(ex);
+			}
 		}
+
 	}
 }
