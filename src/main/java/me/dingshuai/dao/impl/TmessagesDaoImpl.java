@@ -87,14 +87,15 @@ public class TmessagesDaoImpl implements TmessagesDao {
 		int status = 0;
 		Connection conn = null;
 		PreparedStatement ps = null;
-		String sql = "UPDATE tmessages SET msgSender = ?, msgContent = ?, msgStatus = ? WHERE msgId = ?";
+		String sql = "UPDATE tmessages SET msgSender = ?, msgContent = ?, msgStatus = ?, msgReplyContent = ? WHERE msgId = ?";
 		try {
 			conn = DButil.getConnection();
 			ps = conn.prepareStatement(sql);
-			ps.setString(1, msg.getMsgContent());
+			ps.setString(1, msg.getMsgSender());
 			ps.setString(2, msg.getMsgContent());
 			ps.setString(3, msg.getMsgStatus());
-			ps.setInt(4, msg.getMsgId());
+			ps.setString(4,msg.getMsgReplyContent());
+			ps.setInt(5, msg.getMsgId());
 			ps.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -106,8 +107,7 @@ public class TmessagesDaoImpl implements TmessagesDao {
 
 	@Override
 	public Tmessages findById(int msgId) {
-		Tmessages user = null;
-
+		Tmessages msg = new Tmessages();
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -130,7 +130,12 @@ public class TmessagesDaoImpl implements TmessagesDao {
 
 			// 如果查询结果不为空，则创建 Tmessages 对象
 			if (rs.next()) {
-				user = new Tmessages();
+				msg.setMsgId(rs.getInt("msgId"));
+				msg.setMsgSender(rs.getString("msgSender"));
+				msg.setMsgTitle(rs.getString("msgTitle"));
+				msg.setMsgContent(rs.getString("msgContent"));
+				msg.setMsgStatus(rs.getString("msgStatus"));
+				msg.setMsgReplyContent(rs.getString("msgReplyContent"));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -140,6 +145,6 @@ public class TmessagesDaoImpl implements TmessagesDao {
 		}
 
 		// 返回 Tmessages 对象
-		return user;
+		return msg;
 	}
 }

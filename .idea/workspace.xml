@@ -10,21 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c979057-edd9-4904-8b74-81638d2d1c44" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed7096e8-a47a-432b-99c8-2313330dbdfb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ed7096e8-a47a-432b-99c8-2313330dbdfb.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/dao/impl/TmessagesDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/dao/impl/TmessagesDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/dao/impl/TusersDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/dao/impl/TusersDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/pojo/Tmessages.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/pojo/Tmessages.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/guestbook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/guestbook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/reg-result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/DetailServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/DetailServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/ReplyServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/ReplyServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/UpdateServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/userinfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/userinfo.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/TmessagesDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/TmessagesDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/TusersDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/TusersDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Tmessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Tmessages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/DetailServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/DetailServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/ReplyServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/ReplyServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/UpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/UpdateUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/dao/impl/TmessagesDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/dingshuai/dao/impl/TmessagesDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/dao/impl/TusersDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/dingshuai/dao/impl/TusersDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/pojo/Tmessages.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/dingshuai/pojo/Tmessages.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/guestbook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/guestbook.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/test/DetailServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/dingshuai/test/DetailServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/test/ReplyServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/dingshuai/test/ReplyServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/test/UpdateServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/userinfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/userinfo.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +220,7 @@
       <workItem from="1670573858798" duration="16040000" />
       <workItem from="1670594413957" duration="8179000" />
       <workItem from="1670602906154" duration="7067000" />
-      <workItem from="1670610004374" duration="5029000" />
+      <workItem from="1670610004374" duration="9086000" />
     </task>
     <servers />
   </component>
@@ -237,6 +237,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="完成后台留言删查" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

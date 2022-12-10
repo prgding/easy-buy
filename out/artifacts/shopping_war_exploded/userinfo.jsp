@@ -43,7 +43,7 @@
 </head>
 <body>
 <h1 align="center">个人信息查看、修改</h1>
-<form action="update" method="post">
+<form action="updateUser" method="post">
     <label>用户 id （数据库主键，已设为只读）:</label>
     <input type="text" name="userid" value="<%=user.getUserId()%>" readonly><br>
     <label>用户名:</label>
