@@ -74,7 +74,7 @@
                         out.println("	<td class='w2 c'>" + tuser.getPassword() + "</td>");
                         out.println("	<td class='w3 c'>" + tuser.getLocation() + "</td>");
                         out.println("	<td class='w4 c'>" + tuser.getPhoneNumber() + "</td>");
-                        out.println("	<td class='w1 c'><a href='/shopping/detail?userid=" + tuser.getUserId() +
+                        out.println("	<td class='w1 c'><a href='/shopping/detail?userId=" + tuser.getUserId() +
                                 "'>修改</a> <a href='javascript:DeleteUser(" + tuser.getUserId() + ");" +
                                 "'>删除</a></td>");
                         out.println("</tr>");

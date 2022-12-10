@@ -26,7 +26,7 @@ public class TusersDaoImpl implements TusersDao {
 			conn = DButil.getConnection();
 
 			// 创建 SQL 查询语句
-			String sql = "SELECT * FROM tusers WHERE userid = ? ";
+			String sql = "SELECT * FROM tusers WHERE userId = ? ";
 
 			// 创建 PreparedStatement 对象
 			stmt = conn.prepareStatement(sql);
@@ -40,9 +40,9 @@ public class TusersDaoImpl implements TusersDao {
 			// 如果查询结果不为空，则创建 Tusers 对象
 			if (rs.next()) {
 				user = new Tusers();
-				user.setUserId(rs.getInt("userid"));
-				user.setUsername(rs.getString("username"));
-				user.setPassword(rs.getString("password"));
+				user.setUserId(rs.getInt("userId"));
+				user.setUsername(rs.getString("userName"));
+				user.setPassword(rs.getString("passWord"));
 				user.setLocation(rs.getString("location"));
 				user.setPhoneNumber(rs.getString("phoneNumber"));
 
@@ -71,9 +71,9 @@ public class TusersDaoImpl implements TusersDao {
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				Tusers Tusers = new Tusers();
-				Tusers.setUserId(rs.getInt("userid"));
-				Tusers.setUsername(rs.getString("username"));
-				Tusers.setPassword(rs.getString("password"));
+				Tusers.setUserId(rs.getInt("userId"));
+				Tusers.setUsername(rs.getString("userName"));
+				Tusers.setPassword(rs.getString("passWord"));
 				Tusers.setLocation(rs.getString("location"));
 				Tusers.setPhoneNumber(rs.getString("phoneNumber"));
 				list.add(Tusers);
@@ -87,7 +87,7 @@ public class TusersDaoImpl implements TusersDao {
 	}
 
 	@Override
-	public Tusers findByUsernameAndPassword(String username, String password) {
+	public Tusers findByUserNameAndPassWord(String userName, String passWord) {
 		Tusers user = null;
 
 		Connection conn = null;
@@ -99,14 +99,14 @@ public class TusersDaoImpl implements TusersDao {
 			conn = DButil.getConnection();
 
 			// 创建 SQL 查询语句
-			String sql = "SELECT * FROM tusers WHERE username = ? AND password = ?";
+			String sql = "SELECT * FROM tusers WHERE userName = ? AND passWord = ?";
 
 			// 创建 PreparedStatement 对象
 			stmt = conn.prepareStatement(sql);
 
 			// 为 PreparedStatement 对象的参数赋值
-			stmt.setString(1, username);
-			stmt.setString(2, password);
+			stmt.setString(1, userName);
+			stmt.setString(2, passWord);
 
 			// 使用 PreparedStatement 对象的 executeQuery 方法执行查询
 			rs = stmt.executeQuery();
@@ -114,9 +114,9 @@ public class TusersDaoImpl implements TusersDao {
 			// 如果查询结果不为空，则创建 Tusers 对象，并设置属性值
 			if (rs.next()) {
 				user = new Tusers();
-				user.setUserId(rs.getInt("userid"));
-				user.setUsername(rs.getString("username"));
-				user.setPassword(rs.getString("password"));
+				user.setUserId(rs.getInt("userId"));
+				user.setUsername(rs.getString("userName"));
+				user.setPassword(rs.getString("passWord"));
 				user.setLocation(rs.getString("location"));
 				user.setPhoneNumber(rs.getString("phoneNumber"));
 			}
@@ -132,7 +132,7 @@ public class TusersDaoImpl implements TusersDao {
 	}
 
 	@Override
-	public Tusers checkIfExists(String username) {
+	public Tusers checkIfExists(String userName) {
 		Tusers user = null;
 
 		Connection conn = null;
@@ -144,13 +144,13 @@ public class TusersDaoImpl implements TusersDao {
 			conn = DButil.getConnection();
 
 			// 创建 SQL 查询语句
-			String sql = "SELECT * FROM tusers WHERE username = ? ";
+			String sql = "SELECT * FROM tusers WHERE userName = ? ";
 
 			// 创建 PreparedStatement 对象
 			stmt = conn.prepareStatement(sql);
 
 			// 为 PreparedStatement 对象的参数赋值
-			stmt.setString(1, username);
+			stmt.setString(1, userName);
 
 			// 使用 PreparedStatement 对象的 executeQuery 方法执行查询
 			rs = stmt.executeQuery();
@@ -175,7 +175,7 @@ public class TusersDaoImpl implements TusersDao {
 		int status = 0;
 		Connection conn = null;
 		PreparedStatement ps = null;
-		String sql = "insert into tusers(username,password,location,phoneNumber) values(?,?,?,?)";
+		String sql = "insert into tusers(userName,passWord,location,phoneNumber) values(?,?,?,?)";
 		try {
 			conn = DButil.getConnection();
 			ps = conn.prepareStatement(sql);
@@ -197,7 +197,7 @@ public class TusersDaoImpl implements TusersDao {
 		int status = 0;
 		Connection conn = null;
 		PreparedStatement ps = null;
-		String sql = "delete from tusers where userid = ?";
+		String sql = "delete from tusers where userId = ?";
 		try {
 			conn = DButil.getConnection();
 			ps = conn.prepareStatement(sql);
@@ -216,7 +216,7 @@ public class TusersDaoImpl implements TusersDao {
 		int status = 0;
 		Connection conn = null;
 		PreparedStatement ps = null;
-		String sql = "UPDATE Tusers SET username = ?, password = ?, location = ?, phoneNumber = ? WHERE userid = ?";
+		String sql = "UPDATE Tusers SET userName = ?, passWord = ?, location = ?, phoneNumber = ? WHERE userId = ?";
 		try {
 			conn = DButil.getConnection();
 			ps = conn.prepareStatement(sql);

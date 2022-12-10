@@ -30,7 +30,12 @@ public class UpdateMsg extends HttpServlet {
 		tm.setMsgId(Integer.parseInt(msgId));
 		tm.setMsgSender(msgSender);
 		tm.setMsgContent(msgContent);
-		tm.setMsgStatus("已回复");
+
+		if (msgReplyContent.equals("")) {
+			tm.setMsgStatus("未回复");
+		} else {
+			tm.setMsgStatus("已回复");
+		}
 		tm.setMsgReplyContent(msgReplyContent);
 
 		// 创建 TusersDao 对象

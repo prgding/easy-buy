@@ -10,20 +10,60 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c979057-edd9-4904-8b74-81638d2d1c44" name="变更" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed7096e8-a47a-432b-99c8-2313330dbdfb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ed7096e8-a47a-432b-99c8-2313330dbdfb.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/dao/impl/TmessagesDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/dao/impl/TmessagesDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/dao/TusersDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/dao/TusersDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/dao/impl/TusersDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/dao/impl/TusersDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/pojo/Tusers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/pojo/Tusers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/DeleteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/DeleteServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/DetailServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/DetailServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/ReplyServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/ReplyServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/UpdateServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/RegisterServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/RegisterServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/UpdateMsg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/UpdateMsg.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/UpdateUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/WEB-INF/classes/me/dingshuai/test/UpdateUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/guestbook-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/guestbook-modify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/manage-result.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/manage-result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/news-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/news-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/news-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/news-modify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/order-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/order-modify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/user-modify.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/manage/user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/scripts/function-manage.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/scripts/function-manage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/scripts/function.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/scripts/function.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/userinfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shopping_war_exploded/userinfo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/TmessagesDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/TmessagesDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/TusersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/TusersDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/TusersDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/TusersDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Tusers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Tusers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/DeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/DeleteServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/DetailServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/DetailServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/ReplyServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/ReplyServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/UpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/UpdateUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/dao/impl/TmessagesDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/dingshuai/dao/impl/TmessagesDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/RegisterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/UpdateMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/UpdateMsg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/UpdateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/UpdateUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/dao/TusersDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/dingshuai/dao/TusersDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/dao/impl/TusersDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/dingshuai/dao/impl/TusersDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/pojo/Tusers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/dingshuai/pojo/Tusers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/test/DeleteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/dingshuai/test/DeleteServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/test/DetailServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/dingshuai/test/DetailServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/test/ReplyServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/dingshuai/test/ReplyServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/test/UpdateServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/test/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/dingshuai/test/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/test/RegisterServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/dingshuai/test/RegisterServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/test/UpdateMsg.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/dingshuai/test/UpdateMsg.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/test/UpdateUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/dingshuai/test/UpdateUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/guestbook-modify.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/manage-result.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/manage-result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/news-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/news-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/news-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/news-modify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/order-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/order-modify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/user-modify.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/scripts/function-manage.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/scripts/function-manage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/scripts/function.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/scripts/function.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/userinfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/userinfo.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +119,8 @@
     &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.web.browsers&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.web.browsers&quot;,
+    &quot;sql.rename.search.for.storage.occurrences&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
@@ -220,7 +261,10 @@
       <workItem from="1670573858798" duration="16040000" />
       <workItem from="1670594413957" duration="8179000" />
       <workItem from="1670602906154" duration="7067000" />
-      <workItem from="1670610004374" duration="9086000" />
+      <workItem from="1670610004374" duration="11908000" />
+      <workItem from="1670670030297" duration="2570000" />
+      <workItem from="1670672619973" duration="81000" />
+      <workItem from="1670673145599" duration="606000" />
     </task>
     <servers />
   </component>

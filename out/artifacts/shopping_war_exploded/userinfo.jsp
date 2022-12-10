@@ -45,11 +45,11 @@
 <h1 align="center">个人信息查看、修改</h1>
 <form action="updateUser" method="post">
     <label>用户 id （数据库主键，已设为只读）:</label>
-    <input type="text" name="userid" value="<%=user.getUserId()%>" readonly><br>
+    <input type="text" name="userId" value="<%=user.getUserId()%>" readonly><br>
     <label>用户名:</label>
-    <input type="text" name="username" value="<%=user.getUsername()%>"><br>
+    <input type="text" name="userName" value="<%=user.getUsername()%>"><br>
     <label>密码:</label>
-    <input type="text" name="password" value="<%=user.getPassword()%>"><br>
+    <input type="text" name="passWord" value="<%=user.getPassword()%>"><br>
     <label>收货地址:</label>
     <input type="text" name="location" value="<%=user.getLocation()%>"><br>
     <label>手机号码:</label>

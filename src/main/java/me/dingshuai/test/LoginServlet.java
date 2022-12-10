@@ -19,14 +19,14 @@ public class LoginServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// 获取表单提交的用户名和密码
-		String username = request.getParameter("username");
-		String password = request.getParameter("password");
+		String userName = request.getParameter("userName");
+		String passWord = request.getParameter("passWord");
 
 		// 根据用户名和密码查询用户是否存在
 		TusersDao dao = new TusersDaoImpl();
-		Tusers user = dao.findByUsernameAndPassword(username, password);
+		Tusers user = dao.findByUserNameAndPassWord(userName, passWord);
 
-		if (username.equals("admin")&&password.equals("admin")){
+		if (userName.equals("admin")&&passWord.equals("admin")){
 			// 用户存在，登录成功
 			// 设置会话属性，标识用户已经登录
 			HttpSession session = request.getSession();
