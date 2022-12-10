@@ -8,10 +8,10 @@ public interface TusersDao {
 	// 查询所有 Tusers 数据
 	List<Tusers> findAll();
 
-	Tusers findByUsernameAndPassword(String username, String password);
+	Tusers findByUserNameAndPassWord(String userName, String passWord);
 
 	// 根据 id 查询 Tusers 数据
-	Tusers checkIfExists(String username);
+	Tusers checkIfExists(String userName);
 
 	Tusers findById(String userId);
 

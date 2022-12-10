@@ -18,15 +18,15 @@ public class RegisterServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// 获取请求参数
-		String username = request.getParameter("username");
-		String password = request.getParameter("password");
+		String userName = request.getParameter("userName");
+		String passWord = request.getParameter("passWord");
 
 		// 创建 Tusers 对象
-		Tusers user = new Tusers(username, password);
+		Tusers user = new Tusers(userName, passWord);
 
 		// 创建 TusersDao 对象
 		TusersDao dao = new TusersDaoImpl();
-		Tusers alreadyHave = dao.checkIfExists(username);
+		Tusers alreadyHave = dao.checkIfExists(userName);
 		if (alreadyHave != null) {
 			// 用户名已存在
 			request.setAttribute("RegisterMsg", "用户名已存在");

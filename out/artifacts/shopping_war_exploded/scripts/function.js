@@ -19,14 +19,14 @@ function CheckItem(obj)
 	obj.parentNode.parentNode.className = "";
 	var msgBox = obj.parentNode.getElementsByTagName("span")[0];
 	switch(obj.name) {
-		case "username":
+		case "userName":
 			if(obj.value == "") {
 				msgBox.innerHTML = "用户名不能为空";
 				msgBox.className = "error";
 				return false;
 			}
 			break;
-		case "password":
+		case "passWord":
 			if(obj.value == "") {
 				msgBox.innerHTML = "密码不能为空";
 				msgBox.className = "error";
@@ -38,7 +38,7 @@ function CheckItem(obj)
 				msgBox.innerHTML = "确认密码不能为空";
 				msgBox.className = "error";
 				return false;
-			} else if(obj.value != document.getElementById("password").value) {
+			} else if(obj.value != document.getElementById("passWord").value) {
 				msgBox.innerHTML = "两次输入的密码不相同";
 				msgBox.className = "error";
 				return false;

@@ -57,11 +57,11 @@
 				<table>
 					<tr>
 						<td class="field">用户名：</td>
-						<td><input class="text" type="text" name="username" onfocus="FocusItem(this)" onblur="CheckItem(this);" /><span></span></td>
+						<td><input class="text" type="text" name="userName" onfocus="FocusItem(this)" onblur="CheckItem(this);" /><span></span></td>
 					</tr>
 					<tr>
 						<td class="field">登录密码：</td>
-						<td><input class="text" type="password" id="password" name="password" onfocus="FocusItem(this)" onblur="CheckItem(this);"
+						<td><input class="text" type="password" id="passWord" name="passWord" onfocus="FocusItem(this)" onblur="CheckItem(this);"
 						/><span></span></td>
 					</tr>
 					<tr>

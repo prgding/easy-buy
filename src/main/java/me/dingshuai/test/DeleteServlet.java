@@ -16,10 +16,10 @@ import java.io.IOException;
 public class DeleteServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		if (request.getParameter("userid") != null) {
-			String userid = request.getParameter("userid");
+		if (request.getParameter("userId") != null) {
+			String userId = request.getParameter("userId");
 			TusersDao td = new TusersDaoImpl();
-			td.deleteById(Integer.parseInt(userid));
+			td.deleteById(Integer.parseInt(userId));
 			response.sendRedirect("manage/user.jsp");
 		}else {
 			String msgId = request.getParameter("msgId");

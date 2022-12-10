@@ -21,21 +21,21 @@ public class UpdateUser extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws IOException {
 		// 获取请求参数
-		String userid = request.getParameter("userid");
-		String username = request.getParameter("username");
-		String password = request.getParameter("password");
+		String userId = request.getParameter("userId");
+		String userName = request.getParameter("userName");
+		String passWord = request.getParameter("passWord");
 		String location = request.getParameter("location");
 		String phoneNumber = request.getParameter("phoneNumber");
 
-		System.out.println(userid + " " + username + " " + password + " " + location + " " + phoneNumber);
+		System.out.println(userId + " " + userName + " " + passWord + " " + location + " " + phoneNumber);
 
 		Tusers user1 = (Tusers) request.getSession().getAttribute("user");
 
 		// 创建 Tusers 对象
 		Tusers user = new Tusers();
-		user.setUserId(Integer.parseInt(userid));
-		user.setUsername(username);
-		user.setPassword(password);
+		user.setUserId(Integer.parseInt(userId));
+		user.setUsername(userName);
+		user.setPassword(passWord);
 		user.setLocation(location);
 		user.setPhoneNumber(phoneNumber);
 

@@ -2,7 +2,7 @@
 function DeleteUser(id)
 {
 	if(confirm("确定要删除吗？")) {
-		location.href = "/shopping/delete?userid=" + id;
+		location.href = "/shopping/delete?userId=" + id;
 	}
 }
 function DeleteMsg(id)

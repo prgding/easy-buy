@@ -2,9 +2,9 @@ package me.dingshuai.pojo;
 
 public class Tusers {
 	// 定义属性
-	private int userid;
-	private String username;
-	private String password;
+	private int userId;
+	private String userName;
+	private String passWord;
 	private String location;
 	private String phoneNumber;
 
@@ -13,36 +13,36 @@ public class Tusers {
 	}
 
 	// 提供带参构造方法
-	public Tusers(String username, String password) {
-		this.username = username;
-		this.password = password;
+	public Tusers(String userName, String passWord) {
+		this.userName = userName;
+		this.passWord = passWord;
 		this.location = "";
 		this.phoneNumber = "";
 	}
 
 	// 提供 getter 和 setter 方法
 	public int getUserId() {
-		return userid;
+		return userId;
 	}
 
-	public void setUserId(int userid) {
-		this.userid = userid;
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 
 	public String getUsername() {
-		return username;
+		return userName;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUsername(String userName) {
+		this.userName = userName;
 	}
 
 	public String getPassword() {
-		return password;
+		return passWord;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPassword(String passWord) {
+		this.passWord = passWord;
 	}
 
 	public String getLocation() {

@@ -74,22 +74,22 @@ public class DetailServlet extends HttpServlet {
 		out.println("				<table class='form'>");
 
 
-		String userid = request.getParameter("userid");
+		String userId = request.getParameter("userId");
 		TusersDao td = new TusersDaoImpl();
-		Tusers user = td.findById(userid);
+		Tusers user = td.findById(userId);
 
 		out.println("					<tr>");
 		out.println("						<td class='field'>userId：</td>");
-		out.println("						<td><input type='text' class='text' name='userid' value='"+user.getUserId()+"' readonly='readonly' " +
+		out.println("						<td><input type='text' class='text' name='userId' value='"+user.getUserId()+"' readonly='readonly' " +
 				"/></td>");
 		out.println("					</tr>");
 		out.println("					<tr>");
 		out.println("						<td class='field'>用户名：</td>");
-		out.println("						<td><input type='text' class='text' name='username' value='"+user.getUsername()+"' /></td>");
+		out.println("						<td><input type='text' class='text' name='userName' value='"+user.getUsername()+"' /></td>");
 		out.println("					</tr>");
 		out.println("					<tr>");
 		out.println("						<td class='field'>密码：</td>");
-		out.println("						<td><input type='text' class='text' name='password' value='"+user.getPassword()+"' /></td>");
+		out.println("						<td><input type='text' class='text' name='passWord' value='"+user.getPassword()+"' /></td>");
 		out.println("					</tr>");
 		out.println("					<tr>");
 		out.println("						<td class='field'>送货地址：</td>");
