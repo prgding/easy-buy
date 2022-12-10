@@ -10,6 +10,16 @@ public class Tmessages {
 	private String msgContent;
 	private String msgStatus;
 
+	private String msgReplyContent;
+
+	public String getMsgReplyContent() {
+		return msgReplyContent;
+	}
+
+	public void setMsgReplyContent(String msgReplyContent) {
+		this.msgReplyContent = msgReplyContent;
+	}
+
 	public Tmessages() {
 	}
 

@@ -45,6 +45,7 @@ public class TusersDaoImpl implements TusersDao {
 				user.setPassword(rs.getString("password"));
 				user.setLocation(rs.getString("location"));
 				user.setPhoneNumber(rs.getString("phoneNumber"));
+
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

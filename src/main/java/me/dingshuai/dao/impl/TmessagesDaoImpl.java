@@ -31,6 +31,7 @@ public class TmessagesDaoImpl implements TmessagesDao {
 				Tmessages.setMsgTitle(rs.getString("msgTitle"));
 				Tmessages.setMsgContent(rs.getString("msgContent"));
 				Tmessages.setMsgStatus(rs.getString("msgStatus"));
+				Tmessages.setMsgReplyContent(rs.getString("msgReplyContent"));
 				list.add(Tmessages);
 			}
 		} catch (Exception e) {
@@ -46,14 +47,13 @@ public class TmessagesDaoImpl implements TmessagesDao {
 		int status = 0;
 		Connection conn = null;
 		PreparedStatement ps = null;
-		String sql = "insert into tmessages(msgId,msgSender,msgContent,msgStatus) values(?,?,?,?)";
+		String sql = "insert into tmessages(msgSender,msgTitle,msgContent) values(?,?,?)";
 		try {
 			conn = DButil.getConnection();
 			ps = conn.prepareStatement(sql);
-			ps.setInt(1, msg.getMsgId());
-			ps.setString(2, msg.getMsgContent());
+			ps.setString(1, msg.getMsgSender());
+			ps.setString(2, msg.getMsgTitle());
 			ps.setString(3, msg.getMsgContent());
-			ps.setString(4, msg.getMsgStatus());
 			ps.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
