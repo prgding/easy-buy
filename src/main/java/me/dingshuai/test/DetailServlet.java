@@ -32,7 +32,7 @@ public class DetailServlet extends HttpServlet {
 		out.println("	<div class='help'><a href='index.jsp'>返回前台页面</a></div>");
 		out.println("	<div class='navbar'>");
 		out.println("		<ul class='clearfix'>");
-		out.println("			<li><a href='index.html'>首页</a></li>");
+		out.println("			<li><a href='index.jsp'>首页</a></li>");
 		out.println("			<li class='current'><a href='user.jsp'>用户</a></li>");
 		out.println("			<li><a href='product.html'>商品</a></li>");
 		out.println("			<li><a href='order.html'>订单</a></li>");
@@ -47,7 +47,7 @@ public class DetailServlet extends HttpServlet {
 		out.println("	</div>");
 		out.println("</div>");
 		out.println("<div id='position' class='wrap'>");
-		out.println("	您现在的位置：<a href='index.html'>易买网</a> &gt; 管理后台");
+		out.println("	您现在的位置：<a href='index.jsp'>易买网</a> &gt; 管理后台");
 		out.println("</div>");
 		out.println("<div id='main' class='wrap'>");
 		out.println("	<div id='menu-mng' class='lefter'>");

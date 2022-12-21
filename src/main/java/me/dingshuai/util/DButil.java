@@ -1,15 +1,15 @@
 package me.dingshuai.util;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
+import java.util.ResourceBundle;
 
 public class DButil {
-	static String driver = "com.mysql.cj.jdbc.Driver";
-	static String url = "jdbc:mysql://localhost:3306/shopping";
-	static String username = "root";
-	static String passwd = "111";
+
+	private static ResourceBundle bundle = ResourceBundle.getBundle("jdbc");
+	static String driver = bundle.getString("driver");
+	static String url = bundle.getString("url");
+	static String username = bundle.getString("username");
+	static String passwd = bundle.getString("passwd");
 
 	public static Connection getConnection() {
 		Connection conn = null;
