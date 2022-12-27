@@ -17,11 +17,11 @@
     <div class="help"><a href="../index.jsp">返回前台页面</a></div>
     <div class="navbar">
         <ul class="clearfix">
-            <li><a href="index.html">首页</a></li>
-            <li class="current"><a href="user.jsp">用户</a></li>
+            <li><a href="index.jsp">首页</a></li>
+            <li class="current"><a href="<%=request.getContextPath()%>/showUsers">用户</a></li>
             <li><a href="product.html">商品</a></li>
             <li><a href="order.html">订单</a></li>
-            <li><a href="guestbook.jsp">留言</a></li>
+            <li><a href="<%=request.getContextPath()%>/showMsg">留言</a></li>
             <li><a href="news.html">新闻</a></li>
         </ul>
     </div>
@@ -32,7 +32,7 @@
     </div>
 </div>
 <div id="position" class="wrap">
-    您现在的位置：<a href="index.html">易买网</a> &gt; 管理后台
+    您现在的位置：<a href="index.jsp">易买网</a> &gt; 管理后台
 </div>
 <div id="main" class="wrap">
     <div id="menu-mng" class="lefter">
@@ -64,22 +64,24 @@
                     <th>手机号</th>
                     <th>操作</th>
                 </tr>
-                <%
-                    TusersDao td = new TusersDaoImpl();
-                    List<Tusers> tusers = td.findAll();
-                    for (Tusers tuser : tusers) {
-                        out.println("<tr>");
-                        out.println("	<td class='first w4 c'>" + tuser.getUserId() + "</td>");
-                        out.println("	<td class='w1 c'>" + tuser.getUsername() + "</td>");
-                        out.println("	<td class='w2 c'>" + tuser.getPassword() + "</td>");
-                        out.println("	<td class='w3 c'>" + tuser.getLocation() + "</td>");
-                        out.println("	<td class='w4 c'>" + tuser.getPhoneNumber() + "</td>");
-                        out.println("	<td class='w1 c'><a href='/shopping/detail?userId=" + tuser.getUserId() +
-                                "'>修改</a> <a href='javascript:DeleteUser(" + tuser.getUserId() + ");" +
-                                "'>删除</a></td>");
-                        out.println("</tr>");
-                    }
-                %>
+            <%
+                List<Tusers> users = (List<Tusers>)session.getAttribute("users");
+                for (Tusers user : users) {
+            %>
+                <tr>
+                    <td class='first w4 c'><%=user.getUserId()%></td>
+                    <td class='w1 c'><%=user.getUsername()%></td>
+                    <td class='w2 c'><%=user.getPassword()%></td>
+                    <td class='w3 c'><%=user.getLocation()%></td>
+                    <td class='w4 c'><%=user.getPhoneNumber()%></td>
+                    <td class='w1 c'>
+                        <a href='<%=request.getContextPath()%>/detail?userId=<%=user.getUserId()%>'>修改</a>
+                        <a href='javascript:DeleteUser(<%=user.getUserId()%>);'>删除</a>
+                    </td>
+                </tr>
+
+            <%}%>
+
             </table>
         </div>
     </div>

@@ -21,10 +21,10 @@
             if (user != null) {
                 // 如果用户已登录，显示用户相关信息
                 out.print("欢迎您，" + user.getUsername() + " ");
-                out.println("<a href='userinfo.jsp'>修改个人信息</a>");
+                out.println("<a href='user-modify.jsp'>修改个人信息</a>");
                 out.print("<a href='logout.jsp'>注销</a>");
                 if (user.getUsername().equals("admin")) {
-                    out.print("<a href='manage/index.html'>进入管理后台</a>");
+                    out.print("<a href='manage/index.jsp'>进入管理后台</a>");
                 }
             } else {
                 // 如果用户未登录，显示登录和注册按钮
@@ -130,7 +130,7 @@
                 </ul>
             </div>
             <div id="reply-box">
-                <form action="addmsg" method="post">
+                <form action="addMsg" method="post">
                     <table>
                         <tr>
                             <td class="field">昵称：</td>
