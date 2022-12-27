@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>shoppoing2</artifactId>
+    <artifactId>shoppoing</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -19,7 +19,7 @@
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-catalina</artifactId>
-            <version>10.1.2</version>
+            <version>10.1.4</version>
             <scope>provided</scope>
         </dependency>
 
