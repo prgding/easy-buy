@@ -16,19 +16,28 @@
 <%
 		Tusers user = (Tusers) session.getAttribute("user");
 		if (user != null) {
-			// 如果用户已登录，显示用户相关信息
-			out.print("欢迎您，" + user.getUsername() + " ");
-			out.println("<a href='user-modify.jsp'>修改个人信息</a>");
-			out.print("<a href='logout.jsp'>注销</a>");
-			if (user.getUsername().equals("admin")){
-				out.print("<a href='manage/index.jsp'>进入管理后台</a>");
+			// 如果用户已登录，显示用户相关信息%>
+
+			欢迎您，<%=user.getUsername()%>
+			<a href='user-modify.jsp'>修改个人信息</a>
+			<a href='<%=request.getContextPath()%>/exit'>注销</a>
+
+		<%if (user.getUsername().equals("admin")){%>
+
+			<a href='manage/index.jsp'>进入管理后台</a>
+
+		<%
 			}
 		}
 		 else {
 			// 如果用户未登录，显示登录和注册按钮
-			out.print("<a href='login.jsp'>登录</a> <a href='register.jsp'>注册</a>");
-		}
-%>
+		%>
+
+			<a href='login.jsp'>登录</a>
+			<a href='register.jsp'>注册</a>
+
+	<%}%>
+
 		<a href="guestbook.jsp">留言</a></div>
 	<div class="navbar">
 		<ul class="clearfix">

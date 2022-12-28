@@ -1,0 +1,51 @@
+package me.dingshuai.test;
+
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.*;
+import me.dingshuai.dao.TusersDao;
+import me.dingshuai.dao.impl.TusersDaoImpl;
+import me.dingshuai.pojo.Tusers;
+
+import java.io.IOException;
+
+@WebServlet(name = "WelcomeServlet", urlPatterns = {"/welcome"})
+public class WelcomeServlet extends HttpServlet {
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		Cookie[] cookies = request.getCookies();
+		String username = null;
+		String password = null;
+
+		if (cookies != null) {
+			for (Cookie cookie : cookies) {
+				String name = cookie.getName();
+				if (name.equals("username")) {
+					username = cookie.getValue();
+				} else if (name.equals("password")) {
+					password = cookie.getValue();
+				}
+			}
+		}
+
+		if (username != null && password != null) {
+			TusersDao td = new TusersDaoImpl();
+			Tusers user = td.findByUserNameAndPassWord(username, password);
+			if (user != null) {
+				HttpSession session = request.getSession();
+				session.setAttribute("user", user);
+
+				if (user.getUsername().equals("admin")) {
+					// 跳转到用户信息页面
+					response.sendRedirect("manage/index.jsp");
+				} else {
+					// 跳转到用户信息页面
+					response.sendRedirect("index.jsp");
+				}
+			} else {
+				response.sendRedirect(request.getContextPath() + "/index.jsp");
+			}
+		} else {
+			response.sendRedirect(request.getContextPath() + "/index.jsp");
+		}
+	}
+}

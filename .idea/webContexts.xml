@@ -5,6 +5,7 @@
       <map>
         <entry key="file://$PROJECT_DIR$/web/manage/detail.jsp" value="file://$PROJECT_DIR$/web/manage" />
         <entry key="file://$PROJECT_DIR$/web/manage/guestbook.jsp" value="file://$PROJECT_DIR$/web/manage" />
+        <entry key="file://$PROJECT_DIR$/web/manage/index.jsp" value="file://$PROJECT_DIR$/web/manage" />
         <entry key="file://$PROJECT_DIR$/web/manage/user.jsp" value="file://$PROJECT_DIR$/web/manage" />
       </map>
     </option>
