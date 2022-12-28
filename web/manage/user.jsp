@@ -2,8 +2,10 @@
 <%@ page import="me.dingshuai.dao.impl.TusersDaoImpl" %>
 <%@ page import="me.dingshuai.pojo.Tusers" %>
 <%@ page import="java.util.List" %>
+<%@ page import="java.time.format.DateTimeFormatter" %>
+<%@ page import="java.time.LocalDateTime" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -27,8 +29,13 @@
     </div>
 </div>
 <div id="childNav">
-    <div class="welcome wrap">
-        管理员admin您好，今天是2022-12-09，欢迎回到管理后台。
+    <div class='welcome wrap'>
+        <%
+            LocalDateTime now = LocalDateTime.now();
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            String format = formatter.format(now);
+        %>
+        管理员admin您好，今天是<%=format%>，欢迎回到管理后台。
     </div>
 </div>
 <div id="position" class="wrap">

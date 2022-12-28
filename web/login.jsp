@@ -61,11 +61,22 @@
                         <td class="field">登录密码：</td>
                         <td><input class="text" type="password" id="passWord" name="passWord" onfocus="FocusItem(this)"
                                    onblur="CheckItem(this);"/><span></span></td>
+
                     </tr>
 
                     <tr>
                         <td></td>
-                        <td><label class="ui-green"><input type="submit" name="submit" value="立即登录"/></label></td>
+                        <td>
+                            <input type="checkbox" name="tenDaysLogin" value="10"/>10天免登陆
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+
+                        <td>
+                            <label class="ui-green"><input type="submit" name="submit" value="立即登录"/></label>
+                        </td>
                     </tr>
                 </table>
 				<% String errorMessage = (String) request.getAttribute("errorMessage"); %>

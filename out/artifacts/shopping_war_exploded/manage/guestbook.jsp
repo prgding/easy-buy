@@ -2,6 +2,8 @@
 <%@ page import="me.dingshuai.dao.TmessagesDao" %>
 <%@ page import="me.dingshuai.dao.impl.TmessagesDaoImpl" %>
 <%@ page import="me.dingshuai.pojo.Tmessages" %>
+<%@ page import="java.time.format.DateTimeFormatter" %>
+<%@ page import="java.time.LocalDateTime" %>
 <%@ page contentType="text/html;charset=UTF-8"%>
 <!DOCTYPE html>
 <head>
@@ -26,8 +28,13 @@
     </div>
 </div>
 <div id="childNav">
-    <div class="welcome wrap">
-        管理员admin您好，今天是2022-12-21，欢迎回到管理后台。
+    <div class='welcome wrap'>
+        <%
+            LocalDateTime now = LocalDateTime.now();
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            String format = formatter.format(now);
+        %>
+        管理员admin您好，今天是<%=format%>，欢迎回到管理后台。
     </div>
 </div>
 <div id="position" class="wrap">

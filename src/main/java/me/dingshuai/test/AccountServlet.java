@@ -3,17 +3,14 @@ package me.dingshuai.test;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
+import jakarta.servlet.http.*;
 import me.dingshuai.dao.TusersDao;
 import me.dingshuai.dao.impl.TusersDaoImpl;
 import me.dingshuai.pojo.Tusers;
 
 import java.io.IOException;
 
-@WebServlet(name = "AccountServlet", urlPatterns = {"/login", "/register"})
+@WebServlet(name = "AccountServlet", urlPatterns = {"/login", "/register", "/exit"})
 public class AccountServlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -21,8 +18,11 @@ public class AccountServlet extends HttpServlet {
 		switch (servletPath) {
 			case "/login" -> doLogin(request, response);
 			case "/register" -> doRegister(request, response);
+			case "/exit" -> doExit(request, response);
 		}
 	}
+
+
 	private void doLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 获取表单提交的用户名和密码
 		String userName = request.getParameter("userName");
@@ -38,22 +38,34 @@ public class AccountServlet extends HttpServlet {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
 			dispatcher.forward(request, response);
 
-		} else if (user.getUsername().equals("admin")) {
-			// 用户存在，登录成功
-			// 设置会话属性，标识用户已经登录
-			HttpSession session = request.getSession();
-			session.setAttribute("user", user);
-
-			// 跳转到用户信息页面
-			response.sendRedirect("manage/index.jsp");
 		} else if (user != null) {
 			// 用户存在，登录成功
 			// 设置会话属性，标识用户已经登录
 			HttpSession session = request.getSession();
 			session.setAttribute("user", user);
 
-			// 跳转到用户信息页面
-			response.sendRedirect("index.jsp");
+			String tenDaysLogin = request.getParameter("tenDaysLogin");
+			if (tenDaysLogin.equals("10")) {
+				Cookie cookie1 = new Cookie("username", userName);
+				Cookie cookie2 = new Cookie("password", passWord);
+
+				cookie1.setMaxAge(60 * 60 * 24 * 10);
+				cookie2.setMaxAge(60 * 60 * 24 * 10);
+
+				cookie1.setPath(request.getContextPath());
+				cookie2.setPath(request.getContextPath());
+
+				response.addCookie(cookie1);
+				response.addCookie(cookie2);
+			}
+
+			if (user.getUsername().equals("admin")) {
+				// 跳转到用户信息页面
+				response.sendRedirect("manage/index.jsp");
+			} else {
+				// 跳转到用户信息页面
+				response.sendRedirect("index.jsp");
+			}
 		}
 	}
 
@@ -79,5 +91,14 @@ public class AccountServlet extends HttpServlet {
 			// 重定向到 userinfo.jsp 页面
 			response.sendRedirect("index.jsp");
 		}
+	}
+
+	private void doExit(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		// 销毁会话
+		HttpSession session = request.getSession(false);
+		session.invalidate();
+
+		// 重定向到首页
+		response.sendRedirect("index.jsp");
 	}
 }
