@@ -17,7 +17,7 @@ import me.dingshuai.pojo.Tusers;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "ShopServlet", urlPatterns = {"/addMsg", "/showMsg", "/delete", "/detail", "/reply", "/updateMsg"})
+@WebServlet(name = "ShopServlet", urlPatterns = {"/addMsg", "/showMsg", "/manageMsg", "/delete", "/detail", "/reply", "/updateMsg"})
 public class ShopServlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -27,6 +27,7 @@ public class ShopServlet extends HttpServlet {
 			switch (servletPath) {
 				case "/addMsg" -> doAddMsg(request, response);
 				case "/showMsg" -> doShowMsg(request, response);
+				case "/manageMsg" -> doManageMsg(request, response);
 				case "/delete" -> doDel(request, response);
 				case "/detail" -> doDetail(request, response);
 				case "/reply" -> doReply(request, response);
@@ -55,6 +56,14 @@ public class ShopServlet extends HttpServlet {
 	}
 
 	private void doShowMsg(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		TmessagesDao td = new TmessagesDaoImpl();
+		List<Tmessages> tmessages = td.findAll();
+		HttpSession session = request.getSession(false);
+		session.setAttribute("tmessages", tmessages);
+		response.sendRedirect("guestbook.jsp");
+	}
+
+	private void doManageMsg(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		TmessagesDao td = new TmessagesDaoImpl();
 		List<Tmessages> tmessages = td.findAll();
 		HttpSession session = request.getSession(false);
@@ -101,8 +110,6 @@ public class ShopServlet extends HttpServlet {
 		String msgContent = request.getParameter("msgContent");
 		String msgReplyContent = request.getParameter("msgReplyContent");
 
-		System.out.println(msgId + " " + msgSender + " " + msgContent + " " + msgReplyContent);
-
 		// 创建 Tusers 对象
 		Tmessages tm = new Tmessages();
 		tm.setMsgId(Integer.parseInt(msgId));
@@ -123,7 +130,7 @@ public class ShopServlet extends HttpServlet {
 		dao.updateMsg(tm);
 
 		// 重定向
-		response.sendRedirect(request.getContextPath()+"/showMsg");
+		response.sendRedirect(request.getContextPath()+"/manageMsg");
 	}
 
 }

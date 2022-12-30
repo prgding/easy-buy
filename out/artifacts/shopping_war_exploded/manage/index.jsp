@@ -1,6 +1,5 @@
-<%@ page import="java.time.format.DateTimeFormatter" %>
-<%@ page import="java.time.LocalDateTime" %>
 <%@ page contentType="text/html;charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -16,22 +15,17 @@
 	<div class="navbar">
 		<ul class="clearfix">
 			<li class="current"><a href="index.jsp">首页</a></li>
-			<li><a href="<%=request.getContextPath()%>/showUsers">用户</a></li>
+			<li><a href="${pageContext.request.contextPath}/showUsers">用户</a></li>
 			<li><a href="product.html">商品</a></li>
 			<li><a href="order.html">订单</a></li>
-			<li><a href="<%=request.getContextPath()%>/showMsg">留言</a></li>
+			<li><a href="${pageContext.request.contextPath}/manageMsg">留言</a></li>
 			<li><a href="news.html">新闻</a></li>
 		</ul>
 	</div>
 </div>
 <div id="childNav">
 	<div class='welcome wrap'>
-		<%
-			LocalDateTime now = LocalDateTime.now();
-			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-			String format = formatter.format(now);
-		%>
-		管理员admin您好，今天是<%=format%>，欢迎回到管理后台。
+		管理员admin您好，今天是${date}，欢迎回到管理后台。
 	</div>
 </div>
 <div id="position" class="wrap">

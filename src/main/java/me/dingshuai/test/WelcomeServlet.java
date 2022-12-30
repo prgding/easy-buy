@@ -7,11 +7,17 @@ import me.dingshuai.dao.impl.TusersDaoImpl;
 import me.dingshuai.pojo.Tusers;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @WebServlet(name = "WelcomeServlet", urlPatterns = {"/welcome"})
 public class WelcomeServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		LocalDateTime now = LocalDateTime.now();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+		String format = formatter.format(now);
+
 		Cookie[] cookies = request.getCookies();
 		String username = null;
 		String password = null;
@@ -33,6 +39,7 @@ public class WelcomeServlet extends HttpServlet {
 			if (user != null) {
 				HttpSession session = request.getSession();
 				session.setAttribute("user", user);
+				session.setAttribute("date", format);
 
 				if (user.getUsername().equals("admin")) {
 					// 跳转到用户信息页面

@@ -61,11 +61,16 @@ public class UserServlet extends HttpServlet {
 
 		// 刷新session
 		try {
+			HttpSession session = request.getSession();
+			session.setAttribute("user", user);
 			if (user1.getUsername().equals("admin")) {
-				response.sendRedirect(request.getContextPath() + "/showUsers");
+				String page = request.getParameter("page");
+				if ("user-modify".equals(page)){
+					response.sendRedirect("index.jsp");
+				}else {
+					response.sendRedirect(request.getContextPath() + "/showUsers");
+				}
 			} else {
-				HttpSession session = request.getSession();
-				session.setAttribute("user", user);
 				response.sendRedirect("index.jsp");
 			}
 		} catch (Exception e) {
