@@ -45,7 +45,7 @@ public class AccountServlet extends HttpServlet {
 			session.setAttribute("user", user);
 
 			String tenDaysLogin = request.getParameter("tenDaysLogin");
-			if (tenDaysLogin.equals("10")) {
+			if ("10".equals(tenDaysLogin)) {
 				Cookie cookie1 = new Cookie("username", userName);
 				Cookie cookie2 = new Cookie("password", passWord);
 

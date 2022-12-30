@@ -4,7 +4,9 @@
 <%@ page import="me.dingshuai.pojo.Tmessages" %>
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -16,23 +18,22 @@
 <div id="header" class="wrap">
     <div id="logo"><img src="images/logo.gif"/></div>
     <div class="help">
-        <%
-            Tusers user = (Tusers) session.getAttribute("user");
-            if (user != null) {
-                // 如果用户已登录，显示用户相关信息
-                out.print("欢迎您，" + user.getUsername() + " ");
-                out.println("<a href='user-modify.jsp'>修改个人信息</a>");
-                out.print("<a href='logout.jsp'>注销</a>");
-                if (user.getUsername().equals("admin")) {
-                    out.print("<a href='manage/index.jsp'>进入管理后台</a>");
-                }
-            } else {
-                // 如果用户未登录，显示登录和注册按钮
-                out.print("<a href='login.jsp'>登录</a> <a href='register.jsp'>注册</a>");
-            }
-        %>
 
-        <a href="guestbook.jsp">留言</a></div>
+        <c:if test="${not empty user}">
+            欢迎您，${user.username}
+            <a href='user-modify.jsp'>修改个人信息</a>
+            <a href='${pageContext.request.contextPath}/exit'>注销</a>
+            <c:if test="${user.username == 'admin'}">
+                <a href='manage/index.jsp'>进入管理后台</a>
+            </c:if>
+        </c:if>
+
+        <c:if test="${empty user}">
+            <a href='login.jsp'>登录</a>
+            <a href='register.jsp'>注册</a>
+        </c:if>
+
+        <a href="${pageContext.request.contextPath}/showMsg">留言</a></div>
     <div class="navbar">
         <ul class="clearfix">
             <li class="current"><a href="#">首页</a></li>
@@ -98,24 +99,19 @@
         <div class="guestbook">
             <h2>全部留言</h2>
             <ul>
-
-                <%
-                    TmessagesDao td = new TmessagesDaoImpl();
-                    List<Tmessages> tmessages = td.findAll();
-                    for (Tmessages tmessage : tmessages) {
-                        out.println("				<li>");
-                        out.println("					<dl>");
-                        out.println("						<dt>" + tmessage.getMsgContent() + "</dt>");
-                        out.println("						<dd class='author'>网友：" + tmessage.getMsgSender() +
-                                "<span class='timer'>标题：" + tmessage.getMsgTitle() + "</span>  &emsp;&nbsp;状态：" + tmessage.getMsgStatus() + "</dd>");
-                        out.println("						<dd>" + tmessage.getMsgReplyContent() + "</dd>");
-                        out.println("					</dl>");
-                        out.println("				</li>");
-                    }
-
-
-                %>
-
+                <c:forEach items="${tmessages}" var="msg">
+                    <li>
+                        <dl>
+                            <dt>${msg.msgContent}</dt>
+                            <dd class='author'>
+                                网友：${msg.msgSender}
+                                <span class='timer'>标题：${msg.msgTitle}</span>&emsp;&nbsp;
+                                状态：${msg.msgStatus}
+                            </dd>
+                            <dd>${msg.msgReplyContent}</dd>
+                        </dl>
+                    </li>
+                </c:forEach>
             </ul>
             <div class="clear"></div>
             <div class="pager">
