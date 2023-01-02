@@ -25,7 +25,7 @@
 		</div>
 		<div id="childNav">
 			<div class='welcome wrap'>
-				管理员admin您好，今天是${date}，欢迎回到管理后台。
+				管理员admin您好，今天是${date}，欢迎回到管理后台。<br>
 			</div>
 		</div>
 		<div id="position" class="wrap">
@@ -58,6 +58,9 @@
 						<div class="box">
 							<div class="msg">
 								<p>欢迎回来</p>
+								<p>当前在线人数：${onlineUser}人
+									<br>(待优化，因为关闭浏览器 session 没有自动销毁)</p>
+								<p>当前已登录人数：${loggedInUser}人</p>
 							</div>
 						</div>
 					</div>

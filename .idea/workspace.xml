@@ -10,27 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c979057-edd9-4904-8b74-81638d2d1c44" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_19_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mysql_mysql_connector_j_8_0_31.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shopping.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shopping.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Tusers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Tusers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/AccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/AccountServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/ShopServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/ShopServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/UserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/WelcomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/WelcomeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/guestbook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/guestbook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/manage/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/manage/guestbook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/guestbook.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/manage/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/manage/reply.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/reply.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/manage/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/scripts/function-manage.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/scripts/function-manage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/user-modify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/user-modify.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,7 +268,7 @@
       <workItem from="1672330503792" duration="12289000" />
       <workItem from="1672551065832" duration="598000" />
       <workItem from="1672563865311" duration="10952000" />
-      <workItem from="1672649260188" duration="6814000" />
+      <workItem from="1672649260188" duration="10725000" />
     </task>
     <servers />
   </component>

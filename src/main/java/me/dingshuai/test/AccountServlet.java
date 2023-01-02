@@ -97,7 +97,10 @@ public class AccountServlet extends HttpServlet {
 		System.out.println("doExit 方法执行");
 		// 销毁会话
 		HttpSession session = request.getSession(false);
+
 		session.invalidate();
+
+
 
 		// 销毁 cookie
 		Cookie[] cookies = request.getCookies();
