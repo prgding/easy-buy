@@ -16,10 +16,10 @@
 			<div class="navbar">
 				<ul class="clearfix">
 					<li><a href="index.jsp">首页</a></li>
-					<li class="current"><a href="<%=request.getContextPath()%>/showUsers">用户</a></li>
+					<li class="current"><a href="${pageContext.request.contextPath}/user/show">用户</a></li>
 					<li><a href="product.html">商品</a></li>
 					<li><a href="order.html">订单</a></li>
-					<li><a href="${pageContext.request.contextPath}/manageMsg">留言</a></li>
+					<li><a href="${pageContext.request.contextPath}/shop/manageMsg">留言</a></li>
 					<li><a href="news.html">新闻</a></li>
 				</ul>
 			</div>
@@ -71,7 +71,7 @@
 								<td class='w3 c'>${user.location}</td>
 								<td class='w4 c'>${user.phoneNumber}</td>
 								<td class='w1 c'>
-									<a href="${pageContext.request.contextPath}/detail?userId=${user.userId}">修改</a>
+									<a href="${pageContext.request.contextPath}/shop/detail?userId=${user.userId}">修改</a>
 									<a href="javascript:DeleteUser(${user.userId});">删除</a>
 								</td>
 							</tr>

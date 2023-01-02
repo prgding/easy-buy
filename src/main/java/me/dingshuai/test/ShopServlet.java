@@ -17,26 +17,19 @@ import me.dingshuai.pojo.Tusers;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "ShopServlet", urlPatterns = {"/addMsg", "/showMsg", "/manageMsg", "/delete", "/detail", "/reply", "/updateMsg"})
+@WebServlet(name = "ShopServlet", urlPatterns = {"/shop/addMsg", "/shop/showMsg", "/shop/manageMsg", "/shop/delete", "/shop/detail", "/shop/reply", "/shop/updateMsg"})
 public class ShopServlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		String servletPath = request.getServletPath();
-		HttpSession session = request.getSession(false);
-		if (session != null && session.getAttribute("user") != null) {
-			switch (servletPath) {
-				case "/addMsg" -> doAddMsg(request, response);
-				case "/showMsg" -> doShowMsg(request, response);
-				case "/manageMsg" -> doManageMsg(request, response);
-				case "/delete" -> doDel(request, response);
-				case "/detail" -> doDetail(request, response);
-				case "/reply" -> doReply(request, response);
-				case "/updateMsg" -> doUpdateMsg(request, response);
-			}
-		} else {
-			request.setAttribute("errorMessage", "未登陆或session失效，请重新登陆");
-			RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
-			dispatcher.forward(request, response);
+		switch (servletPath) {
+			case "/shop/addMsg" -> doAddMsg(request, response);
+			case "/shop/showMsg" -> doShowMsg(request, response);
+			case "/shop/manageMsg" -> doManageMsg(request, response);
+			case "/shop/delete" -> doDel(request, response);
+			case "/shop/detail" -> doDetail(request, response);
+			case "/shop/reply" -> doReply(request, response);
+			case "/shop/updateMsg" -> doUpdateMsg(request, response);
 		}
 	}
 
@@ -52,7 +45,7 @@ public class ShopServlet extends HttpServlet {
 		tm.setMsgContent(guestContent);
 		td.addMsg(tm);
 
-		response.sendRedirect("guestbook.jsp");
+		response.sendRedirect(request.getContextPath() + "/shop/showMsg");
 	}
 
 	private void doShowMsg(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -60,7 +53,7 @@ public class ShopServlet extends HttpServlet {
 		List<Tmessages> tmessages = td.findAll();
 		HttpSession session = request.getSession(false);
 		session.setAttribute("tmessages", tmessages);
-		response.sendRedirect("guestbook.jsp");
+		response.sendRedirect(request.getContextPath() + "/guestbook.jsp");
 	}
 
 	private void doManageMsg(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -68,7 +61,7 @@ public class ShopServlet extends HttpServlet {
 		List<Tmessages> tmessages = td.findAll();
 		HttpSession session = request.getSession(false);
 		session.setAttribute("tmessages", tmessages);
-		response.sendRedirect("manage/guestbook.jsp");
+		response.sendRedirect(request.getContextPath() + "/manage/guestbook.jsp");
 	}
 
 	private void doDel(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -76,12 +69,12 @@ public class ShopServlet extends HttpServlet {
 			String userId = request.getParameter("userId");
 			TusersDao td = new TusersDaoImpl();
 			td.deleteById(Integer.parseInt(userId));
-			response.sendRedirect(request.getContextPath() + "/showUsers");
+			response.sendRedirect(request.getContextPath() + "/user/show");
 		} else {
 			String msgId = request.getParameter("msgId");
 			TmessagesDao td = new TmessagesDaoImpl();
 			td.deleteById(Integer.parseInt(msgId));
-			response.sendRedirect(request.getContextPath() + "/showMsg");
+			response.sendRedirect(request.getContextPath() + "/shop/manageMsg");
 		}
 	}
 
@@ -90,7 +83,7 @@ public class ShopServlet extends HttpServlet {
 		TusersDao td = new TusersDaoImpl();
 		Tusers user = td.findById(userId);
 		request.setAttribute("user", user);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("manage/detail.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/manage/detail.jsp");
 		dispatcher.forward(request, response);
 	}
 
@@ -99,7 +92,7 @@ public class ShopServlet extends HttpServlet {
 		TmessagesDao td = new TmessagesDaoImpl();
 		Tmessages tm = td.findById(Integer.parseInt(msgId));
 		request.setAttribute("msg", tm);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("manage/reply.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/manage/reply.jsp");
 		dispatcher.forward(request, response);
 	}
 
@@ -130,7 +123,6 @@ public class ShopServlet extends HttpServlet {
 		dao.updateMsg(tm);
 
 		// 重定向
-		response.sendRedirect(request.getContextPath()+"/manageMsg");
+		response.sendRedirect(request.getContextPath() + "/shop/manageMsg");
 	}
-
 }

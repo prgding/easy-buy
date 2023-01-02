@@ -5,8 +5,8 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<title>在线购物网 - 首页</title>
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
-		<script type="text/javascript" src="scripts/function.js"></script>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css"/>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/function.js"></script>
 		<style>
             p {
                 text-align: center;
@@ -16,12 +16,13 @@
                 text-align: center;
             }
 		</style>
+<%--		<base href="${pageContext.request.serverPort}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}">--%>
 
 
 	</head>
 	<body>
 		<div id="header" class="wrap">
-			<div id="logo"><img src="images/logo.gif"/></div>
+			<div id="logo"><img src="${pageContext.request.contextPath}/images/logo.gif"/></div>
 			<div class="help">
 				<a href="#" class="shopping">购物车</a>
 				<a href="login.jsp">登录</a>
@@ -66,7 +67,7 @@
 				<em class="corner rt"></em>
 				<div class="box">
 					<h1>欢迎回到易买网</h1>
-					<form id="loginForm" method="post" action="login" onsubmit="return checkForm(this)">
+					<form id="loginForm" method="post" action="account/login" onsubmit="return checkForm(this)">
 						<table>
 							<tr>
 								<td class="field">用户名：</td>

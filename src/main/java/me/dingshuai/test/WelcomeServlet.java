@@ -43,10 +43,10 @@ public class WelcomeServlet extends HttpServlet {
 
 				if (user.getUsername().equals("admin")) {
 					// 跳转到用户信息页面
-					response.sendRedirect("manage/index.jsp");
+					response.sendRedirect(request.getContextPath() + "/manage/index.jsp");
 				} else {
 					// 跳转到用户信息页面
-					response.sendRedirect("index.jsp");
+					response.sendRedirect(request.getContextPath() + "index.jsp");
 				}
 			} else {
 				response.sendRedirect(request.getContextPath() + "/index.jsp");

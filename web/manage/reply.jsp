@@ -4,20 +4,20 @@
 <head>
 	<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
 	<title>后台管理 - 在线购物网</title>
-	<link type='text/css' rel='stylesheet' href='css/style.css'/>
-	<script type='text/javascript' src='scripts/function-manage.js'></script>
+	<link type='text/css' rel='stylesheet' href='../css/style.css'/>
+	<script type='text/javascript' src='../scripts/function-manage.js'></script>
 </head>
 <body>
 	<div id='header' class='wrap'>
-		<div id='logo'><img src='images/logo.gif'/></div>
+		<div id='logo'><img src='../images/logo.gif'/></div>
 		<div class='help'><a href='index.jsp'>返回前台页面</a></div>
 		<div class='navbar'>
 			<ul class='clearfix'>
 				<li><a href='index.jsp'>首页</a></li>
-				<li><a href='user.jsp'>用户</a></li>
+				<li><a href='${pageContext.request.contextPath}/user/show'>用户</a></li>
 				<li><a href='product.html'>商品</a></li>
 				<li><a href='order.html'>订单</a></li>
-				<li class='current'><a href='guestbook.jsp'>留言</a></li>
+				<li class='current'><a href='${pageContext.request.contextPath}/shop/manageMsg'>留言</a></li>
 				<li><a href='news.html'>新闻</a></li>
 			</ul>
 		</div>
@@ -51,7 +51,7 @@
 		<div class='main'>
 			<h2>回复留言</h2>
 			<div class='manage'>
-				<form action='${pageContext.request.contextPath}/updateMsg' method='post'>
+				<form action='updateMsg' method='post'>
 					<table class='form'>
 
 						<tr>

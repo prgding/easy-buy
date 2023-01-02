@@ -6,8 +6,8 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<title>在线购物网 - 首页</title>
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
-		<script type="text/javascript" src="scripts/function.js"></script>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css"/>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/function.js"></script>
 		<style>
             p {
                 text-align: center;
@@ -20,7 +20,7 @@
 	</head>
 	<body>
 		<div id="header" class="wrap">
-			<div id="logo"><img src="images/logo.gif"/></div>
+			<div id="logo"><img src="${pageContext.request.contextPath}/images/logo.gif"/></div>
 			<div class="help">
 				<a href="#" class="shopping">购物车</a><a href="login.jsp">登录</a><a href="register.jsp">注册</a><a href="guestbook.jsp">留言</a>
 			</div>
@@ -66,7 +66,7 @@
 						<li class="current"><em></em>填写注册信息</li>
 						<li class="last"><em></em>注册成功</li>
 					</ul>
-					<form id="regForm" method="post" action="register" onsubmit="return checkForm(this);">
+					<form id="regForm" method="post" action="account/register" onsubmit="return checkForm(this);">
 						<table>
 							<tr>
 								<td class="field">用户名：</td>

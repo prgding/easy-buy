@@ -7,12 +7,12 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<title>后台管理 - 在线购物网</title>
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
-		<script type="text/javascript" src="scripts/function-manage.js"></script>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css"/>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/function-manage.js"></script>
 	</head>
 	<body>
 		<div id="header" class="wrap">
-			<div id="logo"><img src="images/logo.gif"/></div>
+			<div id="logo"><img src="${pageContext.request.contextPath}/images/logo.gif"/></div>
 			<div class="help"><a href="index.jsp">返回前台页面</a></div>
 			<div class="navbar">
 				<ul class="clearfix">
@@ -78,9 +78,9 @@
 				<div class="last-view">
 					<h2>最近浏览</h2>
 					<dl class="clearfix">
-						<dt><img src="images/product/0_tiny.gif"/></dt>
+						<dt><img src="${pageContext.request.contextPath}/images/product/0_tiny.gif"/></dt>
 						<dd><a href="product-view.html">法国德菲丝松露精品巧克力500g/盒</a></dd>
-						<dt><img src="images/product/0_tiny.gif"/></dt>
+						<dt><img src="${pageContext.request.contextPath}/images/product/0_tiny.gif"/></dt>
 						<dd><a href="product-view.html">法国德菲丝松露精品巧克力500g/盒</a></dd>
 					</dl>
 				</div>
@@ -88,7 +88,7 @@
 			<div class="main">
 				<h2>修改用户</h2>
 				<div class="manage">
-					<form action="updateUser" method="post">
+					<form action="${pageContext.request.contextPath}/user/update" method="post">
 						<table class="form">
 							<tr>
 								<td class="field">用户 id（主键，只读）：</td>
