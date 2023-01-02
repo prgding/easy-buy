@@ -14,21 +14,14 @@ import me.dingshuai.pojo.Tusers;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "UserServlet", urlPatterns = {"/updateUser", "/showUsers"})
+@WebServlet(name = "UserServlet", urlPatterns = {"/user/update", "/user/show"})
 public class UserServlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String servletPath = request.getServletPath();
-		HttpSession session = request.getSession(false);
-		if (session != null && session.getAttribute("user") != null) {
-			switch (servletPath) {
-				case "/updateUser" -> doUpdateUser(request, response);
-				case "/showUsers" -> doShowUsers(request, response);
-			}
-		} else {
-			request.setAttribute("errorMessage", "未登陆或session失效，请重新登陆");
-			RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
-			dispatcher.forward(request, response);
+		switch (servletPath) {
+			case "/user/update" -> doUpdateUser(request, response);
+			case "/user/show" -> doShowUsers(request, response);
 		}
 	}
 
@@ -40,10 +33,6 @@ public class UserServlet extends HttpServlet {
 		String passWord = request.getParameter("passWord");
 		String location = request.getParameter("location");
 		String phoneNumber = request.getParameter("phoneNumber");
-
-		System.out.println(userId + " " + userName + " " + passWord + " " + location + " " + phoneNumber);
-
-		Tusers user1 = (Tusers) request.getSession().getAttribute("user");
 
 		// 创建 Tusers 对象
 		Tusers user = new Tusers();
@@ -59,19 +48,28 @@ public class UserServlet extends HttpServlet {
 		// 使用 TusersDao 的 add 方法添加用户
 		dao.update(user);
 
-		// 刷新session
+		// 根据情况跳转到不同的页面
 		try {
+			// 获取当前用户
 			HttpSession session = request.getSession();
-			session.setAttribute("user", user);
+			Tusers user1 = (Tusers) session.getAttribute("user");
+
+			// 是否是管理员
 			if (user1.getUsername().equals("admin")) {
+				// 是更改个人信息还是管理他人信息
 				String page = request.getParameter("page");
-				if ("user-modify".equals(page)){
-					response.sendRedirect("index.jsp");
-				}else {
-					response.sendRedirect(request.getContextPath() + "/showUsers");
+				if ("user-modify".equals(page)) {
+					// 更改个人信息（需要刷新 session）
+					session.setAttribute("user", user);
+					response.sendRedirect(request.getContextPath() + "/index.jsp");
+				} else {
+					// 管理他人信息（不需要刷新 session，因为重新走数据库了）
+					response.sendRedirect(request.getContextPath() + "/user/show");
 				}
 			} else {
-				response.sendRedirect("index.jsp");
+				// 普通用户，
+				session.setAttribute("user", user);
+				response.sendRedirect(request.getContextPath() + "/index.jsp");
 			}
 		} catch (Exception e) {
 			request.setAttribute("errorMessage", "session失效，请重新登陆");
@@ -89,6 +87,6 @@ public class UserServlet extends HttpServlet {
 		List<Tusers> users = td.findAll();
 		HttpSession session = request.getSession(false);
 		session.setAttribute("users", users);
-		response.sendRedirect("manage/user.jsp");
+		response.sendRedirect(request.getContextPath() + "/manage/user.jsp");
 	}
 }

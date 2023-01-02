@@ -7,18 +7,21 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<title>在线购物网 - 首页</title>
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
-		<script type="text/javascript" src="scripts/function.js"></script>
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css"/>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/function.js"></script>
+<%--		<base href="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}">--%>
+
+
 	</head>
 	<body>
 		<div id="header" class="wrap">
-			<div id="logo"><img src="images/logo.gif"/></div>
+			<div id="logo"><img src="${pageContext.request.contextPath}/images/logo.gif"/></div>
 			<div class="help">
 
 				<c:if test="${not empty user}">
 					欢迎您，${user.username}
 					<a href='user-modify.jsp'>修改个人信息</a>
-					<a href='${pageContext.request.contextPath}/exit'>注销</a>
+					<a href='${pageContext.request.contextPath}/account/exit'>注销</a>
 					<c:if test="${user.username == 'admin'}">
 						<a href='manage/index.jsp'>进入管理后台</a>
 					</c:if>
@@ -29,7 +32,7 @@
 					<a href='register.jsp'>注册</a>
 				</c:if>
 
-				<a href="${pageContext.request.contextPath}/showMsg">留言</a></div>
+				<a href="${pageContext.request.contextPath}/shop/showMsg">留言</a></div>
 			<div class="navbar">
 				<ul class="clearfix">
 					<li class="current"><a href="#">首页</a></li>
@@ -91,9 +94,9 @@
 				<div class="last-view">
 					<h2>最近浏览</h2>
 					<dl class="clearfix">
-						<dt><img src="images/product/0_tiny.gif"/></dt>
+						<dt><img src="${pageContext.request.contextPath}/images/product/0_tiny.gif"/></dt>
 						<dd><a href="product-view.html">法国德菲丝松露精品巧克力500g/盒</a></dd>
-						<dt><img src="images/product/0_tiny.gif"/></dt>
+						<dt><img src="${pageContext.request.contextPath}/images/product/0_tiny.gif"/></dt>
 						<dd><a href="product-view.html">法国德菲丝松露精品巧克力500g/盒</a></dd>
 					</dl>
 				</div>
@@ -104,56 +107,56 @@
 					<ul class="product clearfix">
 						<li>
 							<dl>
-								<dt><a href="product-view.html" target="_blank"><img src="images/product/1.jpg"/></a></dt>
+								<dt><a href="product-view.html" target="_blank"><img src="${pageContext.request.contextPath}/images/product/1.jpg"/></a></dt>
 								<dd class="title"><a href="product-view.html" target="_blank">法国德菲丝松露精品巧克力500g/盒</a></dd>
 								<dd class="price">￥108.0</dd>
 							</dl>
 						</li>
 						<li>
 							<dl>
-								<dt><a href="product-view.html" target="_blank"><img src="images/product/2.jpg"/></a></dt>
+								<dt><a href="product-view.html" target="_blank"><img src="${pageContext.request.contextPath}/images/product/2.jpg"/></a></dt>
 								<dd class="title"><a href="product-view.html" target="_blank">乐扣普通型保鲜盒圣诞7件套</a></dd>
 								<dd class="price">￥69.90</dd>
 							</dl>
 						</li>
 						<li>
 							<dl>
-								<dt><a href="product-view.html" target="_blank"><img src="images/product/3.jpg"/></a></dt>
+								<dt><a href="product-view.html" target="_blank"><img src="${pageContext.request.contextPath}/images/product/3.jpg"/></a></dt>
 								<dd class="title"><a href="product-view.html" target="_blank">欧珀莱均衡保湿四件套</a></dd>
 								<dd class="price">￥279.0</dd>
 							</dl>
 						</li>
 						<li>
 							<dl>
-								<dt><a href="product-view.html" target="_blank"><img src="images/product/4.jpg"/></a></dt>
+								<dt><a href="product-view.html" target="_blank"><img src="${pageContext.request.contextPath}/images/product/4.jpg"/></a></dt>
 								<dd class="title"><a href="product-view.html" target="_blank">联想笔记本电脑 高速独立显存</a></dd>
 								<dd class="price">￥4199</dd>
 							</dl>
 						</li>
 						<li>
 							<dl>
-								<dt><a href="product-view.html" target="_blank"><img src="images/product/5.jpg"/></a></dt>
+								<dt><a href="product-view.html" target="_blank"><img src="${pageContext.request.contextPath}/images/product/5.jpg"/></a></dt>
 								<dd class="title"><a href="product-view.html" target="_blank">法姿韩版显瘦彩边时尚牛仔铅笔裤</a></dd>
 								<dd class="price">￥49.00</dd>
 							</dl>
 						</li>
 						<li>
 							<dl>
-								<dt><a href="product-view.html" target="_blank"><img src="images/product/6.jpg"/></a></dt>
+								<dt><a href="product-view.html" target="_blank"><img src="${pageContext.request.contextPath}/images/product/6.jpg"/></a></dt>
 								<dd class="title"><a href="product-view.html" target="_blank">Genius925纯银施华洛世奇水晶吊坠</a></dd>
 								<dd class="price">￥69.90</dd>
 							</dl>
 						</li>
 						<li>
 							<dl>
-								<dt><a href="product-view.html" target="_blank"><img src="images/product/7.jpg"/></a></dt>
+								<dt><a href="product-view.html" target="_blank"><img src="${pageContext.request.contextPath}/images/product/7.jpg"/></a></dt>
 								<dd class="title"><a href="product-view.html" target="_blank">利仁2018M福满堂电饼铛 好用实惠</a></dd>
 								<dd class="price">￥268.0</dd>
 							</dl>
 						</li>
 						<li>
 							<dl>
-								<dt><a href="product-view.html" target="_blank"><img src="images/product/8.jpg"/></a></dt>
+								<dt><a href="product-view.html" target="_blank"><img src="${pageContext.request.contextPath}/images/product/8.jpg"/></a></dt>
 								<dd class="title"><a href="product-view.html" target="_blank">达派高档拉杆箱20寸 经典款式</a></dd>
 								<dd class="price">￥198.0</dd>
 							</dl>
@@ -193,84 +196,84 @@
 					<ul class="product clearfix">
 						<li>
 							<dl>
-								<dt><a href="product-view.html" target="_blank"><img src="images/product/1.jpg"/></a></dt>
+								<dt><a href="product-view.html" target="_blank"><img src="${pageContext.request.contextPath}/images/product/1.jpg"/></a></dt>
 								<dd class="title"><a href="product-view.html" target="_blank">法国德菲丝松露精品巧克力500g/盒</a></dd>
 								<dd class="price">￥108.0</dd>
 							</dl>
 						</li>
 						<li>
 							<dl>
-								<dt><a href="product-view.html" target="_blank"><img src="images/product/2.jpg"/></a></dt>
+								<dt><a href="product-view.html" target="_blank"><img src="${pageContext.request.contextPath}/images/product/2.jpg"/></a></dt>
 								<dd class="title"><a href="product-view.html" target="_blank">乐扣普通型保鲜盒圣诞7件套</a></dd>
 								<dd class="price">￥69.90</dd>
 							</dl>
 						</li>
 						<li>
 							<dl>
-								<dt><a href="product-view.html" target="_blank"><img src="images/product/3.jpg"/></a></dt>
+								<dt><a href="product-view.html" target="_blank"><img src="${pageContext.request.contextPath}/images/product/3.jpg"/></a></dt>
 								<dd class="title"><a href="product-view.html" target="_blank">欧珀莱均衡保湿四件套</a></dd>
 								<dd class="price">￥279.0</dd>
 							</dl>
 						</li>
 						<li>
 							<dl>
-								<dt><a href="product-view.html" target="_blank"><img src="images/product/4.jpg"/></a></dt>
+								<dt><a href="product-view.html" target="_blank"><img src="${pageContext.request.contextPath}/images/product/4.jpg"/></a></dt>
 								<dd class="title"><a href="product-view.html" target="_blank">联想笔记本电脑 高速独立显存</a></dd>
 								<dd class="price">￥4199</dd>
 							</dl>
 						</li>
 						<li>
 							<dl>
-								<dt><a href="product-view.html" target="_blank"><img src="images/product/5.jpg"/></a></dt>
+								<dt><a href="product-view.html" target="_blank"><img src="${pageContext.request.contextPath}/images/product/5.jpg"/></a></dt>
 								<dd class="title"><a href="product-view.html" target="_blank">法姿韩版显瘦彩边时尚牛仔铅笔裤</a></dd>
 								<dd class="price">￥49.00</dd>
 							</dl>
 						</li>
 						<li>
 							<dl>
-								<dt><a href="product-view.html" target="_blank"><img src="images/product/6.jpg"/></a></dt>
+								<dt><a href="product-view.html" target="_blank"><img src="${pageContext.request.contextPath}/images/product/6.jpg"/></a></dt>
 								<dd class="title"><a href="product-view.html" target="_blank">Genius925纯银施华洛世奇水晶吊坠</a></dd>
 								<dd class="price">￥69.90</dd>
 							</dl>
 						</li>
 						<li>
 							<dl>
-								<dt><a href="product-view.html" target="_blank"><img src="images/product/7.jpg"/></a></dt>
+								<dt><a href="product-view.html" target="_blank"><img src="${pageContext.request.contextPath}/images/product/7.jpg"/></a></dt>
 								<dd class="title"><a href="product-view.html" target="_blank">利仁2018M福满堂电饼铛 好用实惠</a></dd>
 								<dd class="price">￥268.0</dd>
 							</dl>
 						</li>
 						<li>
 							<dl>
-								<dt><a href="product-view.html" target="_blank"><img src="images/product/8.jpg"/></a></dt>
+								<dt><a href="product-view.html" target="_blank"><img src="${pageContext.request.contextPath}/images/product/8.jpg"/></a></dt>
 								<dd class="title"><a href="product-view.html" target="_blank">达派高档拉杆箱20寸 经典款式</a></dd>
 								<dd class="price">￥198.0</dd>
 							</dl>
 						</li>
 						<li>
 							<dl>
-								<dt><a href="product-view.html" target="_blank"><img src="images/product/9.jpg"/></a></dt>
+								<dt><a href="product-view.html" target="_blank"><img src="${pageContext.request.contextPath}/images/product/9.jpg"/></a></dt>
 								<dd class="title"><a href="product-view.html" target="_blank">爱国者MP4 全屏触摸多格式播放 4G</a></dd>
 								<dd class="price">￥289.0</dd>
 							</dl>
 						</li>
 						<li>
 							<dl>
-								<dt><a href="product-view.html" target="_blank"><img src="images/product/10.jpg"/></a></dt>
+								<dt><a href="product-view.html" target="_blank"><img src="${pageContext.request.contextPath}/images/product/10.jpg"/></a></dt>
 								<dd class="title"><a href="product-view.html" target="_blank">多美滋金装金盾3阶段幼儿配方奶粉</a></dd>
 								<dd class="price">￥186.0</dd>
 							</dl>
 						</li>
 						<li>
 							<dl>
-								<dt><a href="product-view.html" target="_blank"><img src="images/product/1.jpg"/></a></dt>
+								<dt><a href="product-view.html" target="_blank"><img src="${pageContext.request.contextPath}/images/product/1.jpg"/></a></dt>
 								<dd class="title"><a href="product-view.html" target="_blank">法国德菲丝松露精品巧克力500g/盒</a></dd>
 								<dd class="price">￥108.0</dd>
 							</dl>
 						</li>
 						<li>
 							<dl>
-								<dt><a href="product-view.html" target="_blank"><img src="images/product/2.jpg"/></a></dt>
+								<dt><a href="product-view.html" target="_blank"><img src="${pageContext.request.contextPath}/images/product/2.jpg"/></a></dt>
 								<dd class="title"><a href="product-view.html" target="_blank">乐扣普通型保鲜盒圣诞7件套</a></dd>
 								<dd class="price">￥69.90</dd>
 							</dl>

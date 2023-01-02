@@ -10,15 +10,15 @@ import me.dingshuai.pojo.Tusers;
 
 import java.io.IOException;
 
-@WebServlet(name = "AccountServlet", urlPatterns = {"/login", "/register", "/exit"})
+@WebServlet(name = "AccountServlet", urlPatterns = {"/account/login", "/account/register", "/account/exit"})
 public class AccountServlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String servletPath = request.getServletPath();
 		switch (servletPath) {
-			case "/login" -> doLogin(request, response);
-			case "/register" -> doRegister(request, response);
-			case "/exit" -> doExit(request, response);
+			case "/account/login" -> doLogin(request, response);
+			case "/account/register" -> doRegister(request, response);
+			case "/account/exit" -> doExit(request, response);
 		}
 	}
 
@@ -38,7 +38,7 @@ public class AccountServlet extends HttpServlet {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
 			dispatcher.forward(request, response);
 
-		} else if (user != null) {
+		} else {
 			// 用户存在，登录成功
 			// 设置会话属性，标识用户已经登录
 			HttpSession session = request.getSession();
@@ -61,10 +61,10 @@ public class AccountServlet extends HttpServlet {
 
 			if (user.getUsername().equals("admin")) {
 				// 跳转到用户信息页面
-				response.sendRedirect("manage/index.jsp");
+				response.sendRedirect(request.getContextPath()+"/manage/index.jsp");
 			} else {
 				// 跳转到用户信息页面
-				response.sendRedirect("index.jsp");
+				response.sendRedirect(request.getContextPath()+"/index.jsp");
 			}
 		}
 	}
@@ -89,16 +89,25 @@ public class AccountServlet extends HttpServlet {
 			dao.addUser(user);
 
 			// 重定向到 userinfo.jsp 页面
-			response.sendRedirect("index.jsp");
+			response.sendRedirect(request.getContextPath()+"/index.jsp");
 		}
 	}
 
 	private void doExit(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		System.out.println("doExit 方法执行");
 		// 销毁会话
 		HttpSession session = request.getSession(false);
 		session.invalidate();
 
+		// 销毁 cookie
+		Cookie[] cookies = request.getCookies();
+		for (Cookie cookie : cookies) {
+			cookie.setMaxAge(0);
+			cookie.setPath(request.getContextPath());
+			response.addCookie(cookie);
+		}
+
 		// 重定向到首页
-		response.sendRedirect("index.jsp");
+		response.sendRedirect(request.getContextPath()+"/index.jsp");
 	}
 }
