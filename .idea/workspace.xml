@@ -2,44 +2,107 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="shopping:war exploded" />
+      <artifact name="shop:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c979057-edd9-4904-8b74-81638d2d1c44" name="变更" comment="">
+    <list default="true" id="849432c1-99a9-4c9e-b1f6-220d3e7a16d8" name="变更" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/shopping_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed7096e8-a47a-432b-99c8-2313330dbdfb.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed7096e8-a47a-432b-99c8-2313330dbdfb/storage_v2/_src_/schema/Jia_Gou__name.nCVb5w.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed7096e8-a47a-432b-99c8-2313330dbdfb/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed7096e8-a47a-432b-99c8-2313330dbdfb/storage_v2/_src_/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed7096e8-a47a-432b-99c8-2313330dbdfb/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed7096e8-a47a-432b-99c8-2313330dbdfb/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed7096e8-a47a-432b-99c8-2313330dbdfb/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed7096e8-a47a-432b-99c8-2313330dbdfb/storage_v2/_src_/schema/sys.zb4BAA.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed7096e8-a47a-432b-99c8-2313330dbdfb/storage_v2/_src_/schema/webshop.Stz5SA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_annotations_api_10_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_api_10_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_catalina_10_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_coyote_10_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_el_api_10_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jaspic_api_10_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jni_10_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jsp_api_10_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_10_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_servlet_api_10_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_util_10_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_util_scan_10_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jakarta_servlet_jsp_jstl_2_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jakarta_servlet_jsp_jstl_api_2_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shopping.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Tusers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Tusers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/AccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/test/AccountServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/manage/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/manage/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/util/DButil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/util/DButil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/1.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/jakarta.servlet.jsp.jstl-2.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/jakarta.servlet.jsp.jstl-api-2.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-j-8.0.31.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/guestbook.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/logo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/product/0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/product/0_tiny.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/product/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/product/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/product/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/product/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/product/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/product/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/product/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/product/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/product/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/product/9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/detail.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/guestbook-modify.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/guestbook.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/manage-result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/news-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/news-modify.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/news.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/order-modify.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/order.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/product-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/product-modify.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/product.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/productClass-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/productClass-modify.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/productClass.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/reply.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/user-add.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/manage/user.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/scripts/function-manage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/scripts/function.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/testdir/before.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/user-modify.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="HTML File" />
-        <option value="Tag Library Descriptor" />
-        <option value="Jsp File" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
-  </component>
-  <component name="KotlinCodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -48,9 +111,6 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -58,9 +118,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2Iexzpn158CZ0Lf0wmOKuiM7RBb" />
+  <component name="ProjectId" id="2KVhpVrRtEg2cuaQKSDLOaDihfd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
@@ -68,69 +128,44 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/dingshuai/Dev/Code/Java/shopping/web/WEB-INF/lib&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/dingshuai/Dev/Code/Java/03-JavaWeb/shop&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;库&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;,
-    &quot;sql.rename.search.for.storage.occurrences&quot;: &quot;true&quot;,
-    &quot;typescript.add.unambiguous.imports.on.the.fly&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
-    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
-      <recent name="$PROJECT_DIR$/web/WEB-INF" />
-      <recent name="$PROJECT_DIR$/web" />
-      <recent name="$PROJECT_DIR$/src/main/java/me/dingshuai/util" />
-      <recent name="$PROJECT_DIR$/../shoppoing2/web/WEB-INF/lib" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/新页面" />
-      <recent name="$PROJECT_DIR$/web/WEB-INF" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="me.dingshuai.util" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="excludedTypes">
-      <set>
-        <option value="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" />
-      </set>
-    </option>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 10.1.4" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.4" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 10.1.5" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.5" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
-      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
-      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="shopping:war exploded">
+        <artifact name="easy-buy:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/shopping" />
+            <option name="CONTEXT_PATH" value="/easy-buy" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="5d42aab8-930e-42c7-9c0d-3c39111f7ab4" />
+        <option name="BASE_DIRECTORY_NAME" value="f0704f0b-f9c2-40b8-b080-b22a4d305361" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -138,7 +173,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="51514" />
+        <option name="DEBUG_PORT" value="62296" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -203,72 +238,107 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="shopping:war exploded" />
+          <artifact name="easy-buy:war exploded" />
         </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.5" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="7294a4a8-7347-4762-9bd8-fdb8a528300d" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="62296" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
       </method>
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
-      <changelist id="5c979057-edd9-4904-8b74-81638d2d1c44" name="变更" comment="" />
-      <created>1670556116643</created>
+      <changelist id="849432c1-99a9-4c9e-b1f6-220d3e7a16d8" name="变更" comment="" />
+      <created>1674065840998</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1670556116643</updated>
-      <workItem from="1670556119150" duration="1826000" />
-      <workItem from="1670557990031" duration="3279000" />
-      <workItem from="1670561292453" duration="8000" />
-      <workItem from="1670561334522" duration="701000" />
-      <workItem from="1670562072035" duration="1170000" />
-      <workItem from="1670563257133" duration="734000" />
-      <workItem from="1670564007237" duration="4663000" />
-      <workItem from="1670569409432" duration="3743000" />
-      <workItem from="1670573858798" duration="16040000" />
-      <workItem from="1670594413957" duration="8179000" />
-      <workItem from="1670602906154" duration="7067000" />
-      <workItem from="1670610004374" duration="11908000" />
-      <workItem from="1670670030297" duration="2570000" />
-      <workItem from="1670672619973" duration="81000" />
-      <workItem from="1670673145599" duration="757000" />
-      <workItem from="1670839957443" duration="1015000" />
-      <workItem from="1670841545914" duration="4808000" />
-      <workItem from="1670850598319" duration="800000" />
-      <workItem from="1670853145989" duration="673000" />
-      <workItem from="1670857104428" duration="64000" />
-      <workItem from="1670915966447" duration="583000" />
-      <workItem from="1671000803772" duration="1258000" />
-      <workItem from="1671004480026" duration="846000" />
-      <workItem from="1671005428192" duration="7493000" />
-      <workItem from="1671454575231" duration="37000" />
-      <workItem from="1671454990926" duration="1695000" />
-      <workItem from="1671456701415" duration="5000" />
-      <workItem from="1671457191007" duration="1094000" />
-      <workItem from="1671513476886" duration="971000" />
-      <workItem from="1671515690624" duration="16000" />
-      <workItem from="1671515780660" duration="261000" />
-      <workItem from="1671516066296" duration="117000" />
-      <workItem from="1671516299413" duration="1323000" />
-      <workItem from="1671518534747" duration="708000" />
-      <workItem from="1671521104652" duration="2000" />
-      <workItem from="1671521120956" duration="533000" />
-      <workItem from="1671522361095" duration="3591000" />
-      <workItem from="1671603953275" duration="300000" />
-      <workItem from="1671605397870" duration="3193000" />
-      <workItem from="1671610824857" duration="1204000" />
-      <workItem from="1671621721278" duration="1077000" />
-      <workItem from="1671893813497" duration="610000" />
-      <workItem from="1671938458121" duration="3000" />
-      <workItem from="1671938527257" duration="1589000" />
-      <workItem from="1671951583722" duration="1271000" />
-      <workItem from="1671981273150" duration="17573000" />
-      <workItem from="1672251431758" duration="1405000" />
-      <workItem from="1672288987309" duration="3476000" />
-      <workItem from="1672330269438" duration="226000" />
-      <workItem from="1672330503792" duration="12289000" />
-      <workItem from="1672551065832" duration="598000" />
-      <workItem from="1672563865311" duration="10952000" />
-      <workItem from="1672649260188" duration="10725000" />
+      <updated>1674065840998</updated>
+      <workItem from="1674065842288" duration="471000" />
+      <workItem from="1674066339587" duration="1886000" />
+      <workItem from="1674539723836" duration="1000" />
+      <workItem from="1674540089597" duration="1647000" />
+      <workItem from="1674541955481" duration="1000" />
+      <workItem from="1674541965877" duration="858000" />
+      <workItem from="1674616080360" duration="179000" />
+      <workItem from="1674616262391" duration="165000" />
+      <workItem from="1674616430940" duration="328000" />
     </task>
     <servers />
   </component>
@@ -285,12 +355,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="完成后台留言删查" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

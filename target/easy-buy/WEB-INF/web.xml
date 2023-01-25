@@ -1,0 +1,31 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <display-name>Archetype Created Web Application</display-name>
+
+    <welcome-file-list>
+        <welcome-file>welcome</welcome-file>
+    </welcome-file-list>
+
+    <filter>
+        <filter-name>LoginCheck</filter-name>
+        <filter-class>me.dingshuai.filter.LoginCheckFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>LoginCheck</filter-name>
+        <!--拦截路径-->
+        <url-pattern>/shop/*</url-pattern>
+        <url-pattern>/user/*</url-pattern>
+        <url-pattern>/manage/*</url-pattern>
+        <url-pattern>/user-modify.jsp</url-pattern>
+        <url-pattern>/guestbook.jsp</url-pattern>
+    </filter-mapping>
+
+</web-app>
