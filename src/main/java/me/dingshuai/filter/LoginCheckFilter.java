@@ -54,7 +54,7 @@ public class LoginCheckFilter implements Filter {
 
 		if (session != null && session.getAttribute("user") != null) {
 			// 放行
-			System.out.println("放行");
+//			System.out.println("放行");
 			filterChain.doFilter(request, response);
 		} else {
 			// 拦截

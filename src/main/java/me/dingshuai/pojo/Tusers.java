@@ -8,7 +8,7 @@ public class Tusers implements HttpSessionBindingListener {
 
 	@Override
 	public void valueBound(HttpSessionBindingEvent event) {
-		System.out.println("绑定");
+//		System.out.println("绑定");
 		ServletContext application = event.getSession().getServletContext();
 		Integer loggedInUser = (Integer)application.getAttribute("loggedInUser");
 		if(loggedInUser == null) {
@@ -20,7 +20,7 @@ public class Tusers implements HttpSessionBindingListener {
 
 	@Override
 	public void valueUnbound(HttpSessionBindingEvent event) {
-		System.out.println("解绑");
+//		System.out.println("解绑");
 		ServletContext application = event.getSession().getServletContext();
 		Integer loggedInUser = (Integer)application.getAttribute("loggedInUser");
 		application.setAttribute("loggedInUser", loggedInUser - 1);

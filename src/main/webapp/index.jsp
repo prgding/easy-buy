@@ -8,7 +8,7 @@
 		<title>在线购物网 - 首页</title>
 		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css"/>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/function.js"></script>
-<%--		<base href="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}">--%>
+<%--	<base href="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}">--%>
 
 
 	</head>
