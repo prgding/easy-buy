@@ -3,8 +3,36 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="org.mybatis.example.BlogMapper">
-    <select id="selectBlog" resultType="Blog">
-        select * from Blog where id = #{id}
+<mapper namespace="msg">
+
+    <insert id="insert">
+        insert into tmessages(msgSender, msgTitle, msgContent)
+        values (#{msgSender}, #{msgTitle}, #{msgContent});
+    </insert>
+
+    <delete id="deleteById">
+        delete
+        from tmessages
+        where msgId = #{msgId};
+    </delete>
+
+    <update id="updateById">
+        UPDATE tmessages
+        SET msgSender       = #{msgSender},
+            msgContent      = #{msgContent},
+            msgStatus       = #{msgStatus},
+            msgReplyContent = #{msgReplyContent}
+        WHERE msgId = #{msgId}
+    </update>
+
+    <select id="selectById" resultType="me.dingshuai.pojo.Tmessages">
+        select *
+        from tmessages
+        where msgId = #{msgId};
+    </select>
+
+    <select id="selectAll" resultType="me.dingshuai.pojo.Tmessages">
+        select *
+        from tmessages;
     </select>
 </mapper>

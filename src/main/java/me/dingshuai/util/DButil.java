@@ -12,7 +12,7 @@ public class DButil {
 	static String driver = bundle.getString("driver");
 	static String url = bundle.getString("url");
 	static String username = bundle.getString("username");
-	static String passwd = bundle.getString("passwd");
+	static String passwd = bundle.getString("password");
 
 	public static Connection getConnection() {
 		Connection conn = null;

@@ -10,101 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="849432c1-99a9-4c9e-b1f6-220d3e7a16d8" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a443388-8787-4d08-b048-fed88c3f66fc/storage_v2/_src_/schema/sys.zb4BAA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7a443388-8787-4d08-b048-fed88c3f66fc/storage_v2/_src_/schema/sys.zb4BAA.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MsgMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/easy_buy_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/easy_buy_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a443388-8787-4d08-b048-fed88c3f66fc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7a443388-8787-4d08-b048-fed88c3f66fc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/easy-buy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/easy-buy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/filter/LoginCheckFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/listener/OnlineUserListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/listener/OnlineUserListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Tusers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Tusers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MsgMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/dao/TmessagesDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/dao/TusersDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/dao/impl/TmessagesDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/dao/impl/TusersDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/filter/LoginCheckFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/listener/OnlineUserListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/pojo/Tmessages.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/pojo/Tusers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/service/AccountServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/service/ShopServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/service/UserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/service/WelcomeServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/util/DButil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/dingshuai/util/SqlSessionUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/classes/MsgMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/classes/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/classes/jdbc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/classes/me/dingshuai/dao/TmessagesDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/classes/me/dingshuai/dao/TusersDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/classes/me/dingshuai/dao/impl/TmessagesDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/classes/me/dingshuai/dao/impl/TusersDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/classes/me/dingshuai/filter/LoginCheckFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/classes/me/dingshuai/listener/OnlineUserListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/classes/me/dingshuai/pojo/Tmessages.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/classes/me/dingshuai/pojo/Tusers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/classes/me/dingshuai/service/AccountServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/classes/me/dingshuai/service/ShopServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/classes/me/dingshuai/service/UserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/classes/me/dingshuai/service/WelcomeServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/classes/me/dingshuai/util/DButil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/classes/me/dingshuai/util/SqlSessionUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/classes/mybatis-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/lib/jakarta.activation-2.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/lib/jakarta.el-api-4.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/lib/jakarta.servlet-api-5.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/lib/jakarta.servlet.jsp.jstl-2.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/lib/jakarta.servlet.jsp.jstl-api-2.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/lib/jakarta.xml.bind-api-3.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/lib/mybatis-3.5.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/lib/mysql-connector-j-8.0.32.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/lib/protobuf-java-3.21.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/guestbook.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/images/bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/images/logo.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/images/product/0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/images/product/0_tiny.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/images/product/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/images/product/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/images/product/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/images/product/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/images/product/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/images/product/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/images/product/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/images/product/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/images/product/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/images/product/9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/manage/detail.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/manage/guestbook-modify.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/manage/guestbook.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/manage/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/manage/manage-result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/manage/news-add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/manage/news-modify.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/manage/news.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/manage/order-modify.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/manage/order.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/manage/product-add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/manage/product-modify.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/manage/product.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/manage/productClass-add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/manage/productClass-modify.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/manage/productClass.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/manage/reply.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/manage/user-add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/manage/user.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/register.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/scripts/delete.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/scripts/function.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easy-buy/user-modify.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/TmessagesDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/TmessagesDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Tmessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Tmessages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/util/DButil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/util/DButil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MsgMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MsgMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +39,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -157,7 +77,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.notifications",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -167,8 +87,58 @@
     ]
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="Tomcat 10.1.5" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.5" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+  <component name="RunManager" selected="Tomcat 服务器.Tomcat 10.1.7">
+    <configuration name="MsgMapperTest.addMsg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="easy-buy" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MsgMapperTest" />
+      <option name="METHOD_NAME" value="addMsg" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MsgMapperTest.deleteById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="easy-buy" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MsgMapperTest" />
+      <option name="METHOD_NAME" value="deleteById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MsgMapperTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="easy-buy" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MsgMapperTest" />
+      <option name="METHOD_NAME" value="findAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MsgMapperTest.findById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="easy-buy" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MsgMapperTest" />
+      <option name="METHOD_NAME" value="findById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MsgMapperTest.updateMsg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="easy-buy" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MsgMapperTest" />
+      <option name="METHOD_NAME" value="updateMsg" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 10.1.7" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.7" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -257,6 +227,23 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.MsgMapperTest.addMsg" />
+      <item itemvalue="JUnit.MsgMapperTest.deleteById" />
+      <item itemvalue="JUnit.MsgMapperTest.findAll" />
+      <item itemvalue="JUnit.MsgMapperTest.findById" />
+      <item itemvalue="JUnit.MsgMapperTest.updateMsg" />
+      <item itemvalue="Tomcat 服务器.Tomcat 10.1.7" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MsgMapperTest.updateMsg" />
+        <item itemvalue="JUnit.MsgMapperTest.deleteById" />
+        <item itemvalue="JUnit.MsgMapperTest.addMsg" />
+        <item itemvalue="JUnit.MsgMapperTest.findAll" />
+        <item itemvalue="JUnit.MsgMapperTest.findById" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -278,6 +265,10 @@
       <workItem from="1677197178166" duration="15000" />
       <workItem from="1677199348704" duration="921000" />
       <workItem from="1677208773332" duration="1250000" />
+      <workItem from="1678002534190" duration="5000" />
+      <workItem from="1678005175715" duration="65000" />
+      <workItem from="1678005325822" duration="329000" />
+      <workItem from="1678005675983" duration="5974000" />
     </task>
     <servers />
   </component>

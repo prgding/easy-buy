@@ -23,6 +23,20 @@ public class Tmessages {
 	public Tmessages() {
 	}
 
+	public Tmessages(String msgSender, String msgTitle, String msgContent) {
+		this.msgSender = msgSender;
+		this.msgTitle = msgTitle;
+		this.msgContent = msgContent;
+	}
+
+	public Tmessages(int msgId, String msgSender, String msgContent, String msgStatus, String msgReplyContent) {
+		this.msgId = msgId;
+		this.msgSender = msgSender;
+		this.msgContent = msgContent;
+		this.msgStatus = msgStatus;
+		this.msgReplyContent = msgReplyContent;
+	}
+
 	public int getMsgId() {
 		return msgId;
 	}
@@ -61,5 +75,17 @@ public class Tmessages {
 
 	public void setMsgStatus(String msgStatus) {
 		this.msgStatus = msgStatus;
+	}
+
+	@Override
+	public String toString() {
+		return "Tmessages{" +
+				"msgId=" + msgId +
+				", msgSender='" + msgSender + '\'' +
+				", msgTitle='" + msgTitle + '\'' +
+				", msgContent='" + msgContent + '\'' +
+				", msgStatus='" + msgStatus + '\'' +
+				", msgReplyContent='" + msgReplyContent + '\'' +
+				'}';
 	}
 }
