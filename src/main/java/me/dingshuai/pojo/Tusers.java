@@ -37,6 +37,7 @@ public class Tusers implements HttpSessionBindingListener {
 	public Tusers() {
 	}
 
+
 	// 提供带参构造方法
 	public Tusers(String userName, String passWord) {
 		this.userName = userName;

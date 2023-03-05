@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="user">
+    <insert id="addUser">
+        insert into tusers(userName, passWord, location, phoneNumber)
+        values (#{userName}, #{passWord}, #{location}, #{phoneNumber});
+    </insert>
+
+    <delete id="deleteById">
+        delete
+        from tusers
+        where userId = #{userId};
+    </delete>
+
+    <update id="update">
+        UPDATE Tusers
+        SET userName    = #{userName},
+            passWord    = #{passWord},
+            location    = #{location},
+            phoneNumber = #{phoneNumber}
+        WHERE userId = #{userId};
+    </update>
+
+    <select id="findById" resultType="me.dingshuai.pojo.Tusers">
+        SELECT *
+        FROM tusers
+        WHERE userId = #{userId}
+    </select>
+
+    <select id="findAll" resultType="me.dingshuai.pojo.Tusers">
+        select *
+        from tusers;
+    </select>
+
+    <select id="findByUserNameAndPassWord" resultType="me.dingshuai.pojo.Tusers">
+        SELECT *
+        FROM tusers
+        WHERE userName = #{userName}
+          AND passWord = #{passWord};
+    </select>
+
+    <select id="checkIfExists" resultType="me.dingshuai.pojo.Tusers">
+        SELECT *
+        FROM tusers
+        WHERE userName = #{userName};
+    </select>
+
+</mapper>

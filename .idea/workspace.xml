@@ -10,20 +10,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="849432c1-99a9-4c9e-b1f6-220d3e7a16d8" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/MsgMapperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/UserMapperTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/easy_buy_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/easy_buy_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a443388-8787-4d08-b048-fed88c3f66fc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7a443388-8787-4d08-b048-fed88c3f66fc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/easy-buy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/easy-buy.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_21_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mysql_mysql_connector_j_8_0_32.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/TusersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/TusersDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/TmessagesDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/TmessagesDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Tmessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Tmessages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/util/DButil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/util/DButil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MsgMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MsgMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/TusersDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/TusersDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Tusers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Tusers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/AccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/AccountServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/util/DButil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/UserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/guestbook-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/guestbook-modify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/manage-result.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/manage-result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/news-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/news-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/news-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/news-modify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/order-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/order-modify.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +40,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -66,27 +74,33 @@
     <option name="autoscrollToSource" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/dingshuai/Dev/Code/Java/03-JavaWeb/easy-buy/src/main/java/me/dingshuai/web&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql",
-      "oracle"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;,
+      &quot;oracle&quot;
     ]
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/me/dingshuai/web" />
+    </key>
+  </component>
   <component name="RunManager" selected="Tomcat 服务器.Tomcat 10.1.7">
     <configuration name="MsgMapperTest.addMsg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="easy-buy" />
@@ -268,7 +282,8 @@
       <workItem from="1678002534190" duration="5000" />
       <workItem from="1678005175715" duration="65000" />
       <workItem from="1678005325822" duration="329000" />
-      <workItem from="1678005675983" duration="5974000" />
+      <workItem from="1678005675983" duration="12240000" />
+      <workItem from="1678024694980" duration="247000" />
     </task>
     <servers />
   </component>

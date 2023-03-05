@@ -32,9 +32,6 @@ public class AccountServlet extends HttpServlet {
 		String userName = request.getParameter("userName");
 		String passWord = request.getParameter("passWord");
 
-
-
-
 		// 根据用户名和密码查询用户是否存在
 		TusersDao dao = new TusersDaoImpl();
 		Tusers user = dao.findByUserNameAndPassWord(userName, passWord);
@@ -42,7 +39,7 @@ public class AccountServlet extends HttpServlet {
 			// 用户不存在，登录失败
 			// 设置错误消息，并跳转到登录页面
 			request.setAttribute("errorMessage", "用户名或密码错误，请重试");
-			RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/login.jsp");
 			dispatcher.forward(request, response);
 
 		} else {
