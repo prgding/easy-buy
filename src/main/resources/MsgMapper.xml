@@ -25,13 +25,13 @@
         WHERE msgId = #{msgId}
     </update>
 
-    <select id="selectById" resultType="msg">
+    <select id="selectById" resultType="Tmessages">
         select *
         from tmessages
         where msgId = #{msgId};
     </select>
 
-    <select id="selectAll" resultType="msg">
+    <select id="selectAll" resultType="Tmessages">
         select *
         from tmessages;
     </select>

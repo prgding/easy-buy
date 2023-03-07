@@ -6,8 +6,7 @@
 <configuration>
     <properties resource="jdbc.properties"/>
     <typeAliases>
-        <typeAlias type="me.dingshuai.pojo.Tmessages" alias="msg"/>
-        <typeAlias type="me.dingshuai.pojo.Tusers" alias="user"/>
+        <package name="me.dingshuai.pojo"/>
     </typeAliases>
     <environments default="development">
         <environment id="development">
