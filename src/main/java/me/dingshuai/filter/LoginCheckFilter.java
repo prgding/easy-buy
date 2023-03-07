@@ -15,6 +15,8 @@ import java.time.format.DateTimeFormatter;
 
 
 public class LoginCheckFilter implements Filter {
+	private UsersDao userDao = new UsersDaoImpl();
+
 	@Override
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
 		HttpServletRequest request = (HttpServletRequest) servletRequest;
@@ -22,7 +24,7 @@ public class LoginCheckFilter implements Filter {
 
 		HttpSession session = request.getSession();
 		String servletPath = request.getServletPath();
-		System.out.print(servletPath + " ");
+//		System.out.print(servletPath + " ");
 
 		LocalDateTime now = LocalDateTime.now();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
@@ -44,8 +46,7 @@ public class LoginCheckFilter implements Filter {
 		}
 
 		if (username != null && password != null) {
-			UsersDao td = new UsersDaoImpl();
-			Users user = td.findByUserNameAndPassWord(username, password);
+			Users user = userDao.findByUserNameAndPassWord(username, password);
 			if (user != null) {
 				session.setAttribute("user", user);
 				session.setAttribute("date", format);

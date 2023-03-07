@@ -7,12 +7,16 @@ import jakarta.servlet.http.*;
 import me.dingshuai.dao.UsersDao;
 import me.dingshuai.dao.impl.UsersDaoImpl;
 import me.dingshuai.pojo.Users;
+import me.dingshuai.util.SqlSessionUtil;
+import org.apache.ibatis.session.SqlSession;
 
 import java.io.IOException;
 
 @WebServlet(name = "AccountServlet", urlPatterns = {"/account/login", "/account/register", "/account/exit"})
 public class AccountServlet extends HttpServlet {
 	private UsersDao userDao = new UsersDaoImpl();
+	private SqlSession sqlSession = SqlSessionUtil.open();
+
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String servletPath = request.getServletPath();
@@ -20,7 +24,10 @@ public class AccountServlet extends HttpServlet {
 			case "/account/login" -> doLogin(request, response);
 			case "/account/register" -> doRegister(request, response);
 			case "/account/exit" -> doExit(request, response);
+
 		}
+		// 销毁数据库对象
+		SqlSessionUtil.close(sqlSession);
 	}
 
 
@@ -30,7 +37,7 @@ public class AccountServlet extends HttpServlet {
 		String passWord = request.getParameter("passWord");
 
 		// 根据用户名和密码查询用户是否存在
-		
+
 		Users user = userDao.findByUserNameAndPassWord(userName, passWord);
 		if (user == null) {
 			// 用户不存在，登录失败
@@ -62,12 +69,13 @@ public class AccountServlet extends HttpServlet {
 
 			if (user.getUsername().equals("admin")) {
 				// 跳转到用户信息页面
-				response.sendRedirect(request.getContextPath()+"/manage/index.jsp");
+				response.sendRedirect(request.getContextPath() + "/manage/index.jsp");
 			} else {
 				// 跳转到用户信息页面
-				response.sendRedirect(request.getContextPath()+"/index.jsp");
+				response.sendRedirect(request.getContextPath() + "/index.jsp");
 			}
 		}
+
 	}
 
 	private void doRegister(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -79,7 +87,7 @@ public class AccountServlet extends HttpServlet {
 		Users user = new Users(userName, passWord);
 
 		// 创建 UsersDao 对象
-		
+
 		Users alreadyHave = userDao.checkIfExists(userName);
 		if (alreadyHave != null) {
 			// 用户名已存在
@@ -90,7 +98,7 @@ public class AccountServlet extends HttpServlet {
 			userDao.addUser(user);
 
 			// 重定向到 userinfo.jsp 页面
-			response.sendRedirect(request.getContextPath()+"/index.jsp");
+			response.sendRedirect(request.getContextPath() + "/index.jsp");
 		}
 	}
 
@@ -98,10 +106,7 @@ public class AccountServlet extends HttpServlet {
 		System.out.println("doExit 方法执行");
 		// 销毁会话
 		HttpSession session = request.getSession(false);
-
 		session.invalidate();
-
-
 
 		// 销毁 cookie
 		Cookie[] cookies = request.getCookies();
@@ -112,6 +117,6 @@ public class AccountServlet extends HttpServlet {
 		}
 
 		// 重定向到首页
-		response.sendRedirect(request.getContextPath()+"/index.jsp");
+		response.sendRedirect(request.getContextPath() + "/index.jsp");
 	}
 }

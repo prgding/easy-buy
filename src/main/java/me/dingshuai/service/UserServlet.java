@@ -10,6 +10,8 @@ import jakarta.servlet.http.HttpSession;
 import me.dingshuai.dao.UsersDao;
 import me.dingshuai.dao.impl.UsersDaoImpl;
 import me.dingshuai.pojo.Users;
+import me.dingshuai.util.SqlSessionUtil;
+import org.apache.ibatis.session.SqlSession;
 
 import java.io.IOException;
 import java.util.List;
@@ -18,6 +20,7 @@ import java.util.List;
 public class UserServlet extends HttpServlet {
 
 	private UsersDao usersDao = new UsersDaoImpl();
+	private SqlSession sqlSession = SqlSessionUtil.open();
 
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -26,6 +29,8 @@ public class UserServlet extends HttpServlet {
 			case "/user/update" -> doUpdateUser(request, response);
 			case "/user/show" -> doShowUsers(request, response);
 		}
+		// 销毁数据库对象
+		SqlSessionUtil.close(sqlSession);
 	}
 
 
@@ -83,8 +88,7 @@ public class UserServlet extends HttpServlet {
 	}
 
 	private void doShowUsers(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		UsersDao td = new UsersDaoImpl();
-		List<Users> users = td.findAll();
+		List<Users> users = usersDao.findAll();
 		HttpSession session = request.getSession(false);
 		session.setAttribute("users", users);
 		response.sendRedirect(request.getContextPath() + "/manage/user.jsp");
