@@ -25,13 +25,13 @@
         WHERE msgId = #{msgId}
     </update>
 
-    <select id="selectById" resultType="me.dingshuai.pojo.Tmessages">
+    <select id="selectById" resultType="msg">
         select *
         from tmessages
         where msgId = #{msgId};
     </select>
 
-    <select id="selectAll" resultType="me.dingshuai.pojo.Tmessages">
+    <select id="selectAll" resultType="msg">
         select *
         from tmessages;
     </select>

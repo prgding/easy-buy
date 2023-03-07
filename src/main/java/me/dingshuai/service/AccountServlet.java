@@ -1,18 +1,14 @@
 package me.dingshuai.service;
 
 import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
-import jakarta.servlet.jsp.HttpJspPage;
-import jakarta.servlet.jsp.PageContext;
 import me.dingshuai.dao.TusersDao;
 import me.dingshuai.dao.impl.TusersDaoImpl;
 import me.dingshuai.pojo.Tusers;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet(name = "AccountServlet", urlPatterns = {"/account/login", "/account/register", "/account/exit"})
 public class AccountServlet extends HttpServlet {

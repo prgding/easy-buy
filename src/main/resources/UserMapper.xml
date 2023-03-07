@@ -24,25 +24,25 @@
         WHERE userId = #{userId};
     </update>
 
-    <select id="findById" resultType="me.dingshuai.pojo.Tusers">
+    <select id="findById" resultType="user">
         SELECT *
         FROM tusers
         WHERE userId = #{userId}
     </select>
 
-    <select id="findAll" resultType="me.dingshuai.pojo.Tusers">
+    <select id="findAll" resultType="user">
         select *
         from tusers;
     </select>
 
-    <select id="findByUserNameAndPassWord" resultType="me.dingshuai.pojo.Tusers">
+    <select id="findByUserNameAndPassWord" resultType="user">
         SELECT *
         FROM tusers
         WHERE userName = #{userName}
           AND passWord = #{passWord};
     </select>
 
-    <select id="checkIfExists" resultType="me.dingshuai.pojo.Tusers">
+    <select id="checkIfExists" resultType="user">
         SELECT *
         FROM tusers
         WHERE userName = #{userName};

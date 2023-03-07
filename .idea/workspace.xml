@@ -10,32 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="849432c1-99a9-4c9e-b1f6-220d3e7a16d8" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/UserMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/easy_buy_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/easy_buy_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/easy-buy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/easy-buy.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_21_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mysql_mysql_connector_j_8_0_32.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/TusersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/TusersDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/TmessagesDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/TmessagesDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/TusersDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/TusersDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Tusers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Tusers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/AccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/AccountServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/util/DButil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/guestbook-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/guestbook-modify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/manage-result.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/manage-result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/news-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/news-add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/news-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/news-modify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/order-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/order-modify.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -101,7 +85,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/me/dingshuai/web" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat 服务器.Tomcat 10.1.7">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.7">
     <configuration name="MsgMapperTest.addMsg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="easy-buy" />
       <option name="PACKAGE_NAME" value="" />
@@ -247,7 +231,7 @@
       <item itemvalue="JUnit.MsgMapperTest.findAll" />
       <item itemvalue="JUnit.MsgMapperTest.findById" />
       <item itemvalue="JUnit.MsgMapperTest.updateMsg" />
-      <item itemvalue="Tomcat 服务器.Tomcat 10.1.7" />
+      <item itemvalue="Tomcat Server.Tomcat 10.1.7" />
     </list>
     <recent_temporary>
       <list>
@@ -284,6 +268,13 @@
       <workItem from="1678005325822" duration="329000" />
       <workItem from="1678005675983" duration="12240000" />
       <workItem from="1678024694980" duration="247000" />
+      <workItem from="1678024952628" duration="3842000" />
+      <workItem from="1678031217257" duration="930000" />
+      <workItem from="1678071181123" duration="1211000" />
+      <workItem from="1678074800839" duration="1595000" />
+      <workItem from="1678094257964" duration="38000" />
+      <workItem from="1678096393484" duration="2220000" />
+      <workItem from="1678149748941" duration="1257000" />
     </task>
     <servers />
   </component>
