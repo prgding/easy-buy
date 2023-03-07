@@ -1,7 +1,7 @@
-<%@ page import="me.dingshuai.pojo.Tusers" %>
-<%@ page import="me.dingshuai.dao.TmessagesDao" %>
-<%@ page import="me.dingshuai.dao.impl.TmessagesDaoImpl" %>
-<%@ page import="me.dingshuai.pojo.Tmessages" %>
+<%@ page import="me.dingshuai.pojo.Users" %>
+<%@ page import="me.dingshuai.dao.MessagesDao" %>
+<%@ page import="me.dingshuai.dao.impl.MessagesDaoImpl" %>
+<%@ page import="me.dingshuai.pojo.Messages" %>
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -99,7 +99,7 @@
 				<div class="guestbook">
 					<h2>全部留言</h2>
 					<ul>
-						<c:forEach items="${tmessages}" var="msg">
+						<c:forEach items="${messages}" var="msg">
 							<li>
 								<dl>
 									<dt>${msg.msgContent}</dt>

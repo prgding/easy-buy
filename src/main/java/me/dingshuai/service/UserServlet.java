@@ -7,15 +7,18 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import me.dingshuai.dao.TusersDao;
-import me.dingshuai.dao.impl.TusersDaoImpl;
-import me.dingshuai.pojo.Tusers;
+import me.dingshuai.dao.UsersDao;
+import me.dingshuai.dao.impl.UsersDaoImpl;
+import me.dingshuai.pojo.Users;
 
 import java.io.IOException;
 import java.util.List;
 
 @WebServlet(name = "UserServlet", urlPatterns = {"/user/update", "/user/show"})
 public class UserServlet extends HttpServlet {
+
+	private UsersDao usersDao = new UsersDaoImpl();
+
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String servletPath = request.getServletPath();
@@ -34,25 +37,22 @@ public class UserServlet extends HttpServlet {
 		String location = request.getParameter("location");
 		String phoneNumber = request.getParameter("phoneNumber");
 
-		// 创建 Tusers 对象
-		Tusers user = new Tusers();
+		// 创建 Users 对象
+		Users user = new Users();
 		user.setUserId(Integer.parseInt(userId));
 		user.setUsername(userName);
 		user.setPassword(passWord);
 		user.setLocation(location);
 		user.setPhoneNumber(phoneNumber);
 
-		// 创建 TusersDao 对象
-		TusersDao dao = new TusersDaoImpl();
-
-		// 使用 TusersDao 的 add 方法添加用户
-		dao.update(user);
+		// 使用 UsersDao 的 add 方法添加用户
+		usersDao.update(user);
 
 		// 根据情况跳转到不同的页面
 		try {
 			// 获取当前用户
 			HttpSession session = request.getSession();
-			Tusers user1 = (Tusers) session.getAttribute("user");
+			Users user1 = (Users) session.getAttribute("user");
 
 			// 是否是管理员
 			if (user1.getUsername().equals("admin")) {
@@ -83,8 +83,8 @@ public class UserServlet extends HttpServlet {
 	}
 
 	private void doShowUsers(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		TusersDao td = new TusersDaoImpl();
-		List<Tusers> users = td.findAll();
+		UsersDao td = new UsersDaoImpl();
+		List<Users> users = td.findAll();
 		HttpSession session = request.getSession(false);
 		session.setAttribute("users", users);
 		response.sendRedirect(request.getContextPath() + "/manage/user.jsp");

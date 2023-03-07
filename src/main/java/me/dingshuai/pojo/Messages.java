@@ -1,6 +1,6 @@
 package me.dingshuai.pojo;
 
-public class Tmessages {
+public class Messages {
 	private int msgId;
 	private String msgSender;
 
@@ -20,16 +20,16 @@ public class Tmessages {
 		this.msgReplyContent = msgReplyContent;
 	}
 
-	public Tmessages() {
+	public Messages() {
 	}
 
-	public Tmessages(String msgSender, String msgTitle, String msgContent) {
+	public Messages(String msgSender, String msgTitle, String msgContent) {
 		this.msgSender = msgSender;
 		this.msgTitle = msgTitle;
 		this.msgContent = msgContent;
 	}
 
-	public Tmessages(int msgId, String msgSender, String msgContent, String msgStatus, String msgReplyContent) {
+	public Messages(int msgId, String msgSender, String msgContent, String msgStatus, String msgReplyContent) {
 		this.msgId = msgId;
 		this.msgSender = msgSender;
 		this.msgContent = msgContent;
@@ -79,7 +79,7 @@ public class Tmessages {
 
 	@Override
 	public String toString() {
-		return "Tmessages{" +
+		return "Messages{" +
 				"msgId=" + msgId +
 				", msgSender='" + msgSender + '\'' +
 				", msgTitle='" + msgTitle + '\'' +

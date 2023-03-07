@@ -1,27 +1,27 @@
 package me.dingshuai.dao.impl;
 
-import me.dingshuai.dao.TmessagesDao;
-import me.dingshuai.pojo.Tmessages;
+import me.dingshuai.dao.MessagesDao;
+import me.dingshuai.pojo.Messages;
 import me.dingshuai.util.SqlSessionUtil;
 import org.apache.ibatis.session.SqlSession;
 
 import java.util.List;
 
-public class TmessagesDaoImpl implements TmessagesDao {
+public class MessagesDaoImpl implements MessagesDao {
 
 	@Override
-	public List<Tmessages> findAll() {
+	public List<Messages> findAll() {
 		SqlSession sqlSession = SqlSessionUtil.openSession();
-		List<Tmessages> selectAll = sqlSession.selectList("msg.selectAll");
+		List<Messages> selectAll = sqlSession.selectList("msg.selectAll");
 		sqlSession.close();
 		return selectAll;
 	}
 
 	@Override
-	public Tmessages findById(int msgId) {
+	public Messages findById(int msgId) {
 
 		SqlSession sqlSession = SqlSessionUtil.openSession();
-		Tmessages msg = sqlSession.selectOne("msg.selectById", msgId);
+		Messages msg = sqlSession.selectOne("msg.selectById", msgId);
 		System.out.println("msg.查找一条 =" + msg);
 		sqlSession.close();
 
@@ -29,7 +29,7 @@ public class TmessagesDaoImpl implements TmessagesDao {
 	}
 
 	@Override
-	public int addMsg(Tmessages msg) {
+	public int addMsg(Messages msg) {
 		SqlSession sqlSession = SqlSessionUtil.openSession();
 		int count = sqlSession.insert("msg.insert", msg);
 		System.out.println("msg.新增 =" + count);
@@ -49,7 +49,7 @@ public class TmessagesDaoImpl implements TmessagesDao {
 	}
 
 	@Override
-	public int updateMsg(Tmessages msg) {
+	public int updateMsg(Messages msg) {
 		SqlSession sqlSession = SqlSessionUtil.openSession();
 		int count = sqlSession.update("msg.updateById", msg);
 		System.out.println("msg.更新 =" + count);

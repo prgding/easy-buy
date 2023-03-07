@@ -5,9 +5,9 @@ import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import me.dingshuai.dao.TusersDao;
-import me.dingshuai.dao.impl.TusersDaoImpl;
-import me.dingshuai.pojo.Tusers;
+import me.dingshuai.dao.UsersDao;
+import me.dingshuai.dao.impl.UsersDaoImpl;
+import me.dingshuai.pojo.Users;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -44,8 +44,8 @@ public class LoginCheckFilter implements Filter {
 		}
 
 		if (username != null && password != null) {
-			TusersDao td = new TusersDaoImpl();
-			Tusers user = td.findByUserNameAndPassWord(username, password);
+			UsersDao td = new UsersDaoImpl();
+			Users user = td.findByUserNameAndPassWord(username, password);
 			if (user != null) {
 				session.setAttribute("user", user);
 				session.setAttribute("date", format);

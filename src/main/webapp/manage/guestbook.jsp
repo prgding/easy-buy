@@ -61,15 +61,15 @@
 						<th>操作</th>
 					</tr>
 
-					<c:forEach items="${tmessages}" var="tmessage">
+					<c:forEach items="${messages}" var="message">
 						<tr>
-							<td class='first w4 c'>${tmessage.msgId}</td>
-							<td class='w1 c'>${tmessage.msgSender}</td>
-							<td class='w4 c'>${tmessage.msgContent}</td>
-							<td class='w3 c'>${tmessage.msgStatus}</td>
+							<td class='first w4 c'>${message.msgId}</td>
+							<td class='w1 c'>${message.msgSender}</td>
+							<td class='w4 c'>${message.msgContent}</td>
+							<td class='w3 c'>${message.msgStatus}</td>
 							<td class='w1 c'>
-								<a href='${pageContext.request.contextPath}/shop/reply?msgId=${tmessage.msgId}'>回复</a>
-								<a href='javascript:DeleteMsg(${tmessage.msgId});'>删除</a>
+								<a href='${pageContext.request.contextPath}/shop/reply?msgId=${message.msgId}'>回复</a>
+								<a href='javascript:DeleteMsg(${message.msgId});'>删除</a>
 							</td>
 						</tr>
 					</c:forEach>

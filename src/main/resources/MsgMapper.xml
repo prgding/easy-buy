@@ -6,18 +6,18 @@
 <mapper namespace="msg">
 
     <insert id="insert">
-        insert into tmessages(msgSender, msgTitle, msgContent)
+        insert into messages(msgSender, msgTitle, msgContent)
         values (#{msgSender}, #{msgTitle}, #{msgContent});
     </insert>
 
     <delete id="deleteById">
         delete
-        from tmessages
+        from messages
         where msgId = #{msgId};
     </delete>
 
     <update id="updateById">
-        UPDATE tmessages
+        UPDATE messages
         SET msgSender       = #{msgSender},
             msgContent      = #{msgContent},
             msgStatus       = #{msgStatus},
@@ -25,14 +25,14 @@
         WHERE msgId = #{msgId}
     </update>
 
-    <select id="selectById" resultType="Tmessages">
+    <select id="selectById" resultType="Messages">
         select *
-        from tmessages
+        from messages
         where msgId = #{msgId};
     </select>
 
-    <select id="selectAll" resultType="Tmessages">
+    <select id="selectAll" resultType="Messages">
         select *
-        from tmessages;
+        from messages;
     </select>
 </mapper>

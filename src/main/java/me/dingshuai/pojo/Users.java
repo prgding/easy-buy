@@ -4,7 +4,7 @@ import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpSessionBindingEvent;
 import jakarta.servlet.http.HttpSessionBindingListener;
 
-public class Tusers implements HttpSessionBindingListener {
+public class Users implements HttpSessionBindingListener {
 
 	@Override
 	public void valueBound(HttpSessionBindingEvent event) {
@@ -34,12 +34,12 @@ public class Tusers implements HttpSessionBindingListener {
 	private String phoneNumber;
 
 	// 提供无参构造方法
-	public Tusers() {
+	public Users() {
 	}
 
 
 	// 提供带参构造方法
-	public Tusers(String userName, String passWord) {
+	public Users(String userName, String passWord) {
 		this.userName = userName;
 		this.passWord = passWord;
 		this.location = "";

@@ -2,9 +2,9 @@ package me.dingshuai.service;
 
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
-import me.dingshuai.dao.TusersDao;
-import me.dingshuai.dao.impl.TusersDaoImpl;
-import me.dingshuai.pojo.Tusers;
+import me.dingshuai.dao.UsersDao;
+import me.dingshuai.dao.impl.UsersDaoImpl;
+import me.dingshuai.pojo.Users;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -12,6 +12,7 @@ import java.time.format.DateTimeFormatter;
 
 @WebServlet(name = "WelcomeServlet", urlPatterns = {"/welcome"})
 public class WelcomeServlet extends HttpServlet {
+	private UsersDao usersDao = new UsersDaoImpl();
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		LocalDateTime now = LocalDateTime.now();
@@ -34,8 +35,7 @@ public class WelcomeServlet extends HttpServlet {
 		}
 
 		if (username != null && password != null) {
-			TusersDao td = new TusersDaoImpl();
-			Tusers user = td.findByUserNameAndPassWord(username, password);
+			Users user = usersDao.findByUserNameAndPassWord(username, password);
 			if (user != null) {
 				HttpSession session = request.getSession();
 				session.setAttribute("user", user);

@@ -5,18 +5,18 @@
 
 <mapper namespace="user">
     <insert id="addUser">
-        insert into tusers(userName, passWord, location, phoneNumber)
+        insert into users(userName, passWord, location, phoneNumber)
         values (#{userName}, #{passWord}, #{location}, #{phoneNumber});
     </insert>
 
     <delete id="deleteById">
         delete
-        from tusers
+        from users
         where userId = #{userId};
     </delete>
 
     <update id="update">
-        UPDATE Tusers
+        UPDATE Users
         SET userName    = #{userName},
             passWord    = #{passWord},
             location    = #{location},
@@ -24,27 +24,27 @@
         WHERE userId = #{userId};
     </update>
 
-    <select id="findById" resultType="Tusers">
+    <select id="findById" resultType="Users">
         SELECT *
-        FROM tusers
+        FROM users
         WHERE userId = #{userId}
     </select>
 
-    <select id="findAll" resultType="Tusers">
+    <select id="findAll" resultType="Users">
         select *
-        from tusers;
+        from users;
     </select>
 
-    <select id="findByUserNameAndPassWord" resultType="Tusers">
+    <select id="findByUserNameAndPassWord" resultType="Users">
         SELECT *
-        FROM tusers
+        FROM users
         WHERE userName = #{userName}
           AND passWord = #{passWord};
     </select>
 
-    <select id="checkIfExists" resultType="Tusers">
+    <select id="checkIfExists" resultType="Users">
         SELECT *
-        FROM tusers
+        FROM users
         WHERE userName = #{userName};
     </select>
 
