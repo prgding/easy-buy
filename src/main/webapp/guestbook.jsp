@@ -1,5 +1,5 @@
 <%@ page import="me.dingshuai.pojo.Users" %>
-<%@ page import="me.dingshuai.mapper.MessagesMapper" %>
+<%@ page import="me.dingshuai.mapper.MsgMapper" %>
 <%@ page import="me.dingshuai.pojo.Messages" %>
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>

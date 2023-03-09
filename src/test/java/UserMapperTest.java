@@ -1,4 +1,4 @@
-import me.dingshuai.mapper.UsersMapper;
+import me.dingshuai.mapper.UserMapper;
 import me.dingshuai.pojo.Users;
 import me.dingshuai.util.SqlSessionUtil;
 import org.junit.Test;
@@ -9,26 +9,26 @@ public class UserMapperTest {
 
 	@Test
 	public void testCheck() {
-		UsersMapper usersMapper = SqlSessionUtil.open().getMapper(UsersMapper.class);
+		UserMapper userMapper = SqlSessionUtil.open().getMapper(UserMapper.class);
 		// 成功
-		List<Users> users = usersMapper.findAll();
+		List<Users> users = userMapper.findAll();
 		System.out.println(users);
 		// 失败
-		Users user = usersMapper.checkPwd("admin","admin");
+		Users user = userMapper.checkPwd("admin","admin");
 		System.out.println(user);
 	}
 
 	@Test
 	public void testFindAll() {
-		UsersMapper usersMapper = SqlSessionUtil.open().getMapper(UsersMapper.class);
-		List<Users> users = usersMapper.findAll();
+		UserMapper userMapper = SqlSessionUtil.open().getMapper(UserMapper.class);
+		List<Users> users = userMapper.findAll();
 		System.out.println(users);
 	}
 
 	@Test
 	public void testCheckIfExists() {
-		UsersMapper usersMapper = SqlSessionUtil.open().getMapper(UsersMapper.class);
-		Users admin = usersMapper.checkIfExists("admin");
+		UserMapper userMapper = SqlSessionUtil.open().getMapper(UserMapper.class);
+		Users admin = userMapper.checkIfExists("admin");
 		System.out.println(admin);
 	}
 }

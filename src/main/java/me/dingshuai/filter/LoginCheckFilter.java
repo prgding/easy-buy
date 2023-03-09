@@ -5,7 +5,7 @@ import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import me.dingshuai.mapper.UsersMapper;
+import me.dingshuai.mapper.UserMapper;
 import me.dingshuai.pojo.Users;
 import me.dingshuai.util.SqlSessionUtil;
 
@@ -15,7 +15,7 @@ import java.time.format.DateTimeFormatter;
 
 
 public class LoginCheckFilter implements Filter {
-	private UsersMapper userDao = SqlSessionUtil.open().getMapper(UsersMapper.class);
+	private UserMapper userDao = SqlSessionUtil.open().getMapper(UserMapper.class);
 
 	@Override
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {

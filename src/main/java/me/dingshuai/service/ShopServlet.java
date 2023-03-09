@@ -7,8 +7,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import me.dingshuai.mapper.MessagesMapper;
-import me.dingshuai.mapper.UsersMapper;
+import me.dingshuai.mapper.MsgMapper;
+import me.dingshuai.mapper.UserMapper;
 import me.dingshuai.pojo.Messages;
 import me.dingshuai.pojo.Users;
 import me.dingshuai.util.SqlSessionUtil;
@@ -19,14 +19,14 @@ import java.util.List;
 
 @WebServlet(name = "ShopServlet", urlPatterns = {"/shop/addMsg", "/shop/showMsg", "/shop/manageMsg", "/shop/delete", "/shop/detail", "/shop/reply", "/shop/updateMsg"})
 public class ShopServlet extends HttpServlet {
-	private UsersMapper usersMapper;
-	private MessagesMapper msgMapper;
+	private UserMapper userMapper;
+	private MsgMapper msgMapper;
 
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		SqlSession sqlSession = SqlSessionUtil.open();
-		usersMapper = sqlSession.getMapper(UsersMapper.class);
-		msgMapper = sqlSession.getMapper(MessagesMapper.class);
+		userMapper = sqlSession.getMapper(UserMapper.class);
+		msgMapper = sqlSession.getMapper(MsgMapper.class);
 		String servletPath = request.getServletPath();
 		switch (servletPath) {
 			case "/shop/addMsg" -> doAddMsg(request, response);
@@ -82,7 +82,7 @@ public class ShopServlet extends HttpServlet {
 		if (request.getParameter("userId") != null) {
 			String userId = request.getParameter("userId");
 
-			usersMapper.deleteById(Integer.parseInt(userId));
+			userMapper.deleteById(Integer.parseInt(userId));
 			response.sendRedirect(request.getContextPath() + "/user/show");
 		} else {
 			String msgId = request.getParameter("msgId");
@@ -97,7 +97,7 @@ public class ShopServlet extends HttpServlet {
 	private void doDetail(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		String userId = request.getParameter("userId");
 
-		Users user = usersMapper.findById(userId);
+		Users user = userMapper.findById(userId);
 		request.setAttribute("user", user);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/manage/detail.jsp");
 		dispatcher.forward(request, response);
@@ -136,7 +136,7 @@ public class ShopServlet extends HttpServlet {
 		}
 		tm.setMsgReplyContent(msgReplyContent);
 
-		// 使用 UsersMapper 的 add 方法添加用户
+		// 使用 UserMapper 的 add 方法添加用户
 		msgMapper.updateMsg(tm);
 
 		// 重定向

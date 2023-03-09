@@ -10,23 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="849432c1-99a9-4c9e-b1f6-220d3e7a16d8" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/easy_buy_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/easy_buy_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/easy-buy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/easy-buy.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/MessagesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/mapper/MessagesMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/UsersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/mapper/UsersMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/MessagesDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/UsersDaoImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/filter/LoginCheckFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/mapper/MessagesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/mapper/MsgMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/mapper/UsersMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/mapper/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/AccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/AccountServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/ShopServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/ShopServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/UserServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/WelcomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/WelcomeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MsgMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MsgMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MsgMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/me/dingshuai/mapper/MsgMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/me/dingshuai/mapper/UserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/guestbook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/guestbook.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/UserMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserMapperTest.java" afterDir="false" />
@@ -105,6 +98,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/me/dingshuai/web" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/me/dingshuai/mapper" />
     </key>
   </component>
   <component name="RunManager">
@@ -234,7 +230,7 @@
       <workItem from="1678174061784" duration="6913000" />
       <workItem from="1678198856466" duration="41000" />
       <workItem from="1678199621840" duration="2304000" />
-      <workItem from="1678331405123" duration="6929000" />
+      <workItem from="1678331405123" duration="7845000" />
     </task>
     <servers />
   </component>

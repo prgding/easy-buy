@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="me.dingshuai.mapper.MessagesMapper">
+<mapper namespace="me.dingshuai.mapper.MsgMapper">
 
     <insert id="addMsg">
         insert into messages(msgSender, msgTitle, msgContent)

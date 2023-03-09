@@ -4,7 +4,7 @@ import me.dingshuai.pojo.Messages;
 
 import java.util.List;
 
-public interface MessagesMapper {
+public interface MsgMapper {
 	List<Messages> findAll();
 
 	int addMsg(Messages msg);

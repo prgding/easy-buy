@@ -2,7 +2,7 @@ package me.dingshuai.service;
 
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
-import me.dingshuai.mapper.UsersMapper;
+import me.dingshuai.mapper.UserMapper;
 import me.dingshuai.pojo.Users;
 import me.dingshuai.util.SqlSessionUtil;
 import org.apache.ibatis.session.SqlSession;
@@ -13,12 +13,12 @@ import java.time.format.DateTimeFormatter;
 
 @WebServlet(name = "WelcomeServlet", urlPatterns = {"/welcome"})
 public class WelcomeServlet extends HttpServlet {
-	private UsersMapper usersMapper;
+	private UserMapper userMapper;
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		SqlSession sqlSession = SqlSessionUtil.open();
-		usersMapper = sqlSession.getMapper(UsersMapper.class);
+		userMapper = sqlSession.getMapper(UserMapper.class);
 		System.out.println("doGet方法执行了");
 		LocalDateTime now = LocalDateTime.now();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
@@ -40,7 +40,7 @@ public class WelcomeServlet extends HttpServlet {
 		}
 
 		if (username != null && password != null) {
-			Users user = usersMapper.checkPwd(username, password);
+			Users user = userMapper.checkPwd(username, password);
 			if (user != null) {
 				HttpSession session = request.getSession();
 				session.setAttribute("user", user);

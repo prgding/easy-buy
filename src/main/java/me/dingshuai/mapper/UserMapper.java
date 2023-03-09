@@ -5,7 +5,7 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-public interface UsersMapper {
+public interface UserMapper {
 	// 添加 Users 数据
 	int addUser(Users user);
 

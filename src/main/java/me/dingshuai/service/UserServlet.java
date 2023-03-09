@@ -7,7 +7,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import me.dingshuai.mapper.UsersMapper;
+import me.dingshuai.mapper.UserMapper;
 import me.dingshuai.pojo.Users;
 import me.dingshuai.util.SqlSessionUtil;
 import org.apache.ibatis.session.SqlSession;
@@ -18,12 +18,12 @@ import java.util.List;
 @WebServlet(name = "UserServlet", urlPatterns = {"/user/update", "/user/show"})
 public class UserServlet extends HttpServlet {
 
-	private UsersMapper usersMapper;
+	private UserMapper userMapper;
 
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		SqlSession sqlSession = SqlSessionUtil.open();
-		usersMapper = sqlSession.getMapper(UsersMapper.class);
+		userMapper = sqlSession.getMapper(UserMapper.class);
 		String servletPath = request.getServletPath();
 		switch (servletPath) {
 			case "/user/update" -> doUpdateUser(request, response, sqlSession);
@@ -50,8 +50,8 @@ public class UserServlet extends HttpServlet {
 		user.setLocation(location);
 		user.setPhoneNumber(phoneNumber);
 
-		// 使用 UsersMapper 的 add 方法添加用户
-		usersMapper.update(user);
+		// 使用 UserMapper 的 add 方法添加用户
+		userMapper.update(user);
 
 		// 根据情况跳转到不同的页面
 		try {
@@ -89,7 +89,7 @@ public class UserServlet extends HttpServlet {
 
 	private void doShowUsers(HttpServletRequest request, HttpServletResponse response,
 							 SqlSession sqlSession) throws IOException {
-		List<Users> users = usersMapper.findAll();
+		List<Users> users = userMapper.findAll();
 		sqlSession.clearCache();
 		System.out.println("上一行执行过了");
 		HttpSession session = request.getSession(false);

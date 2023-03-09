@@ -4,7 +4,7 @@ import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
-import me.dingshuai.mapper.UsersMapper;
+import me.dingshuai.mapper.UserMapper;
 import me.dingshuai.pojo.Users;
 import me.dingshuai.util.SqlSessionUtil;
 import org.apache.ibatis.session.SqlSession;
@@ -13,12 +13,12 @@ import java.io.IOException;
 
 @WebServlet(name = "AccountServlet", urlPatterns = {"/account/login", "/account/register", "/account/exit"})
 public class AccountServlet extends HttpServlet {
-	private UsersMapper usersMapper;
+	private UserMapper userMapper;
 
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		SqlSession sqlSession = SqlSessionUtil.open();
-		usersMapper = sqlSession.getMapper(UsersMapper.class);
+		userMapper = sqlSession.getMapper(UserMapper.class);
 		String servletPath = request.getServletPath();
 		switch (servletPath) {
 			case "/account/login" -> doLogin(request, response);
@@ -38,7 +38,7 @@ public class AccountServlet extends HttpServlet {
 
 		// 根据用户名和密码查询用户是否存在
 
-		Users user = usersMapper.checkPwd(userName, passWord);
+		Users user = userMapper.checkPwd(userName, passWord);
 		if (user == null) {
 			// 用户不存在，登录失败
 			// 设置错误消息，并跳转到登录页面
@@ -86,16 +86,16 @@ public class AccountServlet extends HttpServlet {
 		// 创建 Users 对象
 		Users user = new Users(userName, passWord);
 
-		// 创建 UsersMapper 对象
+		// 创建 UserMapper 对象
 
-		Users alreadyHave = usersMapper.checkIfExists(userName);
+		Users alreadyHave = userMapper.checkIfExists(userName);
 		if (alreadyHave != null) {
 			// 用户名已存在
 			request.setAttribute("RegisterMsg", "用户名已存在");
 			request.getRequestDispatcher("/register.jsp").forward(request, response);
 		} else {
-			// 使用 UsersMapper 的 add 方法添加用户
-			usersMapper.addUser(user);
+			// 使用 UserMapper 的 add 方法添加用户
+			userMapper.addUser(user);
 
 			// 重定向到 userinfo.jsp 页面
 			response.sendRedirect(request.getContextPath() + "/index.jsp");

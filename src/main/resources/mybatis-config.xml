@@ -25,8 +25,7 @@
 
 
     <mappers>
-        <mapper resource="MsgMapper.xml"/>
-        <mapper resource="UserMapper.xml"/>
+        <package name="me.dingshuai.mapper"/>
     </mappers>
 
 </configuration>
