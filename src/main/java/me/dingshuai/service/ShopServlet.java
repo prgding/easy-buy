@@ -7,10 +7,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import me.dingshuai.dao.MessagesDao;
-import me.dingshuai.dao.UsersDao;
-import me.dingshuai.dao.impl.MessagesDaoImpl;
-import me.dingshuai.dao.impl.UsersDaoImpl;
+import me.dingshuai.mapper.MessagesMapper;
+import me.dingshuai.mapper.UsersMapper;
 import me.dingshuai.pojo.Messages;
 import me.dingshuai.pojo.Users;
 import me.dingshuai.util.SqlSessionUtil;
@@ -21,12 +19,14 @@ import java.util.List;
 
 @WebServlet(name = "ShopServlet", urlPatterns = {"/shop/addMsg", "/shop/showMsg", "/shop/manageMsg", "/shop/delete", "/shop/detail", "/shop/reply", "/shop/updateMsg"})
 public class ShopServlet extends HttpServlet {
-	private UsersDao usersDao = new UsersDaoImpl();
-	private MessagesDao msgDao = new MessagesDaoImpl();
-	private SqlSession sqlSession = SqlSessionUtil.open();
+	private UsersMapper usersMapper;
+	private MessagesMapper msgMapper;
 
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+		SqlSession sqlSession = SqlSessionUtil.open();
+		usersMapper = sqlSession.getMapper(UsersMapper.class);
+		msgMapper = sqlSession.getMapper(MessagesMapper.class);
 		String servletPath = request.getServletPath();
 		switch (servletPath) {
 			case "/shop/addMsg" -> doAddMsg(request, response);
@@ -37,7 +37,7 @@ public class ShopServlet extends HttpServlet {
 			case "/shop/reply" -> doReply(request, response);
 			case "/shop/updateMsg" -> doUpdateMsg(request, response);
 		}
-		// 销毁数据库对象
+		sqlSession.commit();
 		SqlSessionUtil.close(sqlSession);
 	}
 
@@ -51,7 +51,7 @@ public class ShopServlet extends HttpServlet {
 		tm.setMsgSender(guestName);
 		tm.setMsgTitle(guestTitle);
 		tm.setMsgContent(guestContent);
-		msgDao.addMsg(tm);
+		msgMapper.addMsg(tm);
 
 		response.sendRedirect(request.getContextPath() + "/shop/showMsg");
 
@@ -60,7 +60,7 @@ public class ShopServlet extends HttpServlet {
 
 	private void doShowMsg(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-		List<Messages> messages = msgDao.findAll();
+		List<Messages> messages = msgMapper.findAll();
 		HttpSession session = request.getSession(false);
 		session.setAttribute("messages", messages);
 		response.sendRedirect(request.getContextPath() + "/guestbook.jsp");
@@ -70,7 +70,7 @@ public class ShopServlet extends HttpServlet {
 
 	private void doManageMsg(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-		List<Messages> messages = msgDao.findAll();
+		List<Messages> messages = msgMapper.findAll();
 		HttpSession session = request.getSession(false);
 		session.setAttribute("messages", messages);
 		response.sendRedirect(request.getContextPath() + "/manage/guestbook.jsp");
@@ -82,12 +82,12 @@ public class ShopServlet extends HttpServlet {
 		if (request.getParameter("userId") != null) {
 			String userId = request.getParameter("userId");
 
-			usersDao.deleteById(Integer.parseInt(userId));
+			usersMapper.deleteById(Integer.parseInt(userId));
 			response.sendRedirect(request.getContextPath() + "/user/show");
 		} else {
 			String msgId = request.getParameter("msgId");
 
-			msgDao.deleteById(Integer.parseInt(msgId));
+			msgMapper.deleteById(Integer.parseInt(msgId));
 			response.sendRedirect(request.getContextPath() + "/shop/manageMsg");
 		}
 
@@ -97,7 +97,7 @@ public class ShopServlet extends HttpServlet {
 	private void doDetail(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		String userId = request.getParameter("userId");
 
-		Users user = usersDao.findById(userId);
+		Users user = usersMapper.findById(userId);
 		request.setAttribute("user", user);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/manage/detail.jsp");
 		dispatcher.forward(request, response);
@@ -108,7 +108,7 @@ public class ShopServlet extends HttpServlet {
 	private void doReply(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		String msgId = request.getParameter("msgId");
 
-		Messages tm = msgDao.findById(Integer.parseInt(msgId));
+		Messages tm = msgMapper.findById(Integer.parseInt(msgId));
 		request.setAttribute("msg", tm);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/manage/reply.jsp");
 		dispatcher.forward(request, response);
@@ -136,8 +136,8 @@ public class ShopServlet extends HttpServlet {
 		}
 		tm.setMsgReplyContent(msgReplyContent);
 
-		// 使用 UsersDao 的 add 方法添加用户
-		msgDao.updateMsg(tm);
+		// 使用 UsersMapper 的 add 方法添加用户
+		msgMapper.updateMsg(tm);
 
 		// 重定向
 		response.sendRedirect(request.getContextPath() + "/shop/manageMsg");

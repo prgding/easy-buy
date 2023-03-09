@@ -10,17 +10,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="849432c1-99a9-4c9e-b1f6-220d3e7a16d8" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a443388-8787-4d08-b048-fed88c3f66fc/storage_v2/_src_/schema/sys.zb4BAA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7a443388-8787-4d08-b048-fed88c3f66fc/storage_v2/_src_/schema/sys.zb4BAA.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/easy_buy_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/easy_buy_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/easy-buy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/easy-buy.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/MessagesDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/MessagesDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/UsersDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/UsersDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/MessagesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/mapper/MessagesMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/UsersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/mapper/UsersMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/MessagesDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/dao/impl/UsersDaoImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/filter/LoginCheckFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/listener/OnlineUserListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/listener/OnlineUserListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Users.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/AccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/AccountServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/ShopServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/ShopServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/UserServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/WelcomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/WelcomeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/util/SqlSessionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/util/SqlSessionUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MsgMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MsgMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/guestbook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/guestbook.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserMapperTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,11 +51,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/me/dingshuai/service/AccountServlet.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -73,7 +85,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/dingshuai/Dev/Code/Java/03-JavaWeb/easy-buy/src/main/java/me/dingshuai/web",
+    "last_opened_file_path": "/Users/dingshuai/Dev/Code/Java/03-JavaWeb/easy-buy/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -91,60 +103,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/me/dingshuai/web" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.7">
-    <configuration name="MsgMapperTest.addMsg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="easy-buy" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MsgMapperTest" />
-      <option name="METHOD_NAME" value="addMsg" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MsgMapperTest.deleteById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="easy-buy" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MsgMapperTest" />
-      <option name="METHOD_NAME" value="deleteById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MsgMapperTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="easy-buy" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MsgMapperTest" />
-      <option name="METHOD_NAME" value="findAll" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MsgMapperTest.findById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="easy-buy" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MsgMapperTest" />
-      <option name="METHOD_NAME" value="findById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MsgMapperTest.updateMsg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="easy-buy" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MsgMapperTest" />
-      <option name="METHOD_NAME" value="updateMsg" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="Tomcat 10.1.7" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.7" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
@@ -234,23 +197,6 @@
         </option>
       </method>
     </configuration>
-    <list>
-      <item itemvalue="JUnit.MsgMapperTest.addMsg" />
-      <item itemvalue="JUnit.MsgMapperTest.deleteById" />
-      <item itemvalue="JUnit.MsgMapperTest.findAll" />
-      <item itemvalue="JUnit.MsgMapperTest.findById" />
-      <item itemvalue="JUnit.MsgMapperTest.updateMsg" />
-      <item itemvalue="Tomcat Server.Tomcat 10.1.7" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.MsgMapperTest.updateMsg" />
-        <item itemvalue="JUnit.MsgMapperTest.deleteById" />
-        <item itemvalue="JUnit.MsgMapperTest.addMsg" />
-        <item itemvalue="JUnit.MsgMapperTest.findAll" />
-        <item itemvalue="JUnit.MsgMapperTest.findById" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -288,6 +234,7 @@
       <workItem from="1678174061784" duration="6913000" />
       <workItem from="1678198856466" duration="41000" />
       <workItem from="1678199621840" duration="2304000" />
+      <workItem from="1678331405123" duration="6929000" />
     </task>
     <servers />
   </component>

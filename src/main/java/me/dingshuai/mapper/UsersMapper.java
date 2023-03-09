@@ -1,10 +1,11 @@
-package me.dingshuai.dao;
+package me.dingshuai.mapper;
 
 import me.dingshuai.pojo.Users;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-public interface UsersDao {
+public interface UsersMapper {
 	// 添加 Users 数据
 	int addUser(Users user);
 
@@ -17,7 +18,7 @@ public interface UsersDao {
 	// 查询所有 Users 数据
 	List<Users> findAll();
 
-	Users findByUserNameAndPassWord(String userName, String passWord);
+	Users checkPwd(@Param("userName") String userName, @Param("passWord") String passWord);
 
 	// 根据 id 查询 Users 数据
 	Users checkIfExists(String userName);

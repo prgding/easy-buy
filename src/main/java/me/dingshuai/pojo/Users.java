@@ -33,6 +33,17 @@ public class Users implements HttpSessionBindingListener {
 	private String location;
 	private String phoneNumber;
 
+	@Override
+	public String toString() {
+		return "Users{" +
+				"userId=" + userId +
+				", userName='" + userName + '\'' +
+				", passWord='" + passWord + '\'' +
+				", location='" + location + '\'' +
+				", phoneNumber='" + phoneNumber + '\'' +
+				'}';
+	}
+
 	// 提供无参构造方法
 	public Users() {
 	}

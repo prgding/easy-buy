@@ -7,8 +7,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import me.dingshuai.dao.UsersDao;
-import me.dingshuai.dao.impl.UsersDaoImpl;
+import me.dingshuai.mapper.UsersMapper;
 import me.dingshuai.pojo.Users;
 import me.dingshuai.util.SqlSessionUtil;
 import org.apache.ibatis.session.SqlSession;
@@ -19,22 +18,23 @@ import java.util.List;
 @WebServlet(name = "UserServlet", urlPatterns = {"/user/update", "/user/show"})
 public class UserServlet extends HttpServlet {
 
-	private UsersDao usersDao = new UsersDaoImpl();
-	private SqlSession sqlSession = SqlSessionUtil.open();
+	private UsersMapper usersMapper;
 
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		SqlSession sqlSession = SqlSessionUtil.open();
+		usersMapper = sqlSession.getMapper(UsersMapper.class);
 		String servletPath = request.getServletPath();
 		switch (servletPath) {
-			case "/user/update" -> doUpdateUser(request, response);
-			case "/user/show" -> doShowUsers(request, response);
+			case "/user/update" -> doUpdateUser(request, response, sqlSession);
+			case "/user/show" -> doShowUsers(request, response, sqlSession);
 		}
-		// 销毁数据库对象
+		sqlSession.commit();
 		SqlSessionUtil.close(sqlSession);
 	}
 
 
-	private void doUpdateUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	private void doUpdateUser(HttpServletRequest request, HttpServletResponse response, SqlSession sqlSession) throws IOException {
 		// 获取请求参数
 		String userId = request.getParameter("userId");
 		String userName = request.getParameter("userName");
@@ -50,8 +50,8 @@ public class UserServlet extends HttpServlet {
 		user.setLocation(location);
 		user.setPhoneNumber(phoneNumber);
 
-		// 使用 UsersDao 的 add 方法添加用户
-		usersDao.update(user);
+		// 使用 UsersMapper 的 add 方法添加用户
+		usersMapper.update(user);
 
 		// 根据情况跳转到不同的页面
 		try {
@@ -87,8 +87,11 @@ public class UserServlet extends HttpServlet {
 		}
 	}
 
-	private void doShowUsers(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		List<Users> users = usersDao.findAll();
+	private void doShowUsers(HttpServletRequest request, HttpServletResponse response,
+							 SqlSession sqlSession) throws IOException {
+		List<Users> users = usersMapper.findAll();
+		sqlSession.clearCache();
+		System.out.println("上一行执行过了");
 		HttpSession session = request.getSession(false);
 		session.setAttribute("users", users);
 		response.sendRedirect(request.getContextPath() + "/manage/user.jsp");

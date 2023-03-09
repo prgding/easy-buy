@@ -2,8 +2,7 @@ package me.dingshuai.service;
 
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
-import me.dingshuai.dao.UsersDao;
-import me.dingshuai.dao.impl.UsersDaoImpl;
+import me.dingshuai.mapper.UsersMapper;
 import me.dingshuai.pojo.Users;
 import me.dingshuai.util.SqlSessionUtil;
 import org.apache.ibatis.session.SqlSession;
@@ -14,11 +13,13 @@ import java.time.format.DateTimeFormatter;
 
 @WebServlet(name = "WelcomeServlet", urlPatterns = {"/welcome"})
 public class WelcomeServlet extends HttpServlet {
-	private UsersDao usersDao = new UsersDaoImpl();
-	private SqlSession sqlSession = SqlSessionUtil.open();
+	private UsersMapper usersMapper;
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		SqlSession sqlSession = SqlSessionUtil.open();
+		usersMapper = sqlSession.getMapper(UsersMapper.class);
+		System.out.println("doGet方法执行了");
 		LocalDateTime now = LocalDateTime.now();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		String format = formatter.format(now);
@@ -39,7 +40,7 @@ public class WelcomeServlet extends HttpServlet {
 		}
 
 		if (username != null && password != null) {
-			Users user = usersDao.findByUserNameAndPassWord(username, password);
+			Users user = usersMapper.checkPwd(username, password);
 			if (user != null) {
 				HttpSession session = request.getSession();
 				session.setAttribute("user", user);
@@ -58,7 +59,7 @@ public class WelcomeServlet extends HttpServlet {
 		} else {
 			response.sendRedirect(request.getContextPath() + "/index.jsp");
 		}
-		// 销毁数据库对象
+		sqlSession.commit();
 		SqlSessionUtil.close(sqlSession);
 	}
 }

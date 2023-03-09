@@ -3,9 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="msg">
+<mapper namespace="me.dingshuai.mapper.MessagesMapper">
 
-    <insert id="insert">
+    <insert id="addMsg">
         insert into messages(msgSender, msgTitle, msgContent)
         values (#{msgSender}, #{msgTitle}, #{msgContent});
     </insert>
@@ -16,7 +16,7 @@
         where msgId = #{msgId};
     </delete>
 
-    <update id="updateById">
+    <update id="updateMsg">
         UPDATE messages
         SET msgSender       = #{msgSender},
             msgContent      = #{msgContent},
@@ -25,13 +25,13 @@
         WHERE msgId = #{msgId}
     </update>
 
-    <select id="selectById" resultType="Messages">
+    <select id="findById" resultType="Messages">
         select *
         from messages
         where msgId = #{msgId};
     </select>
 
-    <select id="selectAll" resultType="Messages">
+    <select id="findAll" resultType="Messages">
         select *
         from messages;
     </select>

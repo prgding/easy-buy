@@ -4,8 +4,7 @@ import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
-import me.dingshuai.dao.UsersDao;
-import me.dingshuai.dao.impl.UsersDaoImpl;
+import me.dingshuai.mapper.UsersMapper;
 import me.dingshuai.pojo.Users;
 import me.dingshuai.util.SqlSessionUtil;
 import org.apache.ibatis.session.SqlSession;
@@ -14,11 +13,12 @@ import java.io.IOException;
 
 @WebServlet(name = "AccountServlet", urlPatterns = {"/account/login", "/account/register", "/account/exit"})
 public class AccountServlet extends HttpServlet {
-	private UsersDao userDao = new UsersDaoImpl();
-	private SqlSession sqlSession = SqlSessionUtil.open();
+	private UsersMapper usersMapper;
 
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		SqlSession sqlSession = SqlSessionUtil.open();
+		usersMapper = sqlSession.getMapper(UsersMapper.class);
 		String servletPath = request.getServletPath();
 		switch (servletPath) {
 			case "/account/login" -> doLogin(request, response);
@@ -26,7 +26,7 @@ public class AccountServlet extends HttpServlet {
 			case "/account/exit" -> doExit(request, response);
 
 		}
-		// 销毁数据库对象
+		sqlSession.commit();
 		SqlSessionUtil.close(sqlSession);
 	}
 
@@ -38,7 +38,7 @@ public class AccountServlet extends HttpServlet {
 
 		// 根据用户名和密码查询用户是否存在
 
-		Users user = userDao.findByUserNameAndPassWord(userName, passWord);
+		Users user = usersMapper.checkPwd(userName, passWord);
 		if (user == null) {
 			// 用户不存在，登录失败
 			// 设置错误消息，并跳转到登录页面
@@ -86,16 +86,16 @@ public class AccountServlet extends HttpServlet {
 		// 创建 Users 对象
 		Users user = new Users(userName, passWord);
 
-		// 创建 UsersDao 对象
+		// 创建 UsersMapper 对象
 
-		Users alreadyHave = userDao.checkIfExists(userName);
+		Users alreadyHave = usersMapper.checkIfExists(userName);
 		if (alreadyHave != null) {
 			// 用户名已存在
 			request.setAttribute("RegisterMsg", "用户名已存在");
 			request.getRequestDispatcher("/register.jsp").forward(request, response);
 		} else {
-			// 使用 UsersDao 的 add 方法添加用户
-			userDao.addUser(user);
+			// 使用 UsersMapper 的 add 方法添加用户
+			usersMapper.addUser(user);
 
 			// 重定向到 userinfo.jsp 页面
 			response.sendRedirect(request.getContextPath() + "/index.jsp");

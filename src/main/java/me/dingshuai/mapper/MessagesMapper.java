@@ -1,10 +1,10 @@
-package me.dingshuai.dao;
+package me.dingshuai.mapper;
 
 import me.dingshuai.pojo.Messages;
 
 import java.util.List;
 
-public interface MessagesDao {
+public interface MessagesMapper {
 	List<Messages> findAll();
 
 	int addMsg(Messages msg);

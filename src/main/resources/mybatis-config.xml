@@ -5,6 +5,9 @@
 
 <configuration>
     <properties resource="jdbc.properties"/>
+    <settings>
+        <setting name="logImpl" value="LOG4J2"/>
+    </settings>
     <typeAliases>
         <package name="me.dingshuai.pojo"/>
     </typeAliases>
@@ -20,10 +23,10 @@
         </environment>
     </environments>
 
+
     <mappers>
         <mapper resource="MsgMapper.xml"/>
         <mapper resource="UserMapper.xml"/>
-
     </mappers>
 
 </configuration>
