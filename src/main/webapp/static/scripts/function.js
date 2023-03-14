@@ -55,34 +55,47 @@ function CheckItem(obj) {
 
 function checkUsernameDuplicate(obj) {
 	// 发送Ajax请求，检查用户名是否已经存在
-	var username = obj.value;
-	var url = "account/checkIfExists?userName=" + username;
-
-	$.ajax({
-		url: url,
-		type: "GET",
-		success: function (data) {
-			var msgBox = obj.parentNode.getElementsByTagName("span")[0];
-			if (data === "用户名已存在") {
-				msgBox.innerHTML = "用户名已存在";
+	var username = obj.value.trim();
+	if (username) {
+		var url = "account/checkIfExists?userName=" + username;
+		$.ajax({
+			url: url,
+			type: "GET",
+			success: function (data) {
+				var msgBox = obj.parentNode.getElementsByTagName("span")[0];
+				if (data === "用户名已存在") {
+					msgBox.innerHTML = "用户名已存在";
+					msgBox.className = "error";
+				} else {
+					msgBox.innerHTML = "用户名可用";
+					msgBox.className = "success";
+				}
+			},
+			error: function (xhr, status, error) {
+				var msgBox = obj.parentNode.getElementsByTagName("span")[0];
+				msgBox.innerHTML = "服务器端错误，" + xhr.status;
 				msgBox.className = "error";
-			} else {
-				msgBox.innerHTML = "用户名可用";
-				msgBox.className = "success";
+				console.log("error ==", error);
 			}
-		},
-		error: function (xhr, status, error) {
-			console.log("error ==", error);
-		}
-	});
+		});
+	}
 }
 
 function checkForm(frm) {
 	var els = frm.getElementsByTagName("input");
 	for (var i = 0; i < els.length; i++) {
-		if (typeof (els[i].getAttribute("onblur")) == "function") {
-			if (!CheckItem(els[i])) return false;
+		// 获取onblur属性值
+		func_list = els[i].getAttribute("onblur");
+		if (typeof func_list == "string") { // 如果onblur属性值不为空
+			CheckItem(els[i]) // 走一遍验证流程
 		}
+	}
+	// 检查是否有错误信息
+	var listOf = document.querySelectorAll("span.error");
+	console.log(listOf.length);
+	if (listOf.length > 0) {
+		console.log("有错误span");
+		return false;
 	}
 	return true;
 }

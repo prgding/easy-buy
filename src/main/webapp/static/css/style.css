@@ -148,6 +148,7 @@ a:hover, a:active {
 
 .wrap {
     width: 960px;
+    height: 80px;
     margin: 0 auto;
 }
 
@@ -174,13 +175,9 @@ p.error {
     text-align: center;
 }
 
-#header .help a.shopping {
-    padding-left: 18px;
-    background: url(../images/bg.png) left -69px no-repeat;
-}
-
 #header .navbar {
-    padding-left: 120px;
+    /*边框*/
+    /*border: 1px solid black;*/
     margin-top: 30px;
 }
 
@@ -188,35 +185,33 @@ p.error {
     float: left;
     display: inline;
     margin: 0 3px;
-    background: url(../images/bg.png) right -30px no-repeat;
     padding-right: 20px;
 }
 
 #header .navbar li a {
-    display: block;
-    word-spacing: 5px;
-    letter-spacing: 5px;
-    background: url(../images/bg.png) left -30px no-repeat;
-    padding-left: 20px;
-    padding-top: 4px;
-    line-height: 26px;
-    font-size: 14px;
-    font-weight: bold;
-    /*navbar字体*/
-    color: black;
+    display: inline-block;
+    padding: 10px 20px;
     text-decoration: none;
+    /*navbar字体*/
+    color: #1a0a0a;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
-
-#header .navbar li.current {
-    background-position: right top;
-    padding-right: 15px;
-}
-
-#header .navbar li.current a {
-    background-position: left top;
+#header .navbar li a:hover {
+    background-color: #90aaff;
     color: #fff;
-    padding-left: 15px;
 }
+#header .navbar li.current a{
+    background-color: #90aaff;
+
+    color: #fff;
+}
+
+/*#header .navbar li.current a {*/
+/*    background-position: left top;*/
+/*    color: #fff;*/
+/*    padding-left: 15px;*/
+/*}*/
 
 #childNav {
     clear: both;

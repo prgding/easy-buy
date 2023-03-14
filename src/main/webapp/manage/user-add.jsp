@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<div id="header" class="wrap">
-			<div id="logo"><img src="../images/logo.gif"/></div>
+			<%--<div id="logo"><img src="../images/logo.gif"/></div>--%>
 			<div class="help"><a href="../index.jsp">返回前台页面</a></div>
 			<div class="navbar">
 				<ul class="clearfix">

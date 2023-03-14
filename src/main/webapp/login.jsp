@@ -22,7 +22,7 @@
 	</head>
 	<body>
 		<div id="header" class="wrap">
-			<div id="logo"><img src="${pageContext.request.contextPath}/images/logo.gif"/></div>
+			<%--<div id="logo"><img src="${pageContext.request.contextPath}/images/logo.gif"/></div>--%>
 			<div class="help">
 				<a href="#" class="shopping">购物车</a>
 				<a href="login.jsp">登录</a>
