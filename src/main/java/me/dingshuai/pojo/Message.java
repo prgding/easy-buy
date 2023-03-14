@@ -1,6 +1,9 @@
 package me.dingshuai.pojo;
 
-public class Messages {
+import org.springframework.stereotype.Component;
+
+@Component
+public class Message {
 	private int msgId;
 	private String msgSender;
 
@@ -20,16 +23,16 @@ public class Messages {
 		this.msgReplyContent = msgReplyContent;
 	}
 
-	public Messages() {
+	public Message() {
 	}
 
-	public Messages(String msgSender, String msgTitle, String msgContent) {
+	public Message(String msgSender, String msgTitle, String msgContent) {
 		this.msgSender = msgSender;
 		this.msgTitle = msgTitle;
 		this.msgContent = msgContent;
 	}
 
-	public Messages(int msgId, String msgSender, String msgContent, String msgStatus, String msgReplyContent) {
+	public Message(int msgId, String msgSender, String msgContent, String msgStatus, String msgReplyContent) {
 		this.msgId = msgId;
 		this.msgSender = msgSender;
 		this.msgContent = msgContent;
@@ -79,7 +82,7 @@ public class Messages {
 
 	@Override
 	public String toString() {
-		return "Messages{" +
+		return "Message{" +
 				"msgId=" + msgId +
 				", msgSender='" + msgSender + '\'' +
 				", msgTitle='" + msgTitle + '\'' +

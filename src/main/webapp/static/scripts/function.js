@@ -53,6 +53,31 @@ function CheckItem(obj) {
 	return true;
 }
 
+function checkUsernameDuplicate(obj) {
+	// 发送Ajax请求，检查用户名是否已经存在
+	var username = obj.value;
+	var url = "account/checkIfExists?userName=" + username;
+	var xmlHttpRequest = new XMLHttpRequest();
+	xmlHttpRequest.onreadystatechange = function () {
+		if (xmlHttpRequest.readyState == 4) {
+			if (xmlHttpRequest.status == 200) {
+				var msgBox = obj.parentNode.getElementsByTagName("span")[0];
+				if (xmlHttpRequest.responseText === "用户名已存在") {
+					msgBox.innerHTML = "用户名已存在";
+					msgBox.className = "error";
+				} else {
+					msgBox.innerHTML = "用户名可用";
+					msgBox.className = "success";
+				}
+			} else {
+				console.log(xmlHttpRequest.status);
+			}
+		}
+	}
+	xmlHttpRequest.open("GET", url, true);
+	xmlHttpRequest.send();
+}
+
 function checkForm(frm) {
 	var els = frm.getElementsByTagName("input");
 	for (var i = 0; i < els.length; i++) {
@@ -90,79 +115,4 @@ function scrollChater() {
 	var scrollLeft = document.documentElement.scrollLeft;
 	chater.style.left = scrollLeft + document.documentElement.clientWidth - 92 + "px";
 	chater.style.top = scrollTop + document.documentElement.clientHeight - 25 + "px";
-}
-
-function inArray(array, str) {
-	for (a in array) {
-		if (array[a] == str) return true;
-	}
-	return false;
-}
-
-function setCookie(name, value) {
-	var Days = 30;
-	var exp = new Date();
-	exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
-	document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
-}
-
-function getCookie(name) {
-	var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
-	if (arr != null) return unescape(arr[2]);
-	return null;
-}
-
-function delCookie(name) {
-	var exp = new Date();
-	exp.setTime(exp.getTime() - 1);
-	var cval = getCookie(name);
-	if (cval != null) document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString();
-}
-
-function goBuy(id, price) {
-	var newCookie = "";
-	var oldCookie = getCookie("product");
-	if (oldCookie) {
-		if (inArray(oldCookie.split(","), id)) {
-			newCookie = oldCookie;
-		} else {
-			newCookie = id + "," + oldCookie;
-		}
-	} else {
-		newCookie = id;
-	}
-	setCookie("product", newCookie);
-	location.href = "shopping.html";
-}
-
-function delShopping(id) {
-	var tr = document.getElementById("product_id_" + id);
-	var oldCookie = getCookie("product");
-	if (oldCookie) {
-		var oldCookieArr = oldCookie.split(",");
-		var newCookieArr = new Array();
-		for (c in oldCookieArr) {
-			var cookie = parseInt(oldCookieArr[c]);
-			if (cookie != id) newCookieArr.push(cookie);
-		}
-		var newCookie = newCookieArr.join(",");
-		setCookie("product", newCookie);
-	}
-	if (tr) tr.parentNode.removeChild(tr);
-}
-
-function reloadPrice(id, status) {
-	var price = document.getElementById("price_id_" + id).getElementsByTagName("input")[0].value;
-	var priceBox = document.getElementById("price_id_" + id).getElementsByTagName("span")[0];
-	var number = document.getElementById("number_id_" + id);
-	if (status) {
-		number.value++;
-	} else {
-		if (number.value == 1) {
-			return false;
-		} else {
-			number.value--;
-		}
-	}
-	priceBox.innerHTML = "￥" + price * number.value;
 }

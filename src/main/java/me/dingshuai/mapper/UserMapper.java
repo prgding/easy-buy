@@ -1,28 +1,30 @@
 package me.dingshuai.mapper;
 
-import me.dingshuai.pojo.Users;
+import me.dingshuai.pojo.User;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
 public interface UserMapper {
-	// 添加 Users 数据
-	int addUser(Users user);
+	// 添加 User 数据
+	int addUser(User user);
 
-	// 根据 id 删除 Users 数据
+	// 根据 id 删除 User 数据
 	int deleteById(int id);
 
-	// 更新 Users 数据
-	int update(Users users);
+	// 更新 User 数据
+	int update(User user);
 
-	// 查询所有 Users 数据
-	List<Users> findAll();
+	int checkUsernameDuplicate(String userName);
 
-	Users checkPwd(@Param("userName") String userName, @Param("passWord") String passWord);
+	// 查询所有 User 数据
+	List<User> findAll();
 
-	// 根据 id 查询 Users 数据
-	Users checkIfExists(String userName);
+	User checkPwd(@Param("userName") String userName, @Param("passWord") String passWord);
 
-	Users findById(String userId);
+	// 根据 id 查询 User 数据
+	User checkIfExists(String userName);
+
+	User findById(String userId);
 
 }

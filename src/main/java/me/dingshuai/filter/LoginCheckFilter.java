@@ -6,7 +6,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import me.dingshuai.mapper.UserMapper;
-import me.dingshuai.pojo.Users;
+import me.dingshuai.pojo.User;
 import me.dingshuai.util.SqlSessionUtil;
 
 import java.io.IOException;
@@ -46,7 +46,7 @@ public class LoginCheckFilter implements Filter {
 		}
 
 		if (username != null && password != null) {
-			Users user = userDao.checkPwd(username, password);
+			User user = userDao.checkPwd(username, password);
 			if (user != null) {
 				session.setAttribute("user", user);
 				session.setAttribute("date", format);

@@ -70,7 +70,8 @@
 						<table>
 							<tr>
 								<td class="field">用户名：</td>
-								<td><input class="text" type="text" name="userName" onfocus="FocusItem(this)" onblur="CheckItem(this);"/><span></span>
+								<td><input class="text" type="text" name="userName" onfocus="FocusItem(this)"
+										   onblur="CheckItem(this);checkUsernameDuplicate(this);"/><span></span>
 								</td>
 							</tr>
 							<tr>

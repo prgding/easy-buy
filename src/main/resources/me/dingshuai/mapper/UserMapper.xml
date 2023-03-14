@@ -11,7 +11,7 @@
 
     <delete id="deleteById">
         delete
-        from users
+        FROM users
         where userId = #{userId};
     </delete>
 
@@ -24,25 +24,25 @@
         WHERE userId = #{userId};
     </update>
 
-    <select id="findById" resultType="Users">
+    <select id="findById" resultType="User">
         SELECT *
         FROM users
         WHERE userId = #{userId}
     </select>
 
-    <select id="findAll" resultType="Users">
+    <select id="findAll" resultType="User">
         select *
-        from users;
+        FROM users;
     </select>
 
-    <select id="checkPwd" resultType="Users">
+    <select id="checkPwd" resultType="User">
         SELECT *
         FROM users
         WHERE userName = #{userName}
           AND passWord = #{passWord};
     </select>
 
-    <select id="checkIfExists" resultType="Users">
+    <select id="checkIfExists" resultType="User">
         SELECT *
         FROM users
         WHERE userName = #{userName};

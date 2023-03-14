@@ -1,9 +1,9 @@
-package me.dingshuai.service;
+package me.dingshuai.web;
 
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 import me.dingshuai.mapper.UserMapper;
-import me.dingshuai.pojo.Users;
+import me.dingshuai.pojo.User;
 import me.dingshuai.util.SqlSessionUtil;
 import org.apache.ibatis.session.SqlSession;
 
@@ -40,7 +40,7 @@ public class WelcomeServlet extends HttpServlet {
 		}
 
 		if (username != null && password != null) {
-			Users user = userMapper.checkPwd(username, password);
+			User user = userMapper.checkPwd(username, password);
 			if (user != null) {
 				HttpSession session = request.getSession();
 				session.setAttribute("user", user);

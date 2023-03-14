@@ -3,8 +3,10 @@ package me.dingshuai.pojo;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpSessionBindingEvent;
 import jakarta.servlet.http.HttpSessionBindingListener;
+import org.springframework.stereotype.Component;
 
-public class Users implements HttpSessionBindingListener {
+@Component
+public class User implements HttpSessionBindingListener {
 
 	@Override
 	public void valueBound(HttpSessionBindingEvent event) {
@@ -35,7 +37,7 @@ public class Users implements HttpSessionBindingListener {
 
 	@Override
 	public String toString() {
-		return "Users{" +
+		return "User{" +
 				"userId=" + userId +
 				", userName='" + userName + '\'' +
 				", passWord='" + passWord + '\'' +
@@ -45,12 +47,12 @@ public class Users implements HttpSessionBindingListener {
 	}
 
 	// 提供无参构造方法
-	public Users() {
+	public User() {
 	}
 
 
 	// 提供带参构造方法
-	public Users(String userName, String passWord) {
+	public User(String userName, String passWord) {
 		this.userName = userName;
 		this.passWord = passWord;
 		this.location = "";

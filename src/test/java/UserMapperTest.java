@@ -1,34 +1,24 @@
-import me.dingshuai.mapper.UserMapper;
-import me.dingshuai.pojo.Users;
-import me.dingshuai.util.SqlSessionUtil;
-import org.junit.Test;
+import me.dingshuai.service.AccountService;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import java.util.List;
-
+@ExtendWith(SpringExtension.class)
+@ContextConfiguration("classpath:spring.xml")
 public class UserMapperTest {
+	@Autowired
+	private AccountService accountService;
 
 	@Test
-	public void testCheck() {
-		UserMapper userMapper = SqlSessionUtil.open().getMapper(UserMapper.class);
-		// 成功
-		List<Users> users = userMapper.findAll();
-		System.out.println(users);
-		// 失败
-		Users user = userMapper.checkPwd("admin","admin");
-		System.out.println(user);
-	}
-
-	@Test
-	public void testFindAll() {
-		UserMapper userMapper = SqlSessionUtil.open().getMapper(UserMapper.class);
-		List<Users> users = userMapper.findAll();
-		System.out.println(users);
-	}
-
-	@Test
-	public void testCheckIfExists() {
-		UserMapper userMapper = SqlSessionUtil.open().getMapper(UserMapper.class);
-		Users admin = userMapper.checkIfExists("admin");
-		System.out.println(admin);
+	public String testCheckIfExists() {
+		int exist = accountService.CheckIfExists("admin");
+		if (exist == 1) {
+			System.out.println("用户名已存在");
+		} else {
+			System.out.println("用户名可用");
+		}
+		return "用户名已存在";
 	}
 }

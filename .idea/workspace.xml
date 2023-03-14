@@ -10,18 +10,73 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="849432c1-99a9-4c9e-b1f6-220d3e7a16d8" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/ShopService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/WelcomeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/impl/AccountServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/impl/ShopServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/impl/WelcomeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/web/AccountServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/logo.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/easy_buy_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/easy_buy_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a443388-8787-4d08-b048-fed88c3f66fc/storage_v2/_src_/schema/information_schema.FNRwLQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7a443388-8787-4d08-b048-fed88c3f66fc/storage_v2/_src_/schema/information_schema.FNRwLQ.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a443388-8787-4d08-b048-fed88c3f66fc/storage_v2/_src_/schema/sys.zb4BAA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7a443388-8787-4d08-b048-fed88c3f66fc/storage_v2/_src_/schema/sys.zb4BAA.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/easy-buy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/easy-buy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_annotations_api_10_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_api_10_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_catalina_10_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_coyote_10_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_el_api_10_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jaspic_api_10_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jni_10_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jsp_api_10_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_10_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_servlet_api_10_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_util_10_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_util_scan_10_1_5.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/filter/LoginCheckFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/mapper/MessagesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/mapper/MsgMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/mapper/UsersMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/AccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/AccountServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/ShopServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/ShopServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/UserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/WelcomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/WelcomeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MsgMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/me/dingshuai/mapper/MsgMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/me/dingshuai/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/mapper/MsgMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/mapper/MsgMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/AccountServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/ShopServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/web/ShopServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/web/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/WelcomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/web/WelcomeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/util/SqlSessionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/util/SqlSessionUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/me/dingshuai/mapper/MsgMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/me/dingshuai/mapper/MsgMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/me/dingshuai/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/me/dingshuai/mapper/UserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/guestbook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/guestbook.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/logo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/product/0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/product/0.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/product/0_tiny.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/product/0_tiny.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/product/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/product/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/product/10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/product/10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/product/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/product/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/product/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/product/3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/product/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/product/4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/product/5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/product/5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/product/6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/product/6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/product/7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/product/7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/product/8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/product/8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/product/9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/product/9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/scripts/delete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/function.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/scripts/function.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/user-modify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user-modify.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/UserMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserMapperTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,15 +92,13 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="spring-beans.schema" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/me/dingshuai/service/AccountServlet.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -78,32 +131,52 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/dingshuai/Dev/Code/Java/03-JavaWeb/easy-buy/src/main/resources",
+    "last_opened_file_path": "/Users/dingshuai/Dev/Code/Java/03-JavaWeb/easy-buy/src/main/webapp/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.import",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.32719547",
+    "settings.editor.selected.configurable": "spring",
+    "spring.configuration.checksum": "58d0b6c5985434ac3f68f9d33630e59e",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
-      "mysql",
-      "oracle"
+      "oracle",
+      "mysql"
     ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/images/product" />
+      <recent name="$PROJECT_DIR$/src/main/java/me/dingshuai/action" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/me/dingshuai/web" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/static" />
+      <recent name="$PROJECT_DIR$/target/easy-buy/images" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
       <recent name="$PROJECT_DIR$/src/main/resources/me/dingshuai/mapper" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.7">
+    <configuration name="UserMapperTest.testCheckIfExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="easy-buy" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserMapperTest" />
+      <option name="METHOD_NAME" value="testCheckIfExists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 10.1.7" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.7" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
@@ -193,8 +266,16 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserMapperTest.testCheckIfExists" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringGeneralSettings">
+    <option name="allowAutoConfigurationMode" value="true" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
       <changelist id="849432c1-99a9-4c9e-b1f6-220d3e7a16d8" name="变更" comment="" />
@@ -231,6 +312,20 @@
       <workItem from="1678198856466" duration="41000" />
       <workItem from="1678199621840" duration="2304000" />
       <workItem from="1678331405123" duration="7845000" />
+      <workItem from="1678533764854" duration="834000" />
+      <workItem from="1678550260211" duration="2782000" />
+      <workItem from="1678611268884" duration="8000" />
+      <workItem from="1678611316385" duration="3293000" />
+      <workItem from="1678627191706" duration="5989000" />
+      <workItem from="1678665641554" duration="1442000" />
+      <workItem from="1678680707968" duration="170000" />
+      <workItem from="1678682391163" duration="614000" />
+      <workItem from="1678688112317" duration="182000" />
+      <workItem from="1678707096344" duration="1687000" />
+      <workItem from="1678752950742" duration="1060000" />
+      <workItem from="1678754256794" duration="615000" />
+      <workItem from="1678757058371" duration="1533000" />
+      <workItem from="1678762942026" duration="22699000" />
     </task>
     <servers />
   </component>

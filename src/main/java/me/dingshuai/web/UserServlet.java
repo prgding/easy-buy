@@ -1,4 +1,4 @@
-package me.dingshuai.service;
+package me.dingshuai.web;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import me.dingshuai.mapper.UserMapper;
-import me.dingshuai.pojo.Users;
+import me.dingshuai.pojo.User;
 import me.dingshuai.util.SqlSessionUtil;
 import org.apache.ibatis.session.SqlSession;
 
@@ -42,8 +42,8 @@ public class UserServlet extends HttpServlet {
 		String location = request.getParameter("location");
 		String phoneNumber = request.getParameter("phoneNumber");
 
-		// 创建 Users 对象
-		Users user = new Users();
+		// 创建 User 对象
+		User user = new User();
 		user.setUserId(Integer.parseInt(userId));
 		user.setUsername(userName);
 		user.setPassword(passWord);
@@ -57,7 +57,7 @@ public class UserServlet extends HttpServlet {
 		try {
 			// 获取当前用户
 			HttpSession session = request.getSession();
-			Users user1 = (Users) session.getAttribute("user");
+			User user1 = (User) session.getAttribute("user");
 
 			// 是否是管理员
 			if (user1.getUsername().equals("admin")) {
@@ -89,7 +89,7 @@ public class UserServlet extends HttpServlet {
 
 	private void doShowUsers(HttpServletRequest request, HttpServletResponse response,
 							 SqlSession sqlSession) throws IOException {
-		List<Users> users = userMapper.findAll();
+		List<User> users = userMapper.findAll();
 		sqlSession.clearCache();
 		System.out.println("上一行执行过了");
 		HttpSession session = request.getSession(false);

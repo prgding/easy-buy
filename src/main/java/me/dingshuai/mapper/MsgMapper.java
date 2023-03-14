@@ -1,17 +1,17 @@
 package me.dingshuai.mapper;
 
-import me.dingshuai.pojo.Messages;
+import me.dingshuai.pojo.Message;
 
 import java.util.List;
 
 public interface MsgMapper {
-	List<Messages> findAll();
+	List<Message> findAll();
 
-	int addMsg(Messages msg);
+	int addMsg(Message msg);
 
 	int deleteById(int msgId);
 
-	int updateMsg(Messages msg);
+	int updateMsg(Message msg);
 
-	Messages findById(int msgId);
+	Message findById(int msgId);
 }

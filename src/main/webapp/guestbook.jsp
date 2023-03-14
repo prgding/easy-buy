@@ -1,6 +1,6 @@
-<%@ page import="me.dingshuai.pojo.Users" %>
+<%@ page import="me.dingshuai.pojo.User" %>
 <%@ page import="me.dingshuai.mapper.MsgMapper" %>
-<%@ page import="me.dingshuai.pojo.Messages" %>
+<%@ page import="me.dingshuai.pojo.Message" %>
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>

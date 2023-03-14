@@ -63,7 +63,7 @@
 							<th>操作</th>
 						</tr>
 
-						<c:forEach items="${users}" var="user">
+						<c:forEach items="${user}" var="user">
 							<tr>
 								<td class='first w4 c'>${user.userId}</td>
 								<td class='w1 c'>${user.username}</td>
