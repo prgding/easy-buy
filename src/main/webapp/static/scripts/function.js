@@ -57,25 +57,24 @@ function checkUsernameDuplicate(obj) {
 	// 发送Ajax请求，检查用户名是否已经存在
 	var username = obj.value;
 	var url = "account/checkIfExists?userName=" + username;
-	var xmlHttpRequest = new XMLHttpRequest();
-	xmlHttpRequest.onreadystatechange = function () {
-		if (xmlHttpRequest.readyState == 4) {
-			if (xmlHttpRequest.status == 200) {
-				var msgBox = obj.parentNode.getElementsByTagName("span")[0];
-				if (xmlHttpRequest.responseText === "用户名已存在") {
-					msgBox.innerHTML = "用户名已存在";
-					msgBox.className = "error";
-				} else {
-					msgBox.innerHTML = "用户名可用";
-					msgBox.className = "success";
-				}
+
+	$.ajax({
+		url: url,
+		type: "GET",
+		success: function (data) {
+			var msgBox = obj.parentNode.getElementsByTagName("span")[0];
+			if (data === "用户名已存在") {
+				msgBox.innerHTML = "用户名已存在";
+				msgBox.className = "error";
 			} else {
-				console.log(xmlHttpRequest.status);
+				msgBox.innerHTML = "用户名可用";
+				msgBox.className = "success";
 			}
+		},
+		error: function (xhr, status, error) {
+			console.log("error ==", error);
 		}
-	}
-	xmlHttpRequest.open("GET", url, true);
-	xmlHttpRequest.send();
+	});
 }
 
 function checkForm(frm) {
