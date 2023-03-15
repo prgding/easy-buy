@@ -1,39 +1,12 @@
 package me.dingshuai.pojo;
 
-import jakarta.servlet.ServletContext;
-import jakarta.servlet.http.HttpSessionBindingEvent;
-import jakarta.servlet.http.HttpSessionBindingListener;
-
-public class User implements HttpSessionBindingListener {
-
-	@Override
-	public void valueBound(HttpSessionBindingEvent event) {
-//		System.out.println("绑定");
-		ServletContext application = event.getSession().getServletContext();
-		Integer loggedInUser = (Integer)application.getAttribute("loggedInUser");
-		if(loggedInUser == null) {
-			application.setAttribute("loggedInUser", 1);
-		}else {
-			application.setAttribute("loggedInUser", loggedInUser + 1);
-		}
-	}
-
-	@Override
-	public void valueUnbound(HttpSessionBindingEvent event) {
-//		System.out.println("解绑");
-		ServletContext application = event.getSession().getServletContext();
-		Integer loggedInUser = (Integer)application.getAttribute("loggedInUser");
-		application.setAttribute("loggedInUser", loggedInUser - 1);
-	}
-
+public class User {
 	// 定义属性
 	private int userId;
 	private String userName;
 	private String passWord;
 	private String location;
 	private String phoneNumber;
-
-
 
 	// 提供无参构造方法
 	public User() {
