@@ -1,145 +1,105 @@
 package me.dingshuai.web;
 
-import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import me.dingshuai.mapper.MsgMapper;
 import me.dingshuai.mapper.UserMapper;
 import me.dingshuai.pojo.Message;
 import me.dingshuai.pojo.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
-import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "ShopServlet", urlPatterns = {"/shop/addMsg", "/shop/showMsg", "/shop/manageMsg", "/shop/delete", "/shop/detail", "/shop/reply", "/shop/updateMsg"})
-
+@Controller
+@RequestMapping("/shop")
 public class ShopServlet extends HttpServlet {
-	@Autowired
-	private UserMapper userMapper;
-	@Autowired
-	private MsgMapper msgMapper;
+	private final UserMapper userMapper;
+	private final MsgMapper msgMapper;
+	private final Message msg;
 
-	@Override
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-//		SqlSession sqlSession = SqlSessionUtil.open();
-//		userMapper = sqlSession.getMapper(UserMapper.class);
-//		msgMapper = sqlSession.getMapper(MsgMapper.class);
-		String servletPath = request.getServletPath();
-		switch (servletPath) {
-			case "/shop/addMsg" -> doAddMsg(request, response);
-			case "/shop/showMsg" -> doShowMsg(request, response);
-			case "/shop/manageMsg" -> doManageMsg(request, response);
-			case "/shop/delete" -> doDel(request, response);
-			case "/shop/detail" -> doDetail(request, response);
-			case "/shop/reply" -> doReply(request, response);
-			case "/shop/updateMsg" -> doUpdateMsg(request, response);
-		}
-//		sqlSession.commit();
-//		SqlSessionUtil.close(sqlSession);
+	public ShopServlet(UserMapper userMapper, MsgMapper msgMapper, Message msg) {
+		this.userMapper = userMapper;
+		this.msgMapper = msgMapper;
+		this.msg = msg;
 	}
 
-	private void doAddMsg(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		String guestName = request.getParameter("guestName");
-		String guestTitle = request.getParameter("guestTitle");
-		String guestContent = request.getParameter("guestContent");
-
-
-		Message tm = new Message();
-		tm.setMsgSender(guestName);
-		tm.setMsgTitle(guestTitle);
-		tm.setMsgContent(guestContent);
-		msgMapper.addMsg(tm);
-
-		response.sendRedirect(request.getContextPath() + "/shop/showMsg");
-
-
+	@RequestMapping("/addMsg")
+	private String doAddMsg(@RequestParam String guestName, @RequestParam String guestTitle,
+							@RequestParam String guestContent) {
+		msg.setMsgSender(guestName);
+		msg.setMsgTitle(guestTitle);
+		msg.setMsgContent(guestContent);
+		msgMapper.addMsg(msg);
+		return "redirect:/shop/showMsg";
 	}
 
-	private void doShowMsg(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	@RequestMapping("/showMsg")
+	private String doShowMsg(HttpServletRequest request) {
+		List<Message> messages = msgMapper.findAll();
+		HttpSession session = request.getSession(false);
+		session.setAttribute("messages", messages);
+		return "redirect:/guestbook.jsp";
+	}
+
+	@RequestMapping("/manageMsg")
+	private String doManageMsg(HttpServletRequest request) {
 
 		List<Message> messages = msgMapper.findAll();
 		HttpSession session = request.getSession(false);
 		session.setAttribute("messages", messages);
-		response.sendRedirect(request.getContextPath() + "/guestbook.jsp");
-	}
-
-	private void doManageMsg(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
-		List<Message> messages = msgMapper.findAll();
-		HttpSession session = request.getSession(false);
-		session.setAttribute("messages", messages);
-		response.sendRedirect(request.getContextPath() + "/manage/guestbook.jsp");
-
+		return "redirect:/manage/guestbook.jsp";
 
 	}
 
-	private void doDel(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		if (request.getParameter("userId") != null) {
-			String userId = request.getParameter("userId");
-
+	@RequestMapping("/delete")
+	private String doDel(@RequestParam String userId, @RequestParam String msgId) {
+		if (!userId.equals("null")) {
 			userMapper.deleteById(Integer.parseInt(userId));
-			response.sendRedirect(request.getContextPath() + "/user/show");
+			return "redirect:/user/show";
 		} else {
-			String msgId = request.getParameter("msgId");
-
 			msgMapper.deleteById(Integer.parseInt(msgId));
-			response.sendRedirect(request.getContextPath() + "/shop/manageMsg");
+			return "redirect:/shop/manageMsg";
 		}
-
-
 	}
 
-	private void doDetail(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		String userId = request.getParameter("userId");
+	@RequestMapping("/detail")
+	private String doDetail(@RequestParam String userId, HttpServletRequest request) {
 
 		User user = userMapper.findById(userId);
 		request.setAttribute("user", user);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/manage/detail.jsp");
-		dispatcher.forward(request, response);
-
+		return "forward:/manage/detail.jsp";
 
 	}
 
-	private void doReply(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		String msgId = request.getParameter("msgId");
+	@RequestMapping("/reply")
+	private String doReply(@RequestParam String msgId, HttpServletRequest request) {
 
-		Message tm = msgMapper.findById(Integer.parseInt(msgId));
-		request.setAttribute("msg", tm);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/manage/reply.jsp");
-		dispatcher.forward(request, response);
-
+		Message msg = msgMapper.findById(Integer.parseInt(msgId));
+		request.setAttribute("msg", msg);
+		return "forward:/manage/reply.jsp";
 
 	}
 
-	private void doUpdateMsg(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		// 获取请求参数
-		String msgId = request.getParameter("msgId");
-		String msgSender = request.getParameter("msgSender");
-		String msgContent = request.getParameter("msgContent");
-		String msgReplyContent = request.getParameter("msgReplyContent");
-
-		// 创建 User 对象
-		Message tm = new Message();
-		tm.setMsgId(Integer.parseInt(msgId));
-		tm.setMsgSender(msgSender);
-		tm.setMsgContent(msgContent);
+	@RequestMapping("/updateMsg")
+	private String doUpdateMsg(@RequestParam String msgId, @RequestParam String msgSender, @RequestParam String msgContent, @RequestParam String msgReplyContent) {
+		msg.setMsgId(Integer.parseInt(msgId));
+		msg.setMsgSender(msgSender);
+		msg.setMsgContent(msgContent);
 
 		if (msgReplyContent.equals("")) {
-			tm.setMsgStatus("未回复");
+			msg.setMsgStatus("未回复");
 		} else {
-			tm.setMsgStatus("已回复");
+			msg.setMsgStatus("已回复");
 		}
-		tm.setMsgReplyContent(msgReplyContent);
+		msg.setMsgReplyContent(msgReplyContent);
 
 		// 使用 UserMapper 的 add 方法添加用户
-		msgMapper.updateMsg(tm);
+		msgMapper.updateMsg(msg);
 
 		// 重定向
-		response.sendRedirect(request.getContextPath() + "/shop/manageMsg");
+		return "redirect:/shop/manageMsg";
 	}
 }

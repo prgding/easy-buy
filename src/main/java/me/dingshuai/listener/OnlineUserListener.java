@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpSessionListener;
 public class OnlineUserListener implements HttpSessionListener {
 	@Override
 	public void sessionCreated(HttpSessionEvent se) {
-		System.out.println("session 创建: " + se.getSession());
+//		System.out.println("session 创建: " + se.getSession());
 		ServletContext application = se.getSession().getServletContext();
 		Integer onlineUser = (Integer) application.getAttribute("onlineUser");
 		if (onlineUser == null) {
@@ -22,7 +22,7 @@ public class OnlineUserListener implements HttpSessionListener {
 
 	@Override
 	public void sessionDestroyed(HttpSessionEvent se) {
-		System.out.println("session 销毁: " + se.getSession());
+//		System.out.println("session 销毁: " + se.getSession());
 		ServletContext application = se.getSession().getServletContext();
 		Integer onlineUser = (Integer) application.getAttribute("onlineUser");
 		application.setAttribute("onlineUser", onlineUser - 1);

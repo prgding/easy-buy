@@ -1,29 +1,31 @@
 package me.dingshuai.web;
 
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 import me.dingshuai.mapper.UserMapper;
 import me.dingshuai.pojo.User;
-import me.dingshuai.util.SqlSessionUtil;
-import org.apache.ibatis.session.SqlSession;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-@WebServlet(name = "WelcomeServlet", urlPatterns = {"/welcome"})
+@Controller
 public class WelcomeServlet extends HttpServlet {
-	private UserMapper userMapper;
+	private final UserMapper userMapper;
 
-	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		SqlSession sqlSession = SqlSessionUtil.open();
-		userMapper = sqlSession.getMapper(UserMapper.class);
-		System.out.println("doGet方法执行了");
+	public WelcomeServlet(UserMapper userMapper) {
+		this.userMapper = userMapper;
+	}
+
+	@RequestMapping("/welcome")
+	protected String welcome(HttpServletRequest request) {
+
+		// 获取当前时间
 		LocalDateTime now = LocalDateTime.now();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		String format = formatter.format(now);
 
+		// 取出 cookie
 		Cookie[] cookies = request.getCookies();
 		String username = null;
 		String password = null;
@@ -39,27 +41,23 @@ public class WelcomeServlet extends HttpServlet {
 			}
 		}
 
+		// 判断 cookie 中是否有用户名和密码
 		if (username != null && password != null) {
+			// 记住了密码
 			User user = userMapper.checkPwd(username, password);
 			if (user != null) {
+				// 密码正确，有用户
 				HttpSession session = request.getSession();
 				session.setAttribute("user", user);
 				session.setAttribute("date", format);
-
-				if (user.getUsername().equals("admin")) {
-					// 跳转到用户信息页面
-					response.sendRedirect(request.getContextPath() + "/manage/index.jsp");
-				} else {
-					// 跳转到用户信息页面
-					response.sendRedirect(request.getContextPath() + "index.jsp");
+				if (user.getUserName().equals("admin")) {
+					// 管理员登录
+					return "/manage/index.jsp";
 				}
-			} else {
-				response.sendRedirect(request.getContextPath() + "/index.jsp");
 			}
-		} else {
-			response.sendRedirect(request.getContextPath() + "/index.jsp");
 		}
-		sqlSession.commit();
-		SqlSessionUtil.close(sqlSession);
+
+		// 没有记住密码, 普通用户登录
+		return "index.jsp";
 	}
 }

@@ -9,7 +9,6 @@ public class Message {
 
 	private String msgTitle;
 
-
 	private String msgContent;
 	private String msgStatus;
 

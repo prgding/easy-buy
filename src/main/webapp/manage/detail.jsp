@@ -62,11 +62,11 @@
 						</tr>
 						<tr>
 							<td class='field'>用户名：</td>
-							<td><input type='text' class='text' name='userName' value='${user.username}'/></td>
+							<td><input type='text' class='text' name='userName' value='${user.userName}'/></td>
 						</tr>
 						<tr>
 							<td class='field'>密码：</td>
-							<td><input type='text' class='text' name='passWord' value='${user.password}'/></td>
+							<td><input type='text' class='text' name='passWord' value='${user.passWord}'/></td>
 						</tr>
 						<tr>
 							<td class='field'>送货地址：</td>

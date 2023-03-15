@@ -1,9 +1,5 @@
 package me.dingshuai.service.impl;
 
-import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 import me.dingshuai.mapper.UserMapper;
 import me.dingshuai.pojo.User;
 import me.dingshuai.service.AccountService;
@@ -37,18 +33,5 @@ public class AccountServiceImpl implements AccountService {
 		}
 	}
 
-	@Override
-	public void Exit(String username, HttpServletRequest request, HttpServletResponse response) {
-		// 销毁会话
-		HttpSession session = request.getSession(false);
-		session.invalidate();
 
-		// 销毁 cookie
-		Cookie[] cookies = request.getCookies();
-		for (Cookie cookie : cookies) {
-			cookie.setMaxAge(0);
-			cookie.setPath(request.getContextPath());
-			response.addCookie(cookie);
-		}
-	}
 }

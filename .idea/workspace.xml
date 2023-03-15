@@ -10,30 +10,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="849432c1-99a9-4c9e-b1f6-220d3e7a16d8" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a443388-8787-4d08-b048-fed88c3f66fc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7a443388-8787-4d08-b048-fed88c3f66fc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/easy_buy_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/easy_buy_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a443388-8787-4d08-b048-fed88c3f66fc/storage_v2/_src_/schema/sys.zb4BAA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7a443388-8787-4d08-b048-fed88c3f66fc/storage_v2/_src_/schema/sys.zb4BAA.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/easy-buy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/easy-buy.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/filter/LoginCheckFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/listener/OnlineUserListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/listener/OnlineUserListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/impl/AccountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/web/AccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/web/AccountServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/web/ShopServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/web/ShopServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/web/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/web/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dingshuai/web/WelcomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dingshuai/web/WelcomeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/guestbook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/guestbook.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/guestbook-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/guestbook-modify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/guestbook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/guestbook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/manage-result.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/manage-result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/news-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/news-add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/news-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/news-modify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/order-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/order-modify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/product-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/product-add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/product-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/product-modify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/productClass-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/productClass-add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/productClass-modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/productClass-modify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/productClass.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/productClass.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/user-add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/user-add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/detail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/scripts/delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/scripts/delete.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/static/scripts/function.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/scripts/function.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/user-modify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user-modify.jsp" afterDir="false" />
     </list>
@@ -44,6 +46,9 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -83,32 +88,32 @@
     <option name="autoscrollToSource" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/dingshuai/Dev/Code/Java/03-JavaWeb/easy-buy/src/main/webapp/static/css",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.32719547",
-    "settings.editor.selected.configurable": "spring",
-    "spring.configuration.checksum": "58d0b6c5985434ac3f68f9d33630e59e",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/dingshuai/Dev/Code/Java/03-JavaWeb/easy-buy/src/main/webapp/static/css&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.32719547&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;58d0b6c5985434ac3f68f9d33630e59e&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "oracle",
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;oracle&quot;,
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/static/css" />
@@ -130,6 +135,16 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="UserMapperTest" />
       <option name="METHOD_NAME" value="testCheckIfExists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserMapperTest.testFindAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="easy-buy" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserMapperTest" />
+      <option name="METHOD_NAME" value="testFindAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -226,6 +241,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserMapperTest.testFindAll" />
         <item itemvalue="JUnit.UserMapperTest.testCheckIfExists" />
       </list>
     </recent_temporary>
@@ -283,7 +299,9 @@
       <workItem from="1678752950742" duration="1060000" />
       <workItem from="1678754256794" duration="615000" />
       <workItem from="1678757058371" duration="1533000" />
-      <workItem from="1678762942026" duration="33382000" />
+      <workItem from="1678762942026" duration="35496000" />
+      <workItem from="1678866960825" duration="2247000" />
+      <workItem from="1678869244222" duration="11202000" />
     </task>
     <servers />
   </component>
@@ -301,7 +319,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="front-end" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>

@@ -18,10 +18,10 @@
 			<div class="help">
 
 				<c:if test="${not empty user}">
-					欢迎您，${user.username}
+					欢迎您，${user.userName}
 					<a href='user-modify.jsp'>修改个人信息</a>
 					<a href='${pageContext.request.contextPath}/account/exit'>注销</a>
-					<c:if test="${user.username == 'admin'}">
+					<c:if test="${user.userName == 'admin'}">
 						<a href='manage/index.jsp'>进入管理后台</a>
 					</c:if>
 				</c:if>

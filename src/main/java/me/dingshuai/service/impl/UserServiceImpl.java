@@ -1,7 +1,7 @@
 package me.dingshuai.service.impl;
 
+import me.dingshuai.pojo.User;
 import me.dingshuai.service.UserService;
-import org.apache.catalina.User;
 
 import java.util.List;
 

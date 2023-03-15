@@ -66,8 +66,8 @@
 						<c:forEach items="${user}" var="user">
 							<tr>
 								<td class='first w4 c'>${user.userId}</td>
-								<td class='w1 c'>${user.username}</td>
-								<td class='w2 c'>${user.password}</td>
+								<td class='w1 c'>${user.userName}</td>
+								<td class='w2 c'>${user.passWord}</td>
 								<td class='w3 c'>${user.location}</td>
 								<td class='w4 c'>${user.phoneNumber}</td>
 								<td class='w1 c'>

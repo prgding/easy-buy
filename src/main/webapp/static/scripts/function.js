@@ -92,7 +92,6 @@ function checkForm(frm) {
 	}
 	// 检查是否有错误信息
 	var listOf = document.querySelectorAll("span.error");
-	console.log(listOf.length);
 	if (listOf.length > 0) {
 		console.log("有错误span");
 		return false;

@@ -3,9 +3,7 @@ package me.dingshuai.pojo;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpSessionBindingEvent;
 import jakarta.servlet.http.HttpSessionBindingListener;
-import org.springframework.stereotype.Component;
 
-@Component
 public class User implements HttpSessionBindingListener {
 
 	@Override
@@ -35,21 +33,11 @@ public class User implements HttpSessionBindingListener {
 	private String location;
 	private String phoneNumber;
 
-	@Override
-	public String toString() {
-		return "User{" +
-				"userId=" + userId +
-				", userName='" + userName + '\'' +
-				", passWord='" + passWord + '\'' +
-				", location='" + location + '\'' +
-				", phoneNumber='" + phoneNumber + '\'' +
-				'}';
-	}
+
 
 	// 提供无参构造方法
 	public User() {
 	}
-
 
 	// 提供带参构造方法
 	public User(String userName, String passWord) {
@@ -60,6 +48,7 @@ public class User implements HttpSessionBindingListener {
 	}
 
 	// 提供 getter 和 setter 方法
+
 	public int getUserId() {
 		return userId;
 	}
@@ -68,19 +57,19 @@ public class User implements HttpSessionBindingListener {
 		this.userId = userId;
 	}
 
-	public String getUsername() {
+	public String getUserName() {
 		return userName;
 	}
 
-	public void setUsername(String userName) {
+	public void setUserName(String userName) {
 		this.userName = userName;
 	}
 
-	public String getPassword() {
+	public String getPassWord() {
 		return passWord;
 	}
 
-	public void setPassword(String passWord) {
+	public void setPassWord(String passWord) {
 		this.passWord = passWord;
 	}
 
@@ -98,5 +87,17 @@ public class User implements HttpSessionBindingListener {
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
+	}
+
+
+	@Override
+	public String toString() {
+		return "User{" +
+				"userId=" + userId +
+				", userName='" + userName + '\'' +
+				", passWord='" + passWord + '\'' +
+				", location='" + location + '\'' +
+				", phoneNumber='" + phoneNumber + '\'' +
+				'}';
 	}
 }
