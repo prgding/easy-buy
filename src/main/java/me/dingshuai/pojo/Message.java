@@ -14,26 +14,13 @@ public class Message {
 
 	private String msgReplyContent;
 
-	public String getMsgReplyContent() {
-		return msgReplyContent;
-	}
-
-	public void setMsgReplyContent(String msgReplyContent) {
-		this.msgReplyContent = msgReplyContent;
-	}
-
 	public Message() {
 	}
 
-	public Message(String msgSender, String msgTitle, String msgContent) {
-		this.msgSender = msgSender;
-		this.msgTitle = msgTitle;
-		this.msgContent = msgContent;
-	}
-
-	public Message(int msgId, String msgSender, String msgContent, String msgStatus, String msgReplyContent) {
+	public Message(int msgId, String msgSender, String msgTitle, String msgContent, String msgStatus, String msgReplyContent) {
 		this.msgId = msgId;
 		this.msgSender = msgSender;
+		this.msgTitle = msgTitle;
 		this.msgContent = msgContent;
 		this.msgStatus = msgStatus;
 		this.msgReplyContent = msgReplyContent;
@@ -43,16 +30,16 @@ public class Message {
 		return msgId;
 	}
 
+	public void setMsgId(int msgId) {
+		this.msgId = msgId;
+	}
+
 	public String getMsgSender() {
 		return msgSender;
 	}
 
-	public String getMsgContent() {
-		return msgContent;
-	}
-
-	public String getMsgStatus() {
-		return msgStatus;
+	public void setMsgSender(String msgSender) {
+		this.msgSender = msgSender;
 	}
 
 	public String getMsgTitle() {
@@ -63,20 +50,28 @@ public class Message {
 		this.msgTitle = msgTitle;
 	}
 
-	public void setMsgId(int msgId) {
-		this.msgId = msgId;
-	}
-
-	public void setMsgSender(String msgSender) {
-		this.msgSender = msgSender;
+	public String getMsgContent() {
+		return msgContent;
 	}
 
 	public void setMsgContent(String msgContent) {
 		this.msgContent = msgContent;
 	}
 
+	public String getMsgStatus() {
+		return msgStatus;
+	}
+
 	public void setMsgStatus(String msgStatus) {
 		this.msgStatus = msgStatus;
+	}
+
+	public String getMsgReplyContent() {
+		return msgReplyContent;
+	}
+
+	public void setMsgReplyContent(String msgReplyContent) {
+		this.msgReplyContent = msgReplyContent;
 	}
 
 	@Override

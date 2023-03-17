@@ -12,11 +12,9 @@
   - 过滤器, 监听器
   - SSM 框架的简单运用（MyBatis, Spring, Spring MVC）
 - 还需要改进的地方
-	- Controller 和 Service 的分层
     - JSON 规范
     - 前后端分离
     - UI 美化
-    - 优化代码
 ### 版本 
 - JDK 17
 - MySQL 8.0.32
@@ -28,4 +26,4 @@
 - 修改 `src/main/resources/jdbc.properties` 文件中的数据库连接账户、密码
 - IDEA 中使用 Tomcat 运行项目
 
-# 欢迎 PR
+### 欢迎 PR

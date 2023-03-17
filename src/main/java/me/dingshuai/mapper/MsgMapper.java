@@ -5,13 +5,14 @@ import me.dingshuai.pojo.Message;
 import java.util.List;
 
 public interface MsgMapper {
-	List<Message> findAll();
-
-	int addMsg(Message msg);
+	int insert(Message msg);
 
 	int deleteById(int msgId);
 
-	int updateMsg(Message msg);
+	// update 不能 ById, 因为容易全部赋值 id
+	int update(Message msg);
 
-	Message findById(int msgId);
+	Message findOne(int msgId);
+
+	List<Message> findAll();
 }

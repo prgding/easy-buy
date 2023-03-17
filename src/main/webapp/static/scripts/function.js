@@ -57,7 +57,7 @@ function checkUsernameDuplicate(obj) {
 	// 发送Ajax请求，检查用户名是否已经存在
 	var username = obj.value.trim();
 	if (username) {
-		var url = "account/checkIfExists?userName=" + username;
+		var url = "user/checkIfExists?userName=" + username;
 		$.ajax({
 			url: url,
 			type: "GET",

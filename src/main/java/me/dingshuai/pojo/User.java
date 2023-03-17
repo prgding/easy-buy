@@ -13,12 +13,14 @@ public class User {
 	}
 
 	// 提供带参构造方法
-	public User(String userName, String passWord) {
+	public User(int userId, String userName, String passWord, String location, String phoneNumber) {
+		this.userId = userId;
 		this.userName = userName;
 		this.passWord = passWord;
-		this.location = "";
-		this.phoneNumber = "";
+		this.location = location;
+		this.phoneNumber = phoneNumber;
 	}
+
 
 	// 提供 getter 和 setter 方法
 

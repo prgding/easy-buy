@@ -1,6 +1,9 @@
 package me.dingshuai.web;
 
-import jakarta.servlet.http.*;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import me.dingshuai.mapper.UserMapper;
 import me.dingshuai.pojo.User;
 import org.springframework.stereotype.Controller;
@@ -44,7 +47,7 @@ public class WelcomeServlet extends HttpServlet {
 		// 判断 cookie 中是否有用户名和密码
 		if (username != null && password != null) {
 			// 记住了密码
-			User user = userMapper.checkPwd(username, password);
+			User user = userMapper.findOneByNameAndPwd(username, password);
 			if (user != null) {
 				// 密码正确，有用户
 				HttpSession session = request.getSession();

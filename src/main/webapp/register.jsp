@@ -35,7 +35,7 @@
 						<li class="current"><em></em>填写注册信息</li>
 						<li class="last"><em></em>注册成功</li>
 					</ul>
-					<form id="regForm" method="post" action="account/register" onsubmit="return checkForm(this);">
+					<form id="regForm" method="post" action="user/register" onsubmit="return checkForm(this);">
 						<table>
 							<tr>
 								<td class="field">用户名：</td>

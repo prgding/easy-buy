@@ -4,9 +4,9 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="me.dingshuai.mapper.UserMapper">
-    <insert id="addUser">
-        insert into users(userName, passWord, location, phoneNumber)
-        values (#{userName}, #{passWord}, #{location}, #{phoneNumber});
+    <insert id="insert">
+        insert into users(userName, passWord)
+        values (#{userName}, #{passWord});
     </insert>
 
     <delete id="deleteById">
@@ -24,28 +24,27 @@
         WHERE userId = #{userId};
     </update>
 
-    <select id="findById" resultType="User">
+    <select id="findOneByName" resultType="User">
         SELECT *
         FROM users
-        WHERE userId = #{userId}
+        WHERE userName = #{userName};
     </select>
 
-    <select id="findAll" resultType="User">
-        select *
-        FROM users;
+    <select id="findOneById" resultType="User">
+        SELECT *
+        FROM users
+        WHERE userId = #{userId};
     </select>
 
-    <select id="checkPwd" resultType="User">
+    <select id="findOneByNameAndPwd" resultType="User">
         SELECT *
         FROM users
         WHERE userName = #{userName}
           AND passWord = #{passWord};
     </select>
 
-    <select id="checkIfExists" resultType="User">
-        SELECT *
-        FROM users
-        WHERE userName = #{userName};
+    <select id="findAll" resultType="User">
+        select *
+        FROM users;
     </select>
-
 </mapper>
